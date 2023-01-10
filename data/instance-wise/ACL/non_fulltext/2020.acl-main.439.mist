@@ -1,0 +1,145 @@
+#144
+Each	_	_
+example	_	_
+in	_	_
+RTE	_	_
+is	_	_
+a	_	_
+pair	_	_
+of	_	_
+sentences	_	_
+.	_	_
+
+#145
+The	_	_
+model	_	_
+must	deontic	_
+classify	_	_
+whether	_	_
+or	_	_
+not	_	_
+the	_	_
+second	_	_
+sentence	_	_
+entails	_	_
+the	_	_
+first	_	_
+.	_	_
+
+#146
+Examples	_	_
+in	_	_
+COPA	_	_
+are	_	_
+composed	_	_
+of	_	_
+a	_	_
+single	_	_
+context	_	_
+sentence	_	_
+followed	_	_
+by	_	_
+two	_	_
+candidate	_	_
+sentences	_	_
+that	_	_
+are	_	_
+either	_	_
+a	_	_
+cause	_	_
+or	_	_
+effect	_	_
+of	_	_
+the	_	_
+context	_	_
+sentence	_	_
+.	_	_
+
+#147
+The	_	_
+model	_	_
+must	deontic	_
+select	_	_
+the	_	_
+most	_	_
+“plausible”	_	_
+sentence	_	_
+of	_	_
+the	_	_
+two	_	_
+.	_	_
+
+#148
+Lastly	_	_
+,	_	_
+an	_	_
+example	_	_
+in	_	_
+ReCoRD	_	_
+is	_	_
+a	_	_
+paragraph	_	_
+from	_	_
+a	_	_
+news	_	_
+article	_	_
+,	_	_
+followed	_	_
+by	_	_
+several	_	_
+bullet	_	_
+points	_	_
+and	_	_
+with	_	_
+all	_	_
+the	_	_
+entities	_	_
+marked	_	_
+.	_	_
+
+#149
+The	_	_
+model	_	_
+is	_	_
+given	_	_
+a	_	_
+single	_	_
+sentence	_	_
+from	_	_
+later	_	_
+in	_	_
+the	_	_
+document	_	_
+with	_	_
+a	_	_
+single	_	_
+entity	_	_
+masked	_	_
+out	_	_
+and	_	_
+must	deontic	_
+select	_	_
+the	_	_
+entity	_	_
+from	_	_
+the	_	_
+context	_	_
+that	_	_
+fills	_	_
+the	_	_
+blank	_	_
+.	_	_
+
+#150
+Table	_	_
+2	_	_
+shows	_	_
+examples	_	_
+of	_	_
+each	_	_
+with	_	_
+correct	_	_
+choices	_	_
+in	_	_
+bold	_	_
+.	_	_

@@ -1,0 +1,65 @@
+#316
+We	_	_
+integrate	_	_
+the	_	_
+guided	_	_
+filtering	_	_
+layer	_	_
+with	_	_
+FCNs	_	_
+and	_	_
+evaluate	_	_
+it	_	_
+on	_	_
+five	_	_
+image	_	_
+processing	_	_
+tasks	_	_
+and	_	_
+three	_	_
+computer	_	_
+vision	_	_
+tasks	_	_
+.	_	_
+
+#317
+Experiments	_	_
+show	_	_
+that	_	_
+the	_	_
+proposed	_	_
+layer	_	_
+could	capability	_
+achieve	_	_
+state-of-the-art	_	_
+performance	_	_
+while	_	_
+taking	_	_
+10-100×	_	_
+less	_	_
+computational	_	_
+cost	_	_
+.	_	_
+
+#318
+We	_	_
+also	_	_
+conduct	_	_
+a	_	_
+comprehensive	_	_
+ablation	_	_
+study	_	_
+,	_	_
+which	_	_
+demonstrates	_	_
+the	_	_
+contribution	_	_
+of	_	_
+each	_	_
+component	_	_
+as	_	_
+well	_	_
+as	_	_
+the	_	_
+hyper-parameters	_	_
+.	_	_

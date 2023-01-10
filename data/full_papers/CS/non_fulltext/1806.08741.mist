@@ -1,0 +1,7929 @@
+#0
+Scalable	_	_
+Simple	_	_
+Linear	_	_
+Iterative	_	_
+Clustering	_	_
+(	_	_
+SSLIC	_	_
+)	_	_
+Using	_	_
+a	_	_
+Generic	_	_
+and	_	_
+Parallel	_	_
+Approach	_	_
+Release	_	_
+1.0	_	_
+Bradley	_	_
+C.	_	_
+Lowekamp1,2	_	_
+and	_	_
+David	_	_
+T.	_	_
+Chen1,2	_	_
+and	_	_
+Ziv	_	_
+Yaniv1,3	_	_
+and	_	_
+Terry	_	_
+S.	_	_
+Yoo1	_	_
+March	_	_
+13	_	_
+,	_	_
+2021	_	_
+1National	_	_
+Library	_	_
+Of	_	_
+Medicine	_	_
+2Medical	_	_
+Science	_	_
+and	_	_
+Computing	_	_
+LLC3	_	_
+TAJ	_	_
+Inc	_	_
+.	_	_
+
+#1
+Abstract	_	_
+
+#2
+Superpixel	_	_
+algorithms	_	_
+have	_	_
+proven	_	_
+to	_	_
+be	_	_
+a	_	_
+useful	_	_
+initial	_	_
+step	_	_
+for	_	_
+segmentation	_	_
+and	_	_
+subsequent	_	_
+processing	_	_
+of	_	_
+images	_	_
+,	_	_
+reducing	_	_
+computational	_	_
+complexity	_	_
+by	_	_
+replacing	_	_
+the	_	_
+use	_	_
+of	_	_
+expensive	_	_
+per-pixel	_	_
+primitives	_	_
+with	_	_
+a	_	_
+higher-level	_	_
+abstraction	_	_
+,	_	_
+superpixels	_	_
+.	_	_
+
+#3
+They	_	_
+have	_	_
+been	_	_
+successfully	_	_
+applied	_	_
+both	_	_
+in	_	_
+the	_	_
+context	_	_
+of	_	_
+traditional	_	_
+image	_	_
+analysis	_	_
+and	_	_
+deep	_	_
+learning	_	_
+based	_	_
+approaches	_	_
+.	_	_
+
+#4
+In	_	_
+this	_	_
+work	_	_
+,	_	_
+we	_	_
+present	_	_
+a	_	_
+generalized	_	_
+implementation	_	_
+of	_	_
+the	_	_
+simple	_	_
+linear	_	_
+iterative	_	_
+clustering	_	_
+(	_	_
+SLIC	_	_
+)	_	_
+superpixel	_	_
+algorithm	_	_
+that	_	_
+has	_	_
+been	_	_
+generalized	_	_
+for	_	_
+n-dimensional	_	_
+scalar	_	_
+and	_	_
+multi-channel	_	_
+images	_	_
+.	_	_
+
+#5
+Additionally	_	_
+,	_	_
+the	_	_
+standard	_	_
+iterative	_	_
+implementation	_	_
+is	_	_
+replaced	_	_
+by	_	_
+a	_	_
+parallel	_	_
+,	_	_
+multi-threaded	_	_
+one	_	_
+.	_	_
+
+#6
+We	_	_
+describe	_	_
+the	_	_
+implementation	_	_
+details	_	_
+and	_	_
+analyze	_	_
+its	_	_
+scalability	_	_
+using	_	_
+a	_	_
+strong	_	_
+scaling	_	_
+formulation	_	_
+.	_	_
+
+#7
+Quantitative	_	_
+evaluation	_	_
+is	_	_
+performed	_	_
+using	_	_
+a	_	_
+3D	_	_
+image	_	_
+,	_	_
+the	_	_
+Visible	_	_
+Human	_	_
+cryosection	_	_
+dataset	_	_
+,	_	_
+and	_	_
+a	_	_
+2D	_	_
+image	_	_
+from	_	_
+the	_	_
+same	_	_
+dataset	_	_
+.	_	_
+
+#8
+Results	_	_
+show	_	_
+good	_	_
+scalability	_	_
+with	_	_
+runtime	_	_
+gains	_	_
+even	_	_
+when	_	_
+using	_	_
+a	_	_
+large	_	_
+number	_	_
+of	_	_
+threads	_	_
+that	_	_
+exceeds	_	_
+the	_	_
+physical	_	_
+number	_	_
+of	_	_
+available	_	_
+cores	_	_
+(	_	_
+hyperthreading	_	_
+)	_	_
+.	_	_
+
+#9
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+Contents	_	_
+
+#10
+1	_	_
+Introduction	_	_
+2	_	_
+
+#11
+2	_	_
+The	_	_
+Simple	_	_
+Linear	_	_
+Iterative	_	_
+Clustering	_	_
+(	_	_
+SLIC	_	_
+)	_	_
+Algorithm	_	_
+3	_	_
+
+#12
+2.1	_	_
+Distances	_	_
+in	_	_
+the	_	_
+joint	_	_
+range-domain	_	_
+(	_	_
+intensity-geometry	_	_
+)	_	_
+space	_	_
+.	_	_
+
+#13
+.	_	_
+
+#14
+.	_	_
+
+#15
+.	_	_
+
+#16
+.	_	_
+
+#17
+.	_	_
+
+#18
+.	_	_
+
+#19
+.	_	_
+
+#20
+.	_	_
+
+#21
+.	_	_
+
+#22
+.	_	_
+
+#23
+.	_	_
+
+#24
+.	_	_
+
+#25
+.	_	_
+
+#26
+.	_	_
+
+#27
+.	_	_
+
+#28
+3	_	_
+2.2	_	_
+Algorithm	_	_
+Details	_	_
+.	_	_
+
+#29
+.	_	_
+
+#30
+.	_	_
+
+#31
+.	_	_
+
+#32
+.	_	_
+
+#33
+.	_	_
+
+#34
+.	_	_
+
+#35
+.	_	_
+
+#36
+.	_	_
+
+#37
+.	_	_
+
+#38
+.	_	_
+
+#39
+.	_	_
+
+#40
+.	_	_
+
+#41
+.	_	_
+
+#42
+.	_	_
+
+#43
+.	_	_
+
+#44
+.	_	_
+
+#45
+.	_	_
+
+#46
+.	_	_
+
+#47
+.	_	_
+
+#48
+.	_	_
+
+#49
+.	_	_
+
+#50
+.	_	_
+
+#51
+.	_	_
+
+#52
+.	_	_
+
+#53
+.	_	_
+
+#54
+.	_	_
+
+#55
+.	_	_
+
+#56
+.	_	_
+
+#57
+.	_	_
+
+#58
+.	_	_
+
+#59
+.	_	_
+
+#60
+.	_	_
+
+#61
+.	_	_
+
+#62
+.	_	_
+
+#63
+.	_	_
+
+#64
+.	_	_
+
+#65
+.	_	_
+
+#66
+.	_	_
+
+#67
+.	_	_
+
+#68
+4	_	_
+
+#69
+3	_	_
+The	_	_
+Scalable	_	_
+Simple	_	_
+Linear	_	_
+Iterative	_	_
+Clustering	_	_
+(	_	_
+SSLIC	_	_
+)	_	_
+Algorithm	_	_
+4	_	_
+
+#70
+3.1	_	_
+Algorithm	_	_
+Details	_	_
+.	_	_
+
+#71
+.	_	_
+
+#72
+.	_	_
+
+#73
+.	_	_
+
+#74
+.	_	_
+
+#75
+.	_	_
+
+#76
+.	_	_
+
+#77
+.	_	_
+
+#78
+.	_	_
+
+#79
+.	_	_
+
+#80
+.	_	_
+
+#81
+.	_	_
+
+#82
+.	_	_
+
+#83
+.	_	_
+
+#84
+.	_	_
+
+#85
+.	_	_
+
+#86
+.	_	_
+
+#87
+.	_	_
+
+#88
+.	_	_
+
+#89
+.	_	_
+
+#90
+.	_	_
+
+#91
+.	_	_
+
+#92
+.	_	_
+
+#93
+.	_	_
+
+#94
+.	_	_
+
+#95
+.	_	_
+
+#96
+.	_	_
+
+#97
+.	_	_
+
+#98
+.	_	_
+
+#99
+.	_	_
+
+#100
+.	_	_
+
+#101
+.	_	_
+
+#102
+.	_	_
+
+#103
+.	_	_
+
+#104
+.	_	_
+
+#105
+.	_	_
+
+#106
+.	_	_
+
+#107
+.	_	_
+
+#108
+.	_	_
+
+#109
+.	_	_
+
+#110
+4	_	_
+3.2	_	_
+SSLIC	_	_
+Parameters	_	_
+.	_	_
+
+#111
+.	_	_
+
+#112
+.	_	_
+
+#113
+.	_	_
+
+#114
+.	_	_
+
+#115
+.	_	_
+
+#116
+.	_	_
+
+#117
+.	_	_
+
+#118
+.	_	_
+
+#119
+.	_	_
+
+#120
+.	_	_
+
+#121
+.	_	_
+
+#122
+.	_	_
+
+#123
+.	_	_
+
+#124
+.	_	_
+
+#125
+.	_	_
+
+#126
+.	_	_
+
+#127
+.	_	_
+
+#128
+.	_	_
+
+#129
+.	_	_
+
+#130
+.	_	_
+
+#131
+.	_	_
+
+#132
+.	_	_
+
+#133
+.	_	_
+
+#134
+.	_	_
+
+#135
+.	_	_
+
+#136
+.	_	_
+
+#137
+.	_	_
+
+#138
+.	_	_
+
+#139
+.	_	_
+
+#140
+.	_	_
+
+#141
+.	_	_
+
+#142
+.	_	_
+
+#143
+.	_	_
+
+#144
+.	_	_
+
+#145
+.	_	_
+
+#146
+.	_	_
+
+#147
+.	_	_
+
+#148
+.	_	_
+
+#149
+.	_	_
+
+#150
+5	_	_
+3.3	_	_
+Implementation	_	_
+Details	_	_
+.	_	_
+
+#151
+.	_	_
+
+#152
+.	_	_
+
+#153
+.	_	_
+
+#154
+.	_	_
+
+#155
+.	_	_
+
+#156
+.	_	_
+
+#157
+.	_	_
+
+#158
+.	_	_
+
+#159
+.	_	_
+
+#160
+.	_	_
+
+#161
+.	_	_
+
+#162
+.	_	_
+
+#163
+.	_	_
+
+#164
+.	_	_
+
+#165
+.	_	_
+
+#166
+.	_	_
+
+#167
+.	_	_
+
+#168
+.	_	_
+
+#169
+.	_	_
+
+#170
+.	_	_
+
+#171
+.	_	_
+
+#172
+.	_	_
+
+#173
+.	_	_
+
+#174
+.	_	_
+
+#175
+.	_	_
+
+#176
+.	_	_
+
+#177
+.	_	_
+
+#178
+.	_	_
+
+#179
+.	_	_
+
+#180
+.	_	_
+
+#181
+.	_	_
+
+#182
+.	_	_
+
+#183
+.	_	_
+
+#184
+.	_	_
+
+#185
+.	_	_
+
+#186
+.	_	_
+
+#187
+6	_	_
+ar	_	_
+X	_	_
+iv	_	_
+:1	_	_
+6	_	_
+.	_	_
+
+#188
+1v	_	_
+2	_	_
+[	_	_
+cs	_	_
+.C	_	_
+V	_	_
+]	_	_
+2	_	_
+3	_	_
+Ju	_	_
+l	_	_
+2	_	_
+
+#189
+4	_	_
+SSLIC	_	_
+Evaluation	_	_
+6	_	_
+
+#190
+4.1	_	_
+Method	_	_
+.	_	_
+
+#191
+.	_	_
+
+#192
+.	_	_
+
+#193
+.	_	_
+
+#194
+.	_	_
+
+#195
+.	_	_
+
+#196
+.	_	_
+
+#197
+.	_	_
+
+#198
+.	_	_
+
+#199
+.	_	_
+
+#200
+.	_	_
+
+#201
+.	_	_
+
+#202
+.	_	_
+
+#203
+.	_	_
+
+#204
+.	_	_
+
+#205
+.	_	_
+
+#206
+.	_	_
+
+#207
+.	_	_
+
+#208
+.	_	_
+
+#209
+.	_	_
+
+#210
+.	_	_
+
+#211
+.	_	_
+
+#212
+.	_	_
+
+#213
+.	_	_
+
+#214
+.	_	_
+
+#215
+.	_	_
+
+#216
+.	_	_
+
+#217
+.	_	_
+
+#218
+.	_	_
+
+#219
+.	_	_
+
+#220
+.	_	_
+
+#221
+.	_	_
+
+#222
+.	_	_
+
+#223
+.	_	_
+
+#224
+.	_	_
+
+#225
+.	_	_
+
+#226
+.	_	_
+
+#227
+.	_	_
+
+#228
+.	_	_
+
+#229
+.	_	_
+
+#230
+.	_	_
+
+#231
+.	_	_
+
+#232
+.	_	_
+
+#233
+.	_	_
+
+#234
+.	_	_
+
+#235
+7	_	_
+4.2	_	_
+Results	_	_
+.	_	_
+
+#236
+.	_	_
+
+#237
+.	_	_
+
+#238
+.	_	_
+
+#239
+.	_	_
+
+#240
+.	_	_
+
+#241
+.	_	_
+
+#242
+.	_	_
+
+#243
+.	_	_
+
+#244
+.	_	_
+
+#245
+.	_	_
+
+#246
+.	_	_
+
+#247
+.	_	_
+
+#248
+.	_	_
+
+#249
+.	_	_
+
+#250
+.	_	_
+
+#251
+.	_	_
+
+#252
+.	_	_
+
+#253
+.	_	_
+
+#254
+.	_	_
+
+#255
+.	_	_
+
+#256
+.	_	_
+
+#257
+.	_	_
+
+#258
+.	_	_
+
+#259
+.	_	_
+
+#260
+.	_	_
+
+#261
+.	_	_
+
+#262
+.	_	_
+
+#263
+.	_	_
+
+#264
+.	_	_
+
+#265
+.	_	_
+
+#266
+.	_	_
+
+#267
+.	_	_
+
+#268
+.	_	_
+
+#269
+.	_	_
+
+#270
+.	_	_
+
+#271
+.	_	_
+
+#272
+.	_	_
+
+#273
+.	_	_
+
+#274
+.	_	_
+
+#275
+.	_	_
+
+#276
+.	_	_
+
+#277
+.	_	_
+
+#278
+.	_	_
+
+#279
+.	_	_
+
+#280
+.	_	_
+
+#281
+10	_	_
+Qualitative	_	_
+.	_	_
+
+#282
+.	_	_
+
+#283
+.	_	_
+
+#284
+.	_	_
+
+#285
+.	_	_
+
+#286
+.	_	_
+
+#287
+.	_	_
+
+#288
+.	_	_
+
+#289
+.	_	_
+
+#290
+.	_	_
+
+#291
+.	_	_
+
+#292
+.	_	_
+
+#293
+.	_	_
+
+#294
+.	_	_
+
+#295
+.	_	_
+
+#296
+.	_	_
+
+#297
+.	_	_
+
+#298
+.	_	_
+
+#299
+.	_	_
+
+#300
+.	_	_
+
+#301
+.	_	_
+
+#302
+.	_	_
+
+#303
+.	_	_
+
+#304
+.	_	_
+
+#305
+.	_	_
+
+#306
+.	_	_
+
+#307
+.	_	_
+
+#308
+.	_	_
+
+#309
+.	_	_
+
+#310
+.	_	_
+
+#311
+.	_	_
+
+#312
+.	_	_
+
+#313
+.	_	_
+
+#314
+.	_	_
+
+#315
+.	_	_
+
+#316
+.	_	_
+
+#317
+.	_	_
+
+#318
+.	_	_
+
+#319
+.	_	_
+
+#320
+.	_	_
+
+#321
+.	_	_
+
+#322
+.	_	_
+
+#323
+.	_	_
+
+#324
+.	_	_
+
+#325
+10	_	_
+Quantitative	_	_
+.	_	_
+
+#326
+.	_	_
+
+#327
+.	_	_
+
+#328
+.	_	_
+
+#329
+.	_	_
+
+#330
+.	_	_
+
+#331
+.	_	_
+
+#332
+.	_	_
+
+#333
+.	_	_
+
+#334
+.	_	_
+
+#335
+.	_	_
+
+#336
+.	_	_
+
+#337
+.	_	_
+
+#338
+.	_	_
+
+#339
+.	_	_
+
+#340
+.	_	_
+
+#341
+.	_	_
+
+#342
+.	_	_
+
+#343
+.	_	_
+
+#344
+.	_	_
+
+#345
+.	_	_
+
+#346
+.	_	_
+
+#347
+.	_	_
+
+#348
+.	_	_
+
+#349
+.	_	_
+
+#350
+.	_	_
+
+#351
+.	_	_
+
+#352
+.	_	_
+
+#353
+.	_	_
+
+#354
+.	_	_
+
+#355
+.	_	_
+
+#356
+.	_	_
+
+#357
+.	_	_
+
+#358
+.	_	_
+
+#359
+.	_	_
+
+#360
+.	_	_
+
+#361
+.	_	_
+
+#362
+.	_	_
+
+#363
+.	_	_
+
+#364
+.	_	_
+
+#365
+.	_	_
+
+#366
+.	_	_
+
+#367
+.	_	_
+
+#368
+10	_	_
+
+#369
+5	_	_
+Updating	_	_
+with	_	_
+Modern	_	_
+Threads	_	_
+12	_	_
+
+#370
+6	_	_
+Discussion	_	_
+and	_	_
+Conclusion	_	_
+13	_	_
+
+#371
+A	_	_
+Detailed	_	_
+Quantitative	_	_
+Results	_	_
+17	_	_
+
+#372
+1	_	_
+Introduction	_	_
+
+#373
+Pixels	_	_
+,	_	_
+or	_	_
+voxels	_	_
+in	_	_
+three	_	_
+dimensions	_	_
+,	_	_
+are	_	_
+the	_	_
+basic	_	_
+primitive	_	_
+of	_	_
+an	_	_
+image	_	_
+,	_	_
+usually	_	_
+defining	_	_
+a	_	_
+rectilinear	_	_
+grid	_	_
+.	_	_
+
+#374
+Superpixels	_	_
+reduce	_	_
+the	_	_
+number	_	_
+of	_	_
+primitives	_	_
+representing	_	_
+an	_	_
+image	_	_
+by	_	_
+grouping	_	_
+pixels	_	_
+based	_	_
+on	_	_
+low	_	_
+level	_	_
+features	_	_
+,	_	_
+properties	_	_
+such	_	_
+as	_	_
+color	_	_
+,	_	_
+texture	_	_
+and	_	_
+physical	_	_
+proximity	_	_
+.	_	_
+
+#375
+Originally	_	_
+introduced	_	_
+in	_	_
+[	_	_
+13	_	_
+]	_	_
+as	_	_
+a	_	_
+method	_	_
+for	_	_
+reducing	_	_
+the	_	_
+complexity	_	_
+of	_	_
+higher-level	_	_
+image	_	_
+analysis	_	_
+tasks	_	_
+,	_	_
+they	_	_
+have	_	_
+been	_	_
+successfully	_	_
+used	_	_
+in	_	_
+many	_	_
+computer	_	_
+vision	_	_
+tasks	_	_
+such	_	_
+as	_	_
+object	_	_
+detection	_	_
+,	_	_
+depth	_	_
+estimation	_	_
+,	_	_
+and	_	_
+segmentation	_	_
+.	_	_
+
+#376
+A	_	_
+large	_	_
+number	_	_
+of	_	_
+algorithms	_	_
+for	_	_
+creating	_	_
+superpixels	_	_
+have	_	_
+been	_	_
+proposed	_	_
+in	_	_
+the	_	_
+literature	_	_
+,	_	_
+with	_	_
+a	_	_
+recent	_	_
+comparative	_	_
+evaluation	_	_
+of	_	_
+28	_	_
+algorithms	_	_
+described	_	_
+in	_	_
+[	_	_
+16	_	_
+]	_	_
+.	_	_
+
+#377
+One	_	_
+of	_	_
+the	_	_
+more	_	_
+popular	_	_
+and	_	_
+successful	_	_
+superpixel	_	_
+algorithms	_	_
+is	_	_
+the	_	_
+Simple	_	_
+Linear	_	_
+Iterative	_	_
+Clustering	_	_
+(	_	_
+SLIC	_	_
+)	_	_
+algorithm	_	_
+[	_	_
+1	_	_
+,	_	_
+11	_	_
+]	_	_
+.	_	_
+
+#378
+The	_	_
+SLIC	_	_
+algorithm	_	_
+has	_	_
+been	_	_
+used	_	_
+both	_	_
+in	_	_
+the	_	_
+context	_	_
+of	_	_
+classical	_	_
+image	_	_
+analysis	_	_
+algorithms	_	_
+and	_	_
+in	_	_
+the	_	_
+context	_	_
+of	_	_
+deep	_	_
+learning	_	_
+.	_	_
+
+#379
+Examples	_	_
+of	_	_
+using	_	_
+SLIC	_	_
+in	_	_
+the	_	_
+context	_	_
+of	_	_
+graph	_	_
+based	_	_
+algorithms	_	_
+include	_	_
+segmentation	_	_
+of	_	_
+mitochondria	_	_
+in	_	_
+electron	_	_
+microscopy	_	_
+volumes	_	_
+[	_	_
+11	_	_
+]	_	_
+,	_	_
+classification	_	_
+of	_	_
+hyperspectral	_	_
+images	_	_
+[	_	_
+9	_	_
+]	_	_
+,	_	_
+segmentation	_	_
+of	_	_
+the	_	_
+prostate	_	_
+in	_	_
+MR	_	_
+[	_	_
+17	_	_
+]	_	_
+,	_	_
+and	_	_
+segmentation	_	_
+of	_	_
+the	_	_
+liver	_	_
+in	_	_
+CT	_	_
+[	_	_
+19	_	_
+]	_	_
+.	_	_
+
+#380
+Examples	_	_
+of	_	_
+using	_	_
+the	_	_
+SLIC	_	_
+algorithm	_	_
+in	_	_
+combination	_	_
+with	_	_
+deep	_	_
+learning	_	_
+include	_	_
+segmentation	_	_
+of	_	_
+the	_	_
+pancreas	_	_
+in	_	_
+CT	_	_
+[	_	_
+6	_	_
+]	_	_
+,	_	_
+general	_	_
+salient	_	_
+object	_	_
+detection	_	_
+in	_	_
+color	_	_
+pictures	_	_
+[	_	_
+8	_	_
+]	_	_
+,	_	_
+hyperspectral	_	_
+image	_	_
+classification	_	_
+[	_	_
+14	_	_
+]	_	_
+,	_	_
+detection	_	_
+of	_	_
+cell	_	_
+nuclei	_	_
+in	_	_
+digital	_	_
+histology	_	_
+slides	_	_
+[	_	_
+15	_	_
+]	_	_
+,	_	_
+and	_	_
+classification	_	_
+of	_	_
+epithelial	_	_
+and	_	_
+stromal	_	_
+regions	_	_
+in	_	_
+histopathology	_	_
+images	_	_
+[	_	_
+20	_	_
+]	_	_
+.	_	_
+
+#381
+The	_	_
+National	_	_
+Library	_	_
+of	_	_
+Medicine’s	_	_
+Insight	_	_
+Segmentation	_	_
+and	_	_
+Registration	_	_
+Toolkit	_	_
+(	_	_
+ITK	_	_
+)	_	_
+includes	_	_
+a	_	_
+couple	_	_
+of	_	_
+segmentation	_	_
+algorithms	_	_
+that	_	_
+could	_	_
+be	_	_
+classified	_	_
+as	_	_
+superpixel	_	_
+methods	_	_
+;	_	_
+they	_	_
+are	_	_
+the	_	_
+toboggan	_	_
+image	_	_
+filter	_	_
+,	_	_
+the	_	_
+classic	_	_
+watershed	_	_
+image	_	_
+filter	_	_
+and	_	_
+the	_	_
+morphological	_	_
+watershed	_	_
+image	_	_
+filter	_	_
+[	_	_
+4	_	_
+]	_	_
+.	_	_
+
+#382
+These	_	_
+filters	_	_
+are	_	_
+all	_	_
+related	_	_
+to	_	_
+the	_	_
+original	_	_
+watershed	_	_
+segmentation	_	_
+algorithm	_	_
+,	_	_
+operate	_	_
+on	_	_
+the	_	_
+gradient	_	_
+magnitude	_	_
+and	_	_
+perform	_	_
+region	_	_
+growing	_	_
+with	_	_
+seeds	_	_
+from	_	_
+the	_	_
+local	_	_
+gradient	_	_
+magnitude	_	_
+minima	_	_
+.	_	_
+
+#383
+These	_	_
+methods	_	_
+are	_	_
+greedy	_	_
+algorithms	_	_
+and	_	_
+single	_	_
+threaded	_	_
+,	_	_
+therefore	_	_
+they	_	_
+are	_	_
+neither	_	_
+scalable	_	_
+for	_	_
+large	_	_
+data	_	_
+nor	_	_
+is	_	_
+the	_	_
+whole	_	_
+vector	_	_
+space	_	_
+taken	_	_
+into	_	_
+consideration	_	_
+for	_	_
+the	_	_
+superpixel	_	_
+grouping	_	_
+when	_	_
+the	_	_
+image	_	_
+is	_	_
+non-scalar	_	_
+.	_	_
+
+#384
+Our	_	_
+contribution	_	_
+of	_	_
+a	_	_
+scalable	_	_
+version	_	_
+of	_	_
+the	_	_
+SLIC	_	_
+algorithm	_	_
+is	_	_
+motivated	_	_
+by	_	_
+work	_	_
+with	_	_
+several	_	_
+types	_	_
+of	_	_
+large	_	_
+images	_	_
+with	_	_
+a	_	_
+variety	_	_
+of	_	_
+characteristics	_	_
+.	_	_
+
+#385
+These	_	_
+types	_	_
+include	_	_
+focused	_	_
+ion-beam	_	_
+scanning	_	_
+electron	_	_
+microscopy	_	_
+(	_	_
+FIB-SEM	_	_
+)	_	_
+which	_	_
+forms	_	_
+3D	_	_
+volumes	_	_
+with	_	_
+a	_	_
+single	_	_
+channel	_	_
+(	_	_
+gray	_	_
+scale	_	_
+)	_	_
+.	_	_
+
+#386
+Typical	_	_
+image	_	_
+sizes	_	_
+are	_	_
+more	_	_
+than	_	_
+4	_	_
+Gb	_	_
+with	_	_
+continued	_	_
+demanded	_	_
+for	_	_
+increased	_	_
+resolution	_	_
+and	_	_
+larger	_	_
+volumes	_	_
+.	_	_
+
+#387
+Another	_	_
+large	_	_
+image	_	_
+type	_	_
+of	_	_
+interest	_	_
+is	_	_
+whole	_	_
+slide	_	_
+histology	_	_
+imaging	_	_
+.	_	_
+
+#388
+Histology	_	_
+images	_	_
+are	_	_
+generally	_	_
+2D	_	_
+three	_	_
+channel	_	_
+(	_	_
+RGB	_	_
+)	_	_
+images	_	_
+with	_	_
+a	_	_
+size	_	_
+of	_	_
+several	_	_
+(	_	_
+≤10	_	_
+)	_	_
+Gb	_	_
+.	_	_
+
+#389
+Finally	_	_
+,	_	_
+we	_	_
+are	_	_
+also	_	_
+interested	_	_
+in	_	_
+working	_	_
+with	_	_
+3D	_	_
+multiLatest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+channel	_	_
+confocal	_	_
+microscopy	_	_
+images	_	_
+whose	_	_
+size	_	_
+is	_	_
+also	_	_
+on	_	_
+the	_	_
+order	_	_
+of	_	_
+several	_	_
+(	_	_
+≤10	_	_
+)	_	_
+Gb	_	_
+.	_	_
+
+#390
+In	_	_
+the	_	_
+rest	_	_
+of	_	_
+this	_	_
+paper	_	_
+we	_	_
+describe	_	_
+the	_	_
+original	_	_
+SLIC	_	_
+algorithm	_	_
+,	_	_
+our	_	_
+parallel	_	_
+and	_	_
+multi-dimensional	_	_
+version	_	_
+of	_	_
+the	_	_
+algorithm	_	_
+,	_	_
+Scalable	_	_
+SLIC	_	_
+(	_	_
+SSLIC	_	_
+)	_	_
+,	_	_
+and	_	_
+an	_	_
+evaluation	_	_
+of	_	_
+our	_	_
+algorithm’s	_	_
+scalability	_	_
+using	_	_
+both	_	_
+a	_	_
+large	_	_
+53Gb	_	_
+3D	_	_
+color	_	_
+image	_	_
+and	_	_
+a	_	_
+comparatively	_	_
+small	_	_
+24Mb	_	_
+2D	_	_
+color	_	_
+image	_	_
+.	_	_
+
+#391
+2	_	_
+The	_	_
+Simple	_	_
+Linear	_	_
+Iterative	_	_
+Clustering	_	_
+(	_	_
+SLIC	_	_
+)	_	_
+Algorithm	_	_
+
+#392
+Our	_	_
+superpixel	_	_
+implementation	_	_
+is	_	_
+based	_	_
+on	_	_
+the	_	_
+SLIC	_	_
+algorithm	_	_
+proposed	_	_
+by	_	_
+Achanta	_	_
+et	_	_
+al.	_	_
+[	_	_
+1	_	_
+]	_	_
+.	_	_
+
+#393
+The	_	_
+goals	_	_
+outlined	_	_
+for	_	_
+the	_	_
+SLIC	_	_
+algorithm	_	_
+include	_	_
+the	_	_
+following	_	_
+desirable	_	_
+properties	_	_
+with	_	_
+respect	_	_
+to	_	_
+the	_	_
+resulting	_	_
+superpixels	_	_
+and	_	_
+the	_	_
+computation	_	_
+process	_	_
+:	_	_
+1	_	_
+)	_	_
+The	_	_
+natural	_	_
+boundaries	_	_
+of	_	_
+the	_	_
+image	_	_
+should	_	_
+be	_	_
+preserved	_	_
+by	_	_
+the	_	_
+boundaries	_	_
+of	_	_
+the	_	_
+superpixels	_	_
+.	_	_
+
+#394
+2	_	_
+)	_	_
+Computations	_	_
+of	_	_
+the	_	_
+superpixels	_	_
+should	_	_
+be	_	_
+quick	_	_
+,	_	_
+have	_	_
+low	_	_
+memory	_	_
+requirements	_	_
+and	_	_
+involve	_	_
+only	_	_
+a	_	_
+few	_	_
+parameters	_	_
+.	_	_
+
+#395
+3	_	_
+)	_	_
+The	_	_
+generated	_	_
+superpixels	_	_
+should	_	_
+improve	_	_
+the	_	_
+accuracy	_	_
+and	_	_
+speed	_	_
+of	_	_
+subsequent	_	_
+segmentation	_	_
+steps	_	_
+.	_	_
+
+#396
+The	_	_
+SLIC	_	_
+algorithm	_	_
+can	_	_
+be	_	_
+viewed	_	_
+as	_	_
+a	_	_
+specialized	_	_
+and	_	_
+optimized	_	_
+variation	_	_
+of	_	_
+k-means	_	_
+clustering	_	_
+where	_	_
+each	_	_
+pixel	_	_
+is	_	_
+mapped	_	_
+to	_	_
+a	_	_
+point	_	_
+whose	_	_
+coordinates	_	_
+correspond	_	_
+to	_	_
+a	_	_
+concatenation	_	_
+of	_	_
+the	_	_
+pixel	_	_
+coordinates	_	_
+and	_	_
+the	_	_
+channel	_	_
+values	_	_
+for	_	_
+that	_	_
+pixel	_	_
+.	_	_
+
+#397
+The	_	_
+original	_	_
+algorithm	_	_
+dealt	_	_
+with	_	_
+2D	_	_
+color	_	_
+images	_	_
+using	_	_
+the	_	_
+CIE-Lab	_	_
+color	_	_
+space	_	_
+.	_	_
+
+#398
+Thus	_	_
+each	_	_
+pixel	_	_
+was	_	_
+mapped	_	_
+to	_	_
+a	_	_
+five	_	_
+vector	_	_
+[	_	_
+L	_	_
+,	_	_
+a	_	_
+,	_	_
+b	_	_
+,	_	_
+x	_	_
+,	_	_
+y	_	_
+]	_	_
+with	_	_
+clustering	_	_
+performed	_	_
+in	_	_
+this	_	_
+5D	_	_
+space	_	_
+.	_	_
+
+#399
+A	_	_
+user	_	_
+specified	_	_
+property	_	_
+of	_	_
+the	_	_
+SLIC	_	_
+superpixels	_	_
+is	_	_
+the	_	_
+expected	_	_
+size	_	_
+of	_	_
+the	_	_
+super	_	_
+pixel	_	_
+,	_	_
+denoted	_	_
+by	_	_
+S.	_	_
+This	_	_
+restricted	_	_
+size	_	_
+enables	_	_
+the	_	_
+reduction	_	_
+of	_	_
+the	_	_
+global	_	_
+search	_	_
+space	_	_
+of	_	_
+classic	_	_
+k-means	_	_
+to	_	_
+a	_	_
+local	_	_
+neighborhood	_	_
+in	_	_
+the	_	_
+image	_	_
+domain	_	_
+of	_	_
+size	_	_
+2S×2S	_	_
+.	_	_
+
+#400
+2.1	_	_
+Distances	_	_
+in	_	_
+the	_	_
+joint	_	_
+range-domain	_	_
+(	_	_
+intensity-geometry	_	_
+)	_	_
+space	_	_
+
+#401
+Defining	_	_
+an	_	_
+image	_	_
+as	_	_
+I	_	_
+:	_	_
+Ω→	_	_
+r	_	_
+,	_	_
+a	_	_
+joint	_	_
+range-domain	_	_
+(	_	_
+intensity-geometry	_	_
+)	_	_
+cluster	_	_
+center	_	_
+is	_	_
+represented	_	_
+as	_	_
+C′	_	_
+=	_	_
+[	_	_
+Ωr	_	_
+]	_	_
+T.	_	_
+For	_	_
+the	_	_
+case	_	_
+of	_	_
+a	_	_
+2D	_	_
+image	_	_
+with	_	_
+a	_	_
+CIE-Lab	_	_
+color	_	_
+representation	_	_
+the	_	_
+cluster	_	_
+center	_	_
+is	_	_
+Ck	_	_
+=	_	_
+[	_	_
+L	_	_
+,	_	_
+a	_	_
+,	_	_
+b	_	_
+,	_	_
+x	_	_
+,	_	_
+y	_	_
+]	_	_
+T.	_	_
+The	_	_
+distance	_	_
+between	_	_
+any	_	_
+pixel	_	_
+and	_	_
+a	_	_
+cluster	_	_
+center	_	_
+is	_	_
+defined	_	_
+as	_	_
+D	_	_
+=	_	_
+√	_	_
+d2	_	_
+c	_	_
++	_	_
+(	_	_
+ds	_	_
+S	_	_
+)	_	_
+2	_	_
+m2	_	_
+,	_	_
+where	_	_
+dc	_	_
+and	_	_
+ds	_	_
+are	_	_
+the	_	_
+Euclidean	_	_
+distance	_	_
+for	_	_
+the	_	_
+separate	_	_
+range	_	_
+and	_	_
+domain	_	_
+,	_	_
+respectfully	_	_
+.	_	_
+
+#402
+S	_	_
+is	_	_
+a	_	_
+normalizing	_	_
+constant	_	_
+which	_	_
+is	_	_
+the	_	_
+expected	_	_
+size	_	_
+of	_	_
+a	_	_
+cluster	_	_
+and	_	_
+m	_	_
+is	_	_
+a	_	_
+user	_	_
+specified	_	_
+weighting	_	_
+parameter	_	_
+.	_	_
+
+#403
+When	_	_
+m	_	_
+is	_	_
+reduced	_	_
+the	_	_
+dc	_	_
+component	_	_
+becomes	_	_
+more	_	_
+dominant	_	_
+causing	_	_
+color	_	_
+to	_	_
+be	_	_
+the	_	_
+main	_	_
+criteria	_	_
+for	_	_
+cluster	_	_
+affinity	_	_
+while	_	_
+when	_	_
+it	_	_
+is	_	_
+increased	_	_
+the	_	_
+spatial	_	_
+regularity	_	_
+of	_	_
+clusters	_	_
+is	_	_
+emphasized	_	_
+.	_	_
+
+#404
+For	_	_
+2D	_	_
+images	_	_
+of	_	_
+CIE-Lab	_	_
+color	_	_
+,	_	_
+a	_	_
+range	_	_
+of	_	_
+m	_	_
+∈	_	_
+[	_	_
+1,40	_	_
+]	_	_
+is	_	_
+suggested	_	_
+with	_	_
+10	_	_
+being	_	_
+the	_	_
+default	_	_
+.	_	_
+
+#405
+This	_	_
+distance	_	_
+metric	_	_
+can	_	_
+easily	_	_
+be	_	_
+extended	_	_
+to	_	_
+gray-scale	_	_
+images	_	_
+or	_	_
+general	_	_
+multi-channel	_	_
+images	_	_
+by	_	_
+the	_	_
+2-norm	_	_
+of	_	_
+dc	_	_
+,	_	_
+Similarly	_	_
+,	_	_
+ds	_	_
+can	_	_
+support	_	_
+n-dimensional	_	_
+images	_	_
+.	_	_
+
+#406
+It	_	_
+is	_	_
+worth	_	_
+observing	_	_
+that	_	_
+the	_	_
+range	_	_
+of	_	_
+intensity	_	_
+values	_	_
+effects	_	_
+the	_	_
+weight	_	_
+of	_	_
+dc	_	_
+vs.	_	_
+the	_	_
+ds	_	_
+components	_	_
+.	_	_
+
+#407
+The	_	_
+CIE-Lab	_	_
+color	_	_
+space	_	_
+has	_	_
+a	_	_
+range	_	_
+of	_	_
+L∈	_	_
+[	_	_
+0,100	_	_
+]	_	_
+,	_	_
+a∈	_	_
+[	_	_
+−86.185,98.254	_	_
+]	_	_
+and	_	_
+b∈	_	_
+[	_	_
+−107.863,94.482	_	_
+]	_	_
+,	_	_
+which	_	_
+needs	_	_
+to	_	_
+be	_	_
+considered	_	_
+when	_	_
+working	_	_
+with	_	_
+normalized	_	_
+data	_	_
+or	_	_
+data	_	_
+with	_	_
+a	_	_
+16-bit	_	_
+integer	_	_
+range	_	_
+.	_	_
+
+#408
+Also	_	_
+note	_	_
+that	_	_
+the	_	_
+number	_	_
+of	_	_
+components	_	_
+of	_	_
+either	_	_
+the	_	_
+color	_	_
+or	_	_
+dimension	_	_
+will	_	_
+also	_	_
+affect	_	_
+the	_	_
+weighting	_	_
+of	_	_
+the	_	_
+metric	_	_
+.	_	_
+
+#409
+From	_	_
+a	_	_
+practical	_	_
+standpoint	_	_
+,	_	_
+the	_	_
+outer	_	_
+most	_	_
+square	_	_
+root	_	_
+of	_	_
+D	_	_
+is	_	_
+not	_	_
+necessary	_	_
+,	_	_
+as	_	_
+squared	_	_
+values	_	_
+maintain	_	_
+their	_	_
+ordering	_	_
+based	_	_
+on	_	_
+the	_	_
+squared	_	_
+distance	_	_
+.	_	_
+
+#410
+Additionally	_	_
+,	_	_
+the	_	_
+fortuitous	_	_
+use	_	_
+of	_	_
+squared	_	_
+Euclidean	_	_
+distances	_	_
+removes	_	_
+additional	_	_
+uses	_	_
+of	_	_
+square	_	_
+roots	_	_
+.	_	_
+
+#411
+This	_	_
+fact	_	_
+results	_	_
+in	_	_
+an	_	_
+actual	_	_
+implementation	_	_
+of	_	_
+simply	_	_
+the	_	_
+sum	_	_
+of	_	_
+the	_	_
+squares	_	_
+of	_	_
+the	_	_
+difference	_	_
+between	_	_
+the	_	_
+cluster	_	_
+center	_	_
+and	_	_
+the	_	_
+joint	_	_
+range-domain	_	_
+representation	_	_
+with	_	_
+a	_	_
+constant	_	_
+:	_	_
+D	_	_
+=	_	_
+(	_	_
+LCk	_	_
+−Li	_	_
+)	_	_
+2	_	_
++	_	_
+(	_	_
+aCk	_	_
+−ai	_	_
+)	_	_
+2	_	_
++	_	_
+(	_	_
+bCk	_	_
+−bi	_	_
+)	_	_
+2	_	_
++	_	_
+(	_	_
+(	_	_
+xCk	_	_
+−	_	_
+xi	_	_
+)	_	_
+2	_	_
++	_	_
+(	_	_
+yCk	_	_
+−	_	_
+yi	_	_
+)	_	_
+2	_	_
+)	_	_
+m2	_	_
+S2	_	_
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+
+#412
+2.2	_	_
+Algorithm	_	_
+Details	_	_
+4	_	_
+
+#413
+2.2	_	_
+Algorithm	_	_
+Details	_	_
+
+#414
+The	_	_
+SLIC	_	_
+algorithm	_	_
+consists	_	_
+of	_	_
+the	_	_
+following	_	_
+three	_	_
+stages	_	_
+:	_	_
+1	_	_
+.	_	_
+
+#415
+Initialization	_	_
+:	_	_
+The	_	_
+cluster	_	_
+centers	_	_
+Ck	_	_
+are	_	_
+initialized	_	_
+by	_	_
+regularly	_	_
+sampling	_	_
+the	_	_
+domain	_	_
+Ω	_	_
+at	_	_
+fixed	_	_
+intervals	_	_
+.	_	_
+
+#416
+Each	_	_
+center	_	_
+is	_	_
+then	_	_
+perturbed	_	_
+to	_	_
+the	_	_
+location	_	_
+and	_	_
+value	_	_
+of	_	_
+the	_	_
+lowest	_	_
+gradient	_	_
+magnitude1	_	_
+in	_	_
+its	_	_
+3×3	_	_
+neighborhood	_	_
+.	_	_
+
+#417
+Next	_	_
+,	_	_
+a	_	_
+label	_	_
+image	_	_
+,	_	_
+l	_	_
+,	_	_
+is	_	_
+initialized	_	_
+to	_	_
+an	_	_
+undefined	_	_
+label	_	_
+and	_	_
+a	_	_
+distance	_	_
+image	_	_
+,	_	_
+d	_	_
+,	_	_
+is	_	_
+initialized	_	_
+to	_	_
+∞	_	_
+.	_	_
+
+#418
+2	_	_
+.	_	_
+
+#419
+Iterate	_	_
+till	_	_
+termination	_	_
+criterion	_	_
+satsified	_	_
+:	_	_
+Iterate	_	_
+over	_	_
+Ck	_	_
+:	_	_
+Update	_	_
+label	_	_
+and	_	_
+distance	_	_
+images	_	_
+:	_	_
+For	_	_
+all	_	_
+pixels	_	_
+,	_	_
+x	_	_
+,	_	_
+in	_	_
+a	_	_
+[	_	_
+2S×2S	_	_
+]	_	_
+region	_	_
+around	_	_
+Ck	_	_
+,	_	_
+compute	_	_
+D	_	_
+(	_	_
+Ck	_	_
+,	_	_
+[	_	_
+I	_	_
+(	_	_
+x	_	_
+)	_	_
+,	_	_
+x	_	_
+]	_	_
+)	_	_
+.	_	_
+
+#420
+If	_	_
+this	_	_
+distance	_	_
+is	_	_
+less	_	_
+than	_	_
+d	_	_
+(	_	_
+x	_	_
+)	_	_
+update	_	_
+l	_	_
+(	_	_
+x	_	_
+)	_	_
+=	_	_
+k	_	_
+and	_	_
+d	_	_
+(	_	_
+x	_	_
+)	_	_
+.	_	_
+
+#421
+Update	_	_
+clusters	_	_
+:	_	_
+For	_	_
+all	_	_
+labels	_	_
+,	_	_
+compute	_	_
+new	_	_
+cluster	_	_
+centers	_	_
+based	_	_
+on	_	_
+the	_	_
+updated	_	_
+pixel	_	_
+labels	_	_
+,	_	_
+where	_	_
+the	_	_
+new	_	_
+center	_	_
+for	_	_
+cluster	_	_
+k	_	_
+is	_	_
+the	_	_
+mean	_	_
+of	_	_
+[	_	_
+I	_	_
+(	_	_
+x	_	_
+)	_	_
+,	_	_
+x	_	_
+]	_	_
+where	_	_
+l	_	_
+(	_	_
+x	_	_
+)	_	_
+is	_	_
+equal	_	_
+to	_	_
+k.	_	_
+Terminate	_	_
+iterations	_	_
+if	_	_
+:	_	_
+Distance	_	_
+between	_	_
+previous	_	_
+and	_	_
+current	_	_
+cluster	_	_
+centers	_	_
+is	_	_
+below	_	_
+a	_	_
+threshold	_	_
+or	_	_
+we	_	_
+have	_	_
+reached	_	_
+the	_	_
+maximal	_	_
+number	_	_
+of	_	_
+iterations	_	_
+.	_	_
+
+#422
+3	_	_
+.	_	_
+
+#423
+Spatial	_	_
+connectivity	_	_
+enforcement	_	_
+:	_	_
+Connectivity	_	_
+is	_	_
+not	_	_
+enforced	_	_
+in	_	_
+the	_	_
+above	_	_
+steps	_	_
+so	_	_
+the	_	_
+cluster	_	_
+may	_	_
+not	_	_
+be	_	_
+fully	_	_
+connected	_	_
+for	_	_
+all	_	_
+components	_	_
+.	_	_
+
+#424
+This	_	_
+post	_	_
+processing	_	_
+step	_	_
+examines	_	_
+labeled	_	_
+connected	_	_
+components	_	_
+not	_	_
+connected	_	_
+to	_	_
+their	_	_
+cluster	_	_
+center	_	_
+.	_	_
+
+#425
+Such	_	_
+a	_	_
+connected	_	_
+component	_	_
+is	_	_
+relabeled	_	_
+so	_	_
+that	_	_
+it	_	_
+is	_	_
+connected	_	_
+to	_	_
+the	_	_
+”nearest”	_	_
+label	_	_
+,	_	_
+or	_	_
+if	_	_
+the	_	_
+component	_	_
+is	_	_
+of	_	_
+sufficient	_	_
+size	_	_
+,	_	_
+it	_	_
+is	_	_
+assigned	_	_
+a	_	_
+new	_	_
+label	_	_
+.	_	_
+
+#426
+3	_	_
+The	_	_
+Scalable	_	_
+Simple	_	_
+Linear	_	_
+Iterative	_	_
+Clustering	_	_
+(	_	_
+SSLIC	_	_
+)	_	_
+Algorithm	_	_
+
+#427
+Two	_	_
+key	_	_
+principles	_	_
+guiding	_	_
+ITK	_	_
+algorithm	_	_
+development	_	_
+are	_	_
+that	_	_
+:	_	_
+(	_	_
+a	_	_
+)	_	_
+algorithms	_	_
+should	_	_
+be	_	_
+designed	_	_
+to	_	_
+work	_	_
+with	_	_
+n-dimensional	_	_
+images	_	_
+having	_	_
+an	_	_
+arbitrary	_	_
+number	_	_
+of	_	_
+channels	_	_
+per	_	_
+pixel	_	_
+,	_	_
+and	_	_
+(	_	_
+b	_	_
+)	_	_
+algorithms	_	_
+should	_	_
+take	_	_
+advantage	_	_
+of	_	_
+modern	_	_
+hardware	_	_
+to	_	_
+parallelize	_	_
+computations	_	_
+.	_	_
+
+#428
+Our	_	_
+proposed	_	_
+SSLIC	_	_
+algorithm	_	_
+follows	_	_
+both	_	_
+principles	_	_
+in	_	_
+a	_	_
+manner	_	_
+which	_	_
+satisfies	_	_
+the	_	_
+goals	_	_
+of	_	_
+the	_	_
+original	_	_
+algorithm	_	_
+while	_	_
+focusing	_	_
+on	_	_
+significantly	_	_
+improving	_	_
+its	_	_
+speed	_	_
+.	_	_
+
+#429
+In	_	_
+addition	_	_
+,	_	_
+SSLIC	_	_
+generalizes	_	_
+the	_	_
+original	_	_
+algorithm	_	_
+to	_	_
+n-dimensional	_	_
+images	_	_
+with	_	_
+an	_	_
+arbitrary	_	_
+number	_	_
+of	_	_
+channels	_	_
+per	_	_
+pixel	_	_
+.	_	_
+
+#430
+We	_	_
+next	_	_
+describe	_	_
+our	_	_
+approach	_	_
+to	_	_
+implementing	_	_
+the	_	_
+SLIC	_	_
+algorithm	_	_
+in	_	_
+a	_	_
+parallel	_	_
+manner	_	_
+.	_	_
+
+#431
+3.1	_	_
+Algorithm	_	_
+Details	_	_
+
+#432
+The	_	_
+SSLIC	_	_
+algorithm	_	_
+consists	_	_
+of	_	_
+the	_	_
+following	_	_
+three	_	_
+stages	_	_
+:	_	_
+1	_	_
+.	_	_
+
+#433
+Initialization	_	_
+:	_	_
+The	_	_
+cluster	_	_
+centers	_	_
+Ck	_	_
+are	_	_
+initialized	_	_
+by	_	_
+regularly	_	_
+sampling	_	_
+the	_	_
+domain	_	_
+Ω	_	_
+at	_	_
+fixed	_	_
+intervals	_	_
+.	_	_
+
+#434
+Then	_	_
+all	_	_
+cluster	_	_
+centers	_	_
+are	_	_
+updated	_	_
+in	_	_
+parallel	_	_
+so	_	_
+that	_	_
+they	_	_
+are	_	_
+moved	_	_
+to	_	_
+the	_	_
+lowest	_	_
+gradient	_	_
+magnitude	_	_
+location	_	_
+in	_	_
+the	_	_
+3×	_	_
+3	_	_
+neighborhood	_	_
+of	_	_
+their	_	_
+original	_	_
+locations	_	_
+.	_	_
+
+#435
+Next	_	_
+,	_	_
+a	_	_
+label	_	_
+image	_	_
+,	_	_
+l	_	_
+,	_	_
+is	_	_
+initialized	_	_
+to	_	_
+an	_	_
+undefined	_	_
+label	_	_
+and	_	_
+a	_	_
+distance	_	_
+image	_	_
+,	_	_
+d	_	_
+,	_	_
+is	_	_
+initialized	_	_
+to	_	_
+∞	_	_
+.	_	_
+
+#436
+1This	_	_
+gradient	_	_
+only	_	_
+applies	_	_
+when	_	_
+dealing	_	_
+with	_	_
+single	_	_
+channel	_	_
+images	_	_
+.	_	_
+
+#437
+When	_	_
+the	_	_
+image	_	_
+has	_	_
+multiple	_	_
+channels	_	_
+we	_	_
+use	_	_
+the	_	_
+Frobenius	_	_
+norm	_	_
+of	_	_
+the	_	_
+Jacobian	_	_
+matrix	_	_
+(	_	_
+‖J‖F	_	_
+≡	_	_
+√	_	_
+Σm	_	_
+i=1Σn	_	_
+j=1J2	_	_
+i	_	_
+,	_	_
+j	_	_
+)	_	_
+.	_	_
+
+#438
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+
+#439
+3.2	_	_
+SSLIC	_	_
+Parameters	_	_
+5	_	_
+
+#440
+2	_	_
+.	_	_
+
+#441
+Iterate	_	_
+till	_	_
+termination	_	_
+criterion	_	_
+satsified	_	_
+:	_	_
+Create	_	_
+non-overlapping	_	_
+regions	_	_
+which	_	_
+split	_	_
+the	_	_
+image	_	_
+and	_	_
+update	_	_
+label	_	_
+and	_	_
+distance	_	_
+images	_	_
+in	_	_
+parallel	_	_
+:	_	_
+Iterating	_	_
+over	_	_
+Ck	_	_
+,	_	_
+if	_	_
+the	_	_
+cluster’s	_	_
+[	_	_
+2S×2S	_	_
+.	_	_
+
+#442
+.	_	_
+
+#443
+.2S	_	_
+]	_	_
+nD	_	_
+neighborhood	_	_
+intersects	_	_
+the	_	_
+region	_	_
+assigned	_	_
+to	_	_
+the	_	_
+thread	_	_
+,	_	_
+for	_	_
+all	_	_
+pixels	_	_
+,	_	_
+x	_	_
+,	_	_
+in	_	_
+this	_	_
+intersection	_	_
+,	_	_
+compute	_	_
+D	_	_
+(	_	_
+Ck	_	_
+,	_	_
+[	_	_
+I	_	_
+(	_	_
+x	_	_
+)	_	_
+,	_	_
+x	_	_
+]	_	_
+)	_	_
+.	_	_
+
+#444
+If	_	_
+this	_	_
+distance	_	_
+is	_	_
+less	_	_
+than	_	_
+d	_	_
+(	_	_
+x	_	_
+)	_	_
+update	_	_
+l	_	_
+(	_	_
+x	_	_
+)	_	_
+=	_	_
+k	_	_
+and	_	_
+d	_	_
+(	_	_
+x	_	_
+)	_	_
+.	_	_
+
+#445
+Create	_	_
+non-overlapping	_	_
+regions	_	_
+which	_	_
+split	_	_
+the	_	_
+image	_	_
+and	_	_
+update	_	_
+Ck	_	_
+using	_	_
+a	_	_
+map-reduce	_	_
+scheme	_	_
+:	_	_
+Map	_	_
+-	_	_
+in	_	_
+each	_	_
+region	_	_
+iterate	_	_
+over	_	_
+the	_	_
+pixels	_	_
+and	_	_
+accumulate	_	_
+the	_	_
+joint	_	_
+intensity-geometry	_	_
+information	_	_
+per	_	_
+label	_	_
+.	_	_
+
+#446
+Reduce	_	_
+-	_	_
+merge	_	_
+the	_	_
+information	_	_
+from	_	_
+all	_	_
+regions	_	_
+based	_	_
+on	_	_
+the	_	_
+label	_	_
+ids	_	_
+and	_	_
+update	_	_
+the	_	_
+cluster	_	_
+centers	_	_
+where	_	_
+the	_	_
+new	_	_
+center	_	_
+for	_	_
+cluster	_	_
+k	_	_
+is	_	_
+the	_	_
+mean	_	_
+of	_	_
+the	_	_
+joint	_	_
+intensity-geometry	_	_
+information	_	_
+obtained	_	_
+for	_	_
+label	_	_
+k	_	_
+in	_	_
+the	_	_
+previous	_	_
+step	_	_
+.	_	_
+
+#447
+Terminate	_	_
+iterations	_	_
+if	_	_
+:	_	_
+We	_	_
+have	_	_
+reached	_	_
+the	_	_
+maximal	_	_
+number	_	_
+of	_	_
+iterations	_	_
+(	_	_
+distance	_	_
+between	_	_
+previous	_	_
+and	_	_
+current	_	_
+cluster	_	_
+centers	_	_
+is	_	_
+computed	_	_
+and	_	_
+available	_	_
+)	_	_
+.	_	_
+
+#448
+3	_	_
+.	_	_
+
+#449
+Spatial	_	_
+connectivity	_	_
+enforcement	_	_
+:	_	_
+Initialize	_	_
+a	_	_
+marker	_	_
+image	_	_
+m	_	_
+to	_	_
+a	_	_
+value	_	_
+indicating	_	_
+that	_	_
+the	_	_
+label	_	_
+at	_	_
+that	_	_
+location	_	_
+is	_	_
+not	_	_
+the	_	_
+final	_	_
+label	_	_
+.	_	_
+
+#450
+In	_	_
+parallel	_	_
+for	_	_
+each	_	_
+cluster	_	_
+center	_	_
+,	_	_
+if	_	_
+the	_	_
+label	_	_
+at	_	_
+the	_	_
+location	_	_
+defined	_	_
+by	_	_
+Ck	_	_
+is	_	_
+equal	_	_
+to	_	_
+k	_	_
+(	_	_
+our	_	_
+cluster	_	_
+is	_	_
+not	_	_
+torus	_	_
+shaped	_	_
+)	_	_
+,	_	_
+or	_	_
+we	_	_
+found	_	_
+the	_	_
+label	_	_
+k	_	_
+in	_	_
+the	_	_
+[	_	_
+S×	_	_
+S	_	_
+.	_	_
+
+#451
+.	_	_
+
+#452
+.S	_	_
+]	_	_
+nD	_	_
+neighborhood	_	_
+centered	_	_
+on	_	_
+Ck	_	_
+,	_	_
+obtain	_	_
+the	_	_
+connected	_	_
+component	_	_
+with	_	_
+label	_	_
+k	_	_
+using	_	_
+this	_	_
+initial	_	_
+seed	_	_
+point	_	_
+.	_	_
+
+#453
+If	_	_
+this	_	_
+connected	_	_
+component’s	_	_
+size	_	_
+is	_	_
+greater	_	_
+than	_	_
+Sn	_	_
+4	_	_
+,	_	_
+update	_	_
+the	_	_
+maker	_	_
+image	_	_
+in	_	_
+all	_	_
+these	_	_
+locations	_	_
+to	_	_
+indicate	_	_
+the	_	_
+label	_	_
+is	_	_
+final	_	_
+.	_	_
+
+#454
+Iterate	_	_
+over	_	_
+m	_	_
+,	_	_
+if	_	_
+m	_	_
+(	_	_
+x	_	_
+)	_	_
+is	_	_
+not	_	_
+final	_	_
+,	_	_
+obtain	_	_
+the	_	_
+connected	_	_
+component	_	_
+with	_	_
+label	_	_
+l	_	_
+(	_	_
+x	_	_
+)	_	_
+using	_	_
+x	_	_
+as	_	_
+the	_	_
+seed	_	_
+point	_	_
+.	_	_
+
+#455
+If	_	_
+the	_	_
+size	_	_
+of	_	_
+this	_	_
+connected	_	_
+component	_	_
+is	_	_
+larger	_	_
+than	_	_
+Sn	_	_
+4	_	_
+,	_	_
+change	_	_
+the	_	_
+label	_	_
+image	_	_
+for	_	_
+all	_	_
+these	_	_
+locations	_	_
+to	_	_
+a	_	_
+new	_	_
+label	_	_
+,	_	_
+k+	_	_
+1	_	_
+,	_	_
+otherwise	_	_
+change	_	_
+it	_	_
+to	_	_
+the	_	_
+last	_	_
+encountered	_	_
+label	_	_
+and	_	_
+update	_	_
+the	_	_
+marker	_	_
+image	_	_
+to	_	_
+indicate	_	_
+that	_	_
+the	_	_
+label	_	_
+is	_	_
+final	_	_
+.	_	_
+
+#456
+3.2	_	_
+SSLIC	_	_
+Parameters	_	_
+
+#457
+The	_	_
+SSLIC	_	_
+filter	_	_
+exposes	_	_
+two	_	_
+user	_	_
+adjustable	_	_
+parameters	_	_
+of	_	_
+interest	_	_
+:	_	_
+the	_	_
+desired	_	_
+super	_	_
+grid	_	_
+size	_	_
+and	_	_
+the	_	_
+spatial	_	_
+weight	_	_
+factor	_	_
+which	_	_
+balances	_	_
+between	_	_
+superpixel	_	_
+spatial	_	_
+regularity	_	_
+and	_	_
+color	_	_
+affinity	_	_
+.	_	_
+
+#458
+The	_	_
+desired	_	_
+grid	_	_
+size	_	_
+in	_	_
+the	_	_
+original	_	_
+SLIC	_	_
+algorithm	_	_
+was	_	_
+a	_	_
+single	_	_
+number	_	_
+which	_	_
+is	_	_
+appropriate	_	_
+for	_	_
+isotropic	_	_
+pixels	_	_
+.	_	_
+
+#459
+As	_	_
+our	_	_
+goal	_	_
+is	_	_
+to	_	_
+accommodate	_	_
+images	_	_
+from	_	_
+a	_	_
+variety	_	_
+of	_	_
+sources	_	_
+,	_	_
+many	_	_
+of	_	_
+which	_	_
+are	_	_
+highly	_	_
+unisotropic	_	_
+,	_	_
+we	_	_
+allow	_	_
+the	_	_
+the	_	_
+size	_	_
+of	_	_
+the	_	_
+superpixel	_	_
+to	_	_
+be	_	_
+specified	_	_
+as	_	_
+the	_	_
+number	_	_
+of	_	_
+pixels	_	_
+in	_	_
+each	_	_
+dimension	_	_
+i.e.	_	_
+[	_	_
+Sx	_	_
+,	_	_
+Sy	_	_
+,	_	_
+Sz	_	_
+]	_	_
+.	_	_
+
+#460
+Therefore	_	_
+the	_	_
+superpixels	_	_
+themselves	_	_
+can	_	_
+be	_	_
+anisotropic	_	_
+to	_	_
+accommodate	_	_
+non-uniform	_	_
+pixel	_	_
+spacing	_	_
+,	_	_
+as	_	_
+is	_	_
+common	_	_
+in	_	_
+medical	_	_
+images	_	_
+.	_	_
+
+#461
+The	_	_
+weight	_	_
+factor	_	_
+is	_	_
+utilized	_	_
+to	_	_
+balance	_	_
+between	_	_
+the	_	_
+spatial	_	_
+and	_	_
+image	_	_
+intensity	_	_
+portions	_	_
+of	_	_
+the	_	_
+distance	_	_
+metric	_	_
+.	_	_
+
+#462
+The	_	_
+default	_	_
+value	_	_
+is	_	_
+10	_	_
+,	_	_
+which	_	_
+provides	_	_
+good	_	_
+results	_	_
+for	_	_
+2D	_	_
+images	_	_
+in	_	_
+the	_	_
+CIE-Lab	_	_
+color	_	_
+space	_	_
+.	_	_
+
+#463
+Increasing	_	_
+the	_	_
+value	_	_
+increases	_	_
+the	_	_
+weight	_	_
+of	_	_
+the	_	_
+spatial	_	_
+component	_	_
+which	_	_
+produces	_	_
+more	_	_
+regularly	_	_
+shape	_	_
+and	_	_
+sized	_	_
+superpixels	_	_
+.	_	_
+
+#464
+Image	_	_
+dimensionality	_	_
+,	_	_
+and	_	_
+similarly	_	_
+the	_	_
+magnitude	_	_
+of	_	_
+the	_	_
+range	_	_
+of	_	_
+the	_	_
+pixels	_	_
+values	_	_
+will	_	_
+effect	_	_
+the	_	_
+relative	_	_
+weight	_	_
+between	_	_
+the	_	_
+two	_	_
+components	_	_
+of	_	_
+the	_	_
+distance	_	_
+metric	_	_
+and	_	_
+may	_	_
+require	_	_
+experimentation	_	_
+to	_	_
+identify	_	_
+the	_	_
+relevant	_	_
+weighting	_	_
+for	_	_
+a	_	_
+specific	_	_
+setting	_	_
+(	_	_
+nD	_	_
+image	_	_
+with	_	_
+c	_	_
+channels	_	_
+per	_	_
+pixel	_	_
+)	_	_
+.	_	_
+
+#465
+Additionally	_	_
+,	_	_
+the	_	_
+user	_	_
+can	_	_
+specify	_	_
+the	_	_
+algorithm’s	_	_
+termination	_	_
+criteria	_	_
+via	_	_
+the	_	_
+maximal	_	_
+number	_	_
+of	_	_
+iterations	_	_
+,	_	_
+while	_	_
+the	_	_
+residuals	_	_
+or	_	_
+the	_	_
+change	_	_
+in	_	_
+cluster	_	_
+centers	_	_
+between	_	_
+two	_	_
+consecutive	_	_
+iterations	_	_
+can	_	_
+be	_	_
+monitored	_	_
+.	_	_
+
+#466
+The	_	_
+maximum	_	_
+number	_	_
+of	_	_
+iterations	_	_
+defaults	_	_
+to	_	_
+5	_	_
+for	_	_
+images	_	_
+with	_	_
+dimension	_	_
+3	_	_
+or	_	_
+greater	_	_
+,	_	_
+whereas	_	_
+the	_	_
+original	_	_
+SLIC	_	_
+implementation	_	_
+specifies	_	_
+10	_	_
+iterations	_	_
+for	_	_
+2D	_	_
+images	_	_
+.	_	_
+
+#467
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+
+#468
+3.3	_	_
+Implementation	_	_
+Details	_	_
+6	_	_
+
+#469
+3.3	_	_
+Implementation	_	_
+Details	_	_
+
+#470
+Achieving	_	_
+the	_	_
+goals	_	_
+of	_	_
+memory	_	_
+and	_	_
+computational	_	_
+efficiency	_	_
+,	_	_
+while	_	_
+still	_	_
+supporting	_	_
+grayscale	_	_
+,	_	_
+fixed	_	_
+vector	_	_
+and	_	_
+dynamic	_	_
+vector	_	_
+images	_	_
+requires	_	_
+some	_	_
+planning	_	_
+and	_	_
+prudent	_	_
+choices	_	_
+for	_	_
+data-structures	_	_
+and	_	_
+memory	_	_
+layout	_	_
+.	_	_
+
+#471
+The	_	_
+resulting	_	_
+output	_	_
+l	_	_
+is	_	_
+clearly	_	_
+a	_	_
+label	_	_
+image	_	_
+,	_	_
+and	_	_
+the	_	_
+intermediate	_	_
+per	_	_
+pixel	_	_
+distance	_	_
+values	_	_
+,	_	_
+d	_	_
+,	_	_
+are	_	_
+also	_	_
+represented	_	_
+by	_	_
+an	_	_
+image	_	_
+.	_	_
+
+#472
+Efficiently	_	_
+supporting	_	_
+variable	_	_
+length	_	_
+vectors	_	_
+in	_	_
+ITK	_	_
+can	_	_
+be	_	_
+challenging	_	_
+due	_	_
+to	_	_
+the	_	_
+potential	_	_
+memory	_	_
+allocation	_	_
+per	_	_
+pixel	_	_
+to	_	_
+support	_	_
+the	_	_
+run-time	_	_
+length	_	_
+.	_	_
+
+#473
+To	_	_
+avoid	_	_
+this	_	_
+,	_	_
+we	_	_
+store	_	_
+the	_	_
+set	_	_
+of	_	_
+cluster	_	_
+centers	_	_
+,	_	_
+whose	_	_
+lengths	_	_
+are	_	_
+the	_	_
+number	_	_
+of	_	_
+dimensions	_	_
+plus	_	_
+the	_	_
+number	_	_
+of	_	_
+components	_	_
+for	_	_
+the	_	_
+pixel	_	_
+value	_	_
+,	_	_
+in	_	_
+a	_	_
+single	_	_
+1-dimensional	_	_
+array	_	_
+.	_	_
+
+#474
+The	_	_
+values	_	_
+of	_	_
+a	_	_
+cluster	_	_
+Ck	_	_
+are	_	_
+simple	_	_
+accessed	_	_
+via	_	_
+a	_	_
+’vnl	_	_
+ref	_	_
+vector’	_	_
+,	_	_
+which	_	_
+references	_	_
+the	_	_
+data	_	_
+in	_	_
+the	_	_
+array	_	_
+.	_	_
+
+#475
+The	_	_
+user	_	_
+provided	_	_
+superpixel	_	_
+grid	_	_
+size	_	_
+specifies	_	_
+the	_	_
+expected	_	_
+size	_	_
+in	_	_
+pixel	_	_
+units	_	_
+,	_	_
+not	_	_
+physical	_	_
+units	_	_
+as	_	_
+is	_	_
+common	_	_
+in	_	_
+ITK	_	_
+.	_	_
+
+#476
+The	_	_
+use	_	_
+of	_	_
+pixel	_	_
+units	_	_
+enables	_	_
+the	_	_
+grid	_	_
+size	_	_
+parameter	_	_
+to	_	_
+be	_	_
+independent	_	_
+of	_	_
+the	_	_
+image	_	_
+spacing	_	_
+,	_	_
+removes	_	_
+potential	_	_
+degenerate	_	_
+cases	_	_
+,	_	_
+allows	_	_
+reasonable	_	_
+default	_	_
+values	_	_
+,	_	_
+and	_	_
+follows	_	_
+that	_	_
+the	_	_
+superpixels	_	_
+are	_	_
+an	_	_
+abstraction	_	_
+from	_	_
+the	_	_
+pixels	_	_
+.	_	_
+
+#477
+Therefore	_	_
+the	_	_
+”distance”	_	_
+metric	_	_
+computed	_	_
+must	deontic	_
+be	_	_
+computed	_	_
+in	_	_
+index	_	_
+space	_	_
+and	_	_
+not	_	_
+physical	_	_
+space	_	_
+.	_	_
+
+#478
+We	_	_
+have	_	_
+also	_	_
+extended	_	_
+the	_	_
+grid	_	_
+size	_	_
+to	_	_
+potentially	_	_
+be	_	_
+isotropic	_	_
+.	_	_
+
+#479
+So	_	_
+the	_	_
+spatial	_	_
+weights	_	_
+are	_	_
+applied	_	_
+thusly	_	_
+:	_	_
+D	_	_
+=	_	_
+√	_	_
+d2	_	_
+c	_	_
++Σi	_	_
+(	_	_
+di	_	_
+Si	_	_
+)	_	_
+2	_	_
+m2	_	_
+.	_	_
+
+#480
+4	_	_
+SSLIC	_	_
+Evaluation	_	_
+
+#481
+As	_	_
+the	_	_
+focus	_	_
+of	_	_
+our	_	_
+algorithm	_	_
+was	_	_
+on	_	_
+improving	_	_
+the	_	_
+runtime	_	_
+of	_	_
+the	_	_
+original	_	_
+SLIC	_	_
+algorithm	_	_
+without	_	_
+changing	_	_
+the	_	_
+original	_	_
+algorithmic	_	_
+approach	_	_
+we	_	_
+limit	_	_
+our	_	_
+evaluation	_	_
+to	_	_
+computational	_	_
+performance	_	_
+and	_	_
+scalability	_	_
+.	_	_
+
+#482
+In	_	_
+general	_	_
+,	_	_
+the	_	_
+time	_	_
+it	_	_
+takes	_	_
+to	_	_
+perform	_	_
+a	_	_
+task	_	_
+is	_	_
+comprised	_	_
+of	_	_
+the	_	_
+time	_	_
+it	_	_
+takes	_	_
+to	_	_
+complete	_	_
+its	_	_
+sequential	_	_
+portion	_	_
+and	_	_
+the	_	_
+time	_	_
+it	_	_
+takes	_	_
+to	_	_
+perform	_	_
+its	_	_
+parallel	_	_
+portion	_	_
+:	_	_
+T	_	_
+=	_	_
+Ts	_	_
++Tp	_	_
+In	_	_
+our	_	_
+evaluation	_	_
+we	_	_
+use	_	_
+the	_	_
+concept	_	_
+of	_	_
+strong	_	_
+scalability	_	_
+.	_	_
+
+#483
+That	_	_
+is	_	_
+,	_	_
+the	_	_
+problem	_	_
+size	_	_
+is	_	_
+kept	_	_
+fixed	_	_
+while	_	_
+we	_	_
+increase	_	_
+the	_	_
+number	_	_
+of	_	_
+parallel	_	_
+process	_	_
+(	_	_
+in	_	_
+our	_	_
+case	_	_
+these	_	_
+are	_	_
+lightweight	_	_
+threads	_	_
+)	_	_
+.	_	_
+
+#484
+The	_	_
+relative	_	_
+speedup2	_	_
+obtained	_	_
+by	_	_
+using	_	_
+more	_	_
+than	_	_
+a	_	_
+single	_	_
+process	_	_
+is	_	_
+defined	_	_
+as	_	_
+:	_	_
+S	_	_
+(	_	_
+p	_	_
+)	_	_
+=	_	_
+T	_	_
+(	_	_
+1	_	_
+)	_	_
+T	_	_
+(	_	_
+p	_	_
+)	_	_
+,	_	_
+where	_	_
+T	_	_
+(	_	_
+1	_	_
+)	_	_
+is	_	_
+the	_	_
+runtime	_	_
+of	_	_
+the	_	_
+parallel	_	_
+implementation	_	_
+using	_	_
+a	_	_
+single	_	_
+process	_	_
+.	_	_
+
+#485
+The	_	_
+optimal	_	_
+relative	_	_
+speedup	_	_
+value	_	_
+is	_	_
+S∗	_	_
+(	_	_
+p	_	_
+)	_	_
+=	_	_
+p.	_	_
+The	_	_
+relative	_	_
+efficiency	_	_
+is	_	_
+defined	_	_
+as	_	_
+speedup	_	_
+divided	_	_
+by	_	_
+the	_	_
+number	_	_
+of	_	_
+processors	_	_
+:	_	_
+E	_	_
+(	_	_
+p	_	_
+)	_	_
+=	_	_
+S	_	_
+(	_	_
+p	_	_
+)	_	_
+p	_	_
+The	_	_
+optimal	_	_
+relative	_	_
+efficiency	_	_
+is	_	_
+thus	_	_
+E∗	_	_
+(	_	_
+p	_	_
+)	_	_
+=	_	_
+1	_	_
+.	_	_
+
+#486
+When	_	_
+evaluating	_	_
+using	_	_
+strong	_	_
+scalability	_	_
+we	_	_
+have	_	_
+an	_	_
+upper	_	_
+bound	_	_
+on	_	_
+the	_	_
+possible	_	_
+relative	_	_
+speedup	_	_
+and	_	_
+efficiency	_	_
+which	_	_
+are	_	_
+given	_	_
+by	_	_
+Amdahl’s	_	_
+law	_	_
+[	_	_
+3	_	_
+]	_	_
+.	_	_
+
+#487
+Given	_	_
+that	_	_
+a	_	_
+fraction	_	_
+,	_	_
+α	_	_
+∈	_	_
+[	_	_
+0,1	_	_
+]	_	_
+,	_	_
+of	_	_
+the	_	_
+task	_	_
+is	_	_
+serial	_	_
+we	_	_
+2”Relative	_	_
+speedup”	_	_
+uses	_	_
+the	_	_
+single	_	_
+process	_	_
+implementation	_	_
+of	_	_
+the	_	_
+parallelized	_	_
+algorithm	_	_
+and	_	_
+not	_	_
+the	_	_
+best	_	_
+sequential	_	_
+algorithm	_	_
+which	_	_
+would	_	_
+correspond	_	_
+to	_	_
+”speedup”	_	_
+.	_	_
+
+#488
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+
+#489
+4.1	_	_
+Method	_	_
+7	_	_
+
+#490
+(	_	_
+a	_	_
+)	_	_
+SSLIC	_	_
+implementation	_	_
+(	_	_
+b	_	_
+)	_	_
+scikit-image	_	_
+SLIC	_	_
+implementation	_	_
+Figure	_	_
+1	_	_
+:	_	_
+Comparison	_	_
+of	_	_
+our	_	_
+SSLIC	_	_
+implementation	_	_
+and	_	_
+the	_	_
+scikit-image	_	_
+[	_	_
+18	_	_
+]	_	_
+SLIC	_	_
+implementation	_	_
+on	_	_
+a	_	_
+512×	_	_
+512	_	_
+color	_	_
+image	_	_
+converted	_	_
+to	_	_
+CIE-Lab	_	_
+color	_	_
+space	_	_
+.	_	_
+
+#491
+Each	_	_
+implementation	_	_
+was	_	_
+run	_	_
+for	_	_
+10	_	_
+iterations	_	_
+and	_	_
+the	_	_
+size	_	_
+of	_	_
+the	_	_
+superpixels	_	_
+was	_	_
+specified	_	_
+as	_	_
+[	_	_
+32×32	_	_
+]	_	_
+for	_	_
+our	_	_
+implementation	_	_
+,	_	_
+and	_	_
+a	_	_
+requested	_	_
+number	_	_
+of	_	_
+superpixels	_	_
+of	_	_
+256	_	_
+for	_	_
+scikit-image	_	_
+.	_	_
+
+#492
+The	_	_
+runtimes	_	_
+for	_	_
+our	_	_
+implementation	_	_
+were	_	_
+292ms	_	_
+,	_	_
+86ms	_	_
+,	_	_
+and	_	_
+52ms	_	_
+with	_	_
+1	_	_
+,	_	_
+4	_	_
+and	_	_
+8	_	_
+threads	_	_
+respectfully	_	_
+,	_	_
+while	_	_
+scikit-image’s	_	_
+single	_	_
+threaded	_	_
+implementation	_	_
+runtime	_	_
+was	_	_
+166ms	_	_
+.	_	_
+
+#493
+have	_	_
+:	_	_
+S	_	_
+(	_	_
+p	_	_
+)	_	_
+=	_	_
+T	_	_
+(	_	_
+1	_	_
+)	_	_
+αT	_	_
+(	_	_
+1	_	_
+)	_	_
++	_	_
+(	_	_
+1−α	_	_
+)	_	_
+T	_	_
+(	_	_
+p	_	_
+)	_	_
+≤	_	_
+1	_	_
+α+	_	_
+(	_	_
+1−α	_	_
+)	_	_
+/p	_	_
+and	_	_
+E	_	_
+(	_	_
+p	_	_
+)	_	_
+=	_	_
+T	_	_
+(	_	_
+1	_	_
+)	_	_
+p	_	_
+(	_	_
+αT	_	_
+(	_	_
+1	_	_
+)	_	_
++	_	_
+(	_	_
+1−α	_	_
+)	_	_
+T	_	_
+(	_	_
+p	_	_
+)	_	_
+)	_	_
+≤	_	_
+1	_	_
+1+α	_	_
+(	_	_
+p−1	_	_
+)	_	_
+
+#494
+4.1	_	_
+Method	_	_
+
+#495
+To	_	_
+evaluate	_	_
+the	_	_
+performance	_	_
+of	_	_
+the	_	_
+SSLIC	_	_
+algorithm	_	_
+we	_	_
+utilize	_	_
+the	_	_
+cyrosection	_	_
+Visible	_	_
+Human	_	_
+Male	_	_
+dataset	_	_
+[	_	_
+2	_	_
+]	_	_
+.	_	_
+
+#496
+A	_	_
+frozen	_	_
+male	_	_
+cadaver	_	_
+which	_	_
+was	_	_
+serially	_	_
+imaged	_	_
+and	_	_
+sectioned	_	_
+at	_	_
+1	_	_
+millimeter	_	_
+intervals	_	_
+to	_	_
+form	_	_
+The	_	_
+color	_	_
+volume	_	_
+Visible	_	_
+Human	_	_
+of	_	_
+[	_	_
+2048×1216×1978	_	_
+]	_	_
+voxels	_	_
+.	_	_
+
+#497
+The	_	_
+size	_	_
+of	_	_
+the	_	_
+original	_	_
+RGB	_	_
+(	_	_
+unsigned	_	_
+char	_	_
+)	_	_
+volume	_	_
+is	_	_
+16Gb	_	_
+,	_	_
+and	_	_
+53	_	_
+Gb	_	_
+after	_	_
+conversion	_	_
+to	_	_
+CIE-Lab	_	_
+(	_	_
+float	_	_
+)	_	_
+,	_	_
+which	_	_
+is	_	_
+the	_	_
+data	_	_
+used	_	_
+in	_	_
+this	_	_
+work	_	_
+.	_	_
+
+#498
+A	_	_
+single	_	_
+2D	_	_
+slice	_	_
+is	_	_
+evaluated	_	_
+in	_	_
+addition	_	_
+to	_	_
+the	_	_
+whole	_	_
+volume	_	_
+to	_	_
+enable	_	_
+performance	_	_
+comparison	_	_
+at	_	_
+two	_	_
+problem	_	_
+set	_	_
+sizes	_	_
+.	_	_
+
+#499
+The	_	_
+computer	_	_
+system	_	_
+used	_	_
+for	_	_
+the	_	_
+performance	_	_
+analysis	_	_
+is	_	_
+a	_	_
+two	_	_
+CPU	_	_
+socket	_	_
+server	_	_
+running	_	_
+Red	_	_
+Hat	_	_
+Enterprise	_	_
+Linux	_	_
+Server	_	_
+release	_	_
+7.5	_	_
+.	_	_
+
+#500
+The	_	_
+CPUs	_	_
+are	_	_
+Intel	_	_
+Zeon	_	_
+CPU	_	_
+E5-2699	_	_
+v4	_	_
+@	_	_
+2.20GHz	_	_
+each	_	_
+having	_	_
+22	_	_
+physical	_	_
+cores	_	_
+and	_	_
+Hyper-Threading	_	_
+enabled	_	_
+,	_	_
+resulting	_	_
+in	_	_
+44	_	_
+physical	_	_
+cores	_	_
+or	_	_
+88	_	_
+virtual	_	_
+cores	_	_
+.	_	_
+
+#501
+The	_	_
+system	_	_
+has	_	_
+512	_	_
+Gigabytes	_	_
+of	_	_
+memory	_	_
+which	_	_
+is	_	_
+sufficient	_	_
+for	_	_
+processing	_	_
+the	_	_
+dataset	_	_
+without	_	_
+swapping	_	_
+to	_	_
+disk	_	_
+.	_	_
+
+#502
+To	_	_
+analyze	_	_
+the	_	_
+scalability	_	_
+of	_	_
+the	_	_
+SSLIC	_	_
+algorithm	_	_
+,	_	_
+the	_	_
+time	_	_
+of	_	_
+execution	_	_
+is	_	_
+measured	_	_
+for	_	_
+a	_	_
+fixed	_	_
+image	_	_
+while	_	_
+varying	_	_
+the	_	_
+number	_	_
+of	_	_
+threads	_	_
+allocated	_	_
+to	_	_
+the	_	_
+task	_	_
+.	_	_
+
+#503
+This	_	_
+was	_	_
+implemented	_	_
+in	_	_
+a	_	_
+python	_	_
+script	_	_
+via	_	_
+SimpleITK	_	_
+bindings	_	_
+[	_	_
+10	_	_
+]	_	_
+.	_	_
+
+#504
+The	_	_
+reported	_	_
+timing	_	_
+is	_	_
+of	_	_
+the	_	_
+SimpleITK	_	_
+Execute	_	_
+method	_	_
+which	_	_
+includes	_	_
+the	_	_
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+
+#505
+4.1	_	_
+Method	_	_
+8	_	_
+
+#506
+Figure	_	_
+2	_	_
+:	_	_
+Selected	_	_
+slices	_	_
+of	_	_
+the	_	_
+Visible	_	_
+Human	_	_
+Male	_	_
+(	_	_
+110,487,116	_	_
+)	_	_
+with	_	_
+rendered	_	_
+superpixel	_	_
+borders	_	_
+.	_	_
+
+#507
+The	_	_
+SSLIC	_	_
+parameters	_	_
+were	_	_
+super	_	_
+grid	_	_
+[	_	_
+30×30×10	_	_
+]	_	_
+,	_	_
+spatial	_	_
+weight	_	_
+10	_	_
+,	_	_
+and	_	_
+5	_	_
+iterations	_	_
+.	_	_
+
+#508
+The	_	_
+color	_	_
+slices	_	_
+were	_	_
+converted	_	_
+to	_	_
+CIE-Lab	_	_
+color	_	_
+space	_	_
+.	_	_
+
+#509
+The	_	_
+algorithm	_	_
+and	_	_
+superpixels	_	_
+are	_	_
+in	_	_
+3D	_	_
+,	_	_
+so	_	_
+black	_	_
+regions	_	_
+may	_	_
+be	_	_
+caused	_	_
+by	_	_
+co-planar	_	_
+slice	_	_
+and	_	_
+superpixel	_	_
+boundaries	_	_
+.	_	_
+
+#510
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+
+#511
+4.1	_	_
+Method	_	_
+9	_	_
+
+#512
+Figure	_	_
+3	_	_
+:	_	_
+Planar	_	_
+cross	_	_
+sections	_	_
+of	_	_
+Bacillius	_	_
+subtilus	_	_
+acquired	_	_
+with	_	_
+focused	_	_
+ion-beam	_	_
+scanning	_	_
+electron	_	_
+microscopy	_	_
+.	_	_
+
+#513
+The	_	_
+SLIC	_	_
+parameters	_	_
+were	_	_
+super	_	_
+grid	_	_
+[	_	_
+15×15×15	_	_
+]	_	_
+spatial	_	_
+weight	_	_
+5	_	_
+,	_	_
+and	_	_
+10	_	_
+iterations	_	_
+.	_	_
+
+#514
+From	_	_
+the	_	_
+[	_	_
+1243×2094×247	_	_
+]	_	_
+volume	_	_
+a	_	_
+selected	_	_
+X-Y	_	_
+planar	_	_
+slice	_	_
+is	_	_
+on	_	_
+the	_	_
+lower	_	_
+right	_	_
+,	_	_
+a	_	_
+Y-Z	_	_
+slice	_	_
+is	_	_
+on	_	_
+the	_	_
+left	_	_
+,	_	_
+and	_	_
+an	_	_
+X-Z	_	_
+slice	_	_
+is	_	_
+at	_	_
+the	_	_
+top	_	_
+.	_	_
+
+#515
+construction	_	_
+and	_	_
+setting	_	_
+of	_	_
+ITK	_	_
+parameters	_	_
+therefore	_	_
+this	_	_
+approach	_	_
+adds	_	_
+some	_	_
+negligible	_	_
+constant	_	_
+overhead	_	_
+when	_	_
+compared	_	_
+to	_	_
+directly	_	_
+executing	_	_
+the	_	_
+ITK	_	_
+filter	_	_
+.	_	_
+
+#516
+The	_	_
+execution	_	_
+is	_	_
+timed	_	_
+with	_	_
+and	_	_
+without	_	_
+the	_	_
+connectivity	_	_
+enforcement	_	_
+step	_	_
+.	_	_
+
+#517
+As	_	_
+this	_	_
+post-processing	_	_
+step	_	_
+involves	_	_
+a	_	_
+single	_	_
+threaded	_	_
+pass	_	_
+through	_	_
+the	_	_
+entire	_	_
+image	_	_
+,	_	_
+the	_	_
+separate	_	_
+timings	_	_
+enables	_	_
+the	_	_
+scalability	_	_
+assessment	_	_
+of	_	_
+the	_	_
+two	_	_
+algorithmic	_	_
+stages	_	_
+independently	_	_
+.	_	_
+
+#518
+The	_	_
+code	_	_
+was	_	_
+built	_	_
+against	_	_
+the	_	_
+latest	_	_
+stable	_	_
+ITK	_	_
+release	_	_
+4.13.0	_	_
+with	_	_
+C++11	_	_
+enabled	_	_
+for	_	_
+improved	_	_
+compatibility	_	_
+with	_	_
+the	_	_
+forth	_	_
+coming	_	_
+ITK	_	_
+5.0	_	_
+release	_	_
+.	_	_
+
+#519
+The	_	_
+system	_	_
+compiler	_	_
+,	_	_
+”gcc	_	_
+(	_	_
+GCC	_	_
+)	_	_
+4.8.5	_	_
+20150623	_	_
+(	_	_
+Red	_	_
+Hat	_	_
+4.8.5-28	_	_
+)	_	_
+”	_	_
+was	_	_
+used	_	_
+with	_	_
+the	_	_
+default	_	_
+ITK	_	_
+flags	_	_
+for	_	_
+”release”	_	_
+mode	_	_
+.	_	_
+
+#520
+The	_	_
+method	_	_
+was	_	_
+first	_	_
+executed	_	_
+on	_	_
+the	_	_
+extracted	_	_
+100th	_	_
+slice	_	_
+of	_	_
+the	_	_
+Visible	_	_
+Human	_	_
+with	_	_
+dimensions	_	_
+of	_	_
+[	_	_
+2048×	_	_
+1216	_	_
+]	_	_
+pixels	_	_
+.	_	_
+
+#521
+The	_	_
+SSLIC	_	_
+algorithm	_	_
+ran	_	_
+for	_	_
+5	_	_
+iterations	_	_
+with	_	_
+an	_	_
+isotropic	_	_
+supergrid	_	_
+size	_	_
+of	_	_
+50	_	_
+,	_	_
+and	_	_
+the	_	_
+default	_	_
+spatial	_	_
+weight	_	_
+of	_	_
+10	_	_
+.	_	_
+
+#522
+This	_	_
+test	_	_
+case	_	_
+was	_	_
+executed	_	_
+5	_	_
+times	_	_
+,	_	_
+and	_	_
+the	_	_
+minimum	_	_
+time	_	_
+is	_	_
+reported	_	_
+.	_	_
+
+#523
+With	_	_
+the	_	_
+brief	_	_
+execution	_	_
+time	_	_
+of	_	_
+less	_	_
+than	_	_
+a	_	_
+second	_	_
+,	_	_
+the	_	_
+number	_	_
+of	_	_
+threads	_	_
+allocated	_	_
+to	_	_
+the	_	_
+SSLIC	_	_
+was	_	_
+incremented	_	_
+by	_	_
+1	_	_
+.	_	_
+
+#524
+Next	_	_
+the	_	_
+algorithm	_	_
+was	_	_
+evaluated	_	_
+on	_	_
+the	_	_
+whole	_	_
+53	_	_
+Gigabyte	_	_
+3D	_	_
+Visible	_	_
+Human	_	_
+dataset	_	_
+.	_	_
+
+#525
+The	_	_
+same	_	_
+parameters	_	_
+were	_	_
+specified	_	_
+:	_	_
+5	_	_
+iterations	_	_
+,	_	_
+50	_	_
+supergrid	_	_
+size	_	_
+,	_	_
+and	_	_
+spatial	_	_
+weight	_	_
+10	_	_
+.	_	_
+
+#526
+The	_	_
+algorithm	_	_
+was	_	_
+only	_	_
+run	_	_
+once	_	_
+for	_	_
+a	_	_
+selection	_	_
+of	_	_
+number	_	_
+of	_	_
+threads	_	_
+.	_	_
+
+#527
+Visualization	_	_
+of	_	_
+the	_	_
+resulting	_	_
+multi-label	_	_
+segmentation	_	_
+image	_	_
+is	_	_
+done	_	_
+with	_	_
+a	_	_
+brief	_	_
+line	_	_
+of	_	_
+SimpleITK	_	_
+code	_	_
+(	_	_
+see	_	_
+below	_	_
+)	_	_
+.	_	_
+
+#528
+Since	_	_
+the	_	_
+label	_	_
+ID	_	_
+or	_	_
+value	_	_
+of	_	_
+the	_	_
+result	_	_
+contains	_	_
+no	_	_
+significant	_	_
+meaning	_	_
+,	_	_
+only	_	_
+the	_	_
+boundaries	_	_
+of	_	_
+the	_	_
+superpixels	_	_
+are	_	_
+important	_	_
+,	_	_
+we	_	_
+follow	_	_
+the	_	_
+convention	_	_
+to	_	_
+render	_	_
+images	_	_
+using	_	_
+a	_	_
+black	_	_
+contour	_	_
+around	_	_
+the	_	_
+segmentation	_	_
+.	_	_
+
+#529
+def	_	_
+mask_label_contour	_	_
+(	_	_
+image	_	_
+,	_	_
+seg	_	_
+)	_	_
+:	_	_
+"	_	_
+"	_	_
+"	_	_
+Combine	_	_
+an	_	_
+image	_	_
+and	_	_
+segmentation	_	_
+by	_	_
+masking	_	_
+the	_	_
+segmentation	_	_
+contour	_	_
+.	_	_
+
+#530
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+
+#531
+4.2	_	_
+Results	_	_
+10	_	_
+
+#532
+For	_	_
+an	_	_
+input	_	_
+image	_	_
+(	_	_
+scalar	_	_
+or	_	_
+vector	_	_
+)	_	_
+,	_	_
+and	_	_
+a	_	_
+multi-label	_	_
+segmentation	_	_
+image	_	_
+,	_	_
+creates	_	_
+an	_	_
+output	_	_
+image	_	_
+where	_	_
+the	_	_
+countour	_	_
+of	_	_
+each	_	_
+label	_	_
+masks	_	_
+the	_	_
+input	_	_
+image	_	_
+to	_	_
+black	_	_
+.	_	_
+"	_	_
+"	_	_
+"	_	_
+
+#533
+return	_	_
+sitk.Mask	_	_
+(	_	_
+image	_	_
+,	_	_
+sitk.LabelContour	_	_
+(	_	_
+seg+1	_	_
+)	_	_
+==0	_	_
+)	_	_
+
+#534
+4.2	_	_
+Results	_	_
+
+#535
+The	_	_
+following	_	_
+two	_	_
+section	_	_
+describe	_	_
+our	_	_
+qualitative	_	_
+and	_	_
+quantitative	_	_
+evaluation	_	_
+of	_	_
+SSLIC	_	_
+.	_	_
+
+#536
+Superpixel	_	_
+labeled	_	_
+images	_	_
+are	_	_
+included	_	_
+for	_	_
+qualitative	_	_
+evaluation	_	_
+from	_	_
+a	_	_
+selection	_	_
+of	_	_
+datasets	_	_
+to	_	_
+represent	_	_
+some	_	_
+of	_	_
+the	_	_
+diverse	_	_
+image	_	_
+types	_	_
+the	_	_
+SSLIC	_	_
+algorithm	_	_
+is	_	_
+capable	_	_
+of	_	_
+operating	_	_
+upon	_	_
+.	_	_
+
+#537
+The	_	_
+quantitative	_	_
+sections	_	_
+focuses	_	_
+on	_	_
+analyzing	_	_
+the	_	_
+performance	_	_
+and	_	_
+scalability	_	_
+characteristics	_	_
+of	_	_
+our	_	_
+implementation	_	_
+.	_	_
+
+#538
+Qualitative	_	_
+We	_	_
+demonstrate	_	_
+the	_	_
+results	_	_
+of	_	_
+our	_	_
+method	_	_
+on	_	_
+3	_	_
+distinct	_	_
+and	_	_
+representative	_	_
+datasets	_	_
+.	_	_
+
+#539
+First	_	_
+is	_	_
+a	_	_
+photographic	_	_
+example	_	_
+of	_	_
+an	_	_
+astronaut	_	_
+in	_	_
+figure	_	_
+1	_	_
+from	_	_
+the	_	_
+scikit-image	_	_
+[	_	_
+18	_	_
+]	_	_
+project	_	_
+.	_	_
+
+#540
+Visually	_	_
+,	_	_
+both	_	_
+implementations	_	_
+yield	_	_
+similar	_	_
+results	_	_
+.	_	_
+
+#541
+In	_	_
+figure	_	_
+2	_	_
+,	_	_
+three	_	_
+extracted	_	_
+slices	_	_
+from	_	_
+the	_	_
+3D	_	_
+Visible	_	_
+Human	_	_
+dataset	_	_
+are	_	_
+shown	_	_
+with	_	_
+3D	_	_
+superpixels	_	_
+overlaid	_	_
+onto	_	_
+the	_	_
+slices	_	_
+.	_	_
+
+#542
+To	_	_
+capture	_	_
+the	_	_
+anisotropic	_	_
+voxel	_	_
+size	_	_
+of	_	_
+[	_	_
+0.3×0.3×1.0	_	_
+]	_	_
+mm	_	_
+,	_	_
+the	_	_
+super	_	_
+grid	_	_
+size	_	_
+was	_	_
+specified	_	_
+as	_	_
+[	_	_
+30×30×10	_	_
+]	_	_
+,	_	_
+with	_	_
+the	_	_
+default	_	_
+spacial	_	_
+proximity	_	_
+of	_	_
+10	_	_
+and	_	_
+5	_	_
+iterations	_	_
+.	_	_
+
+#543
+The	_	_
+last	_	_
+dataset	_	_
+is	_	_
+a	_	_
+3D	_	_
+focused	_	_
+ion-beam	_	_
+scanning	_	_
+electron	_	_
+microscopy	_	_
+(	_	_
+FIB-SEM	_	_
+)	_	_
+of	_	_
+Bacillus	_	_
+subtilis	_	_
+bacterium	_	_
+courtesy	_	_
+of	_	_
+the	_	_
+High	_	_
+Resolution	_	_
+Electron	_	_
+Microscopy	_	_
+at	_	_
+the	_	_
+National	_	_
+Cancer	_	_
+Institute	_	_
+,	_	_
+National	_	_
+Institutes	_	_
+of	_	_
+Health	_	_
+[	_	_
+12	_	_
+]	_	_
+.	_	_
+
+#544
+The	_	_
+SSLIC	_	_
+algorithm	_	_
+was	_	_
+run	_	_
+on	_	_
+a	_	_
+processed	_	_
+scalar	_	_
+volume	_	_
+of	_	_
+[	_	_
+1243×2094×247	_	_
+]	_	_
+pixel	_	_
+with	_	_
+spacing	_	_
+of	_	_
+approximately	_	_
+[	_	_
+12×12×12	_	_
+]	_	_
+nm	_	_
+,	_	_
+see	_	_
+figure	_	_
+3	_	_
+Quantitative	_	_
+The	_	_
+detailed	_	_
+SSLIC	_	_
+performance	_	_
+timing	_	_
+results	_	_
+for	_	_
+the	_	_
+2D	_	_
+slice	_	_
+are	_	_
+given	_	_
+in	_	_
+table	_	_
+1	_	_
+and	_	_
+those	_	_
+for	_	_
+the	_	_
+3D	_	_
+volume	_	_
+are	_	_
+in	_	_
+table	_	_
+2	_	_
+.	_	_
+
+#545
+Included	_	_
+in	_	_
+the	_	_
+tables	_	_
+are	_	_
+the	_	_
+computed	_	_
+relative	_	_
+efficiency	_	_
+and	_	_
+relative	_	_
+speedup	_	_
+as	_	_
+defined	_	_
+above	_	_
+.	_	_
+
+#546
+These	_	_
+timing	_	_
+measurements	_	_
+are	_	_
+also	_	_
+summarized	_	_
+in	_	_
+figures	_	_
+4	_	_
+and	_	_
+5	_	_
+.	_	_
+
+#547
+The	_	_
+2D	_	_
+speedup	_	_
+graph	_	_
+shows	_	_
+the	_	_
+upper	_	_
+bound	_	_
+for	_	_
+speedup	_	_
+being	_	_
+approached	_	_
+demonstrating	_	_
+Amdhal’s	_	_
+law	_	_
+.	_	_
+
+#548
+That	_	_
+is	_	_
+to	_	_
+say	_	_
+for	_	_
+this	_	_
+relative	_	_
+small	_	_
+2D	_	_
+image	_	_
+we	_	_
+are	_	_
+bounded	_	_
+by	_	_
+the	_	_
+single	_	_
+threaded	_	_
+execution	_	_
+and	_	_
+overhead	_	_
+of	_	_
+the	_	_
+algorithm	_	_
+.	_	_
+
+#549
+This	_	_
+is	_	_
+in	_	_
+contrast	_	_
+to	_	_
+the	_	_
+continued	_	_
+speedup	_	_
+for	_	_
+the	_	_
+1978	_	_
+times	_	_
+larger	_	_
+3D	_	_
+dataset	_	_
+.	_	_
+
+#550
+Performance	_	_
+gains	_	_
+continue	_	_
+when	_	_
+more	_	_
+resources	_	_
+are	_	_
+allocated	_	_
+to	_	_
+the	_	_
+problem	_	_
+.	_	_
+
+#551
+The	_	_
+efficiency	_	_
+best	_	_
+quantifies	_	_
+the	_	_
+difference	_	_
+between	_	_
+2D	_	_
+and	_	_
+3D	_	_
+at	_	_
+44	_	_
+physical	_	_
+cores	_	_
+,	_	_
+where	_	_
+the	_	_
+2D	_	_
+case	_	_
+has	_	_
+35	_	_
+%	_	_
+while	_	_
+the	_	_
+3D	_	_
+case	_	_
+has	_	_
+66	_	_
+%	_	_
+computed	_	_
+relative	_	_
+efficiency	_	_
+.	_	_
+
+#552
+The	_	_
+phenomena	_	_
+of	_	_
+improved	_	_
+efficiency	_	_
+on	_	_
+larger	_	_
+datasets	_	_
+is	_	_
+described	_	_
+by	_	_
+Gustafson’s	_	_
+law	_	_
+[	_	_
+7	_	_
+]	_	_
+.	_	_
+
+#553
+When	_	_
+the	_	_
+number	_	_
+of	_	_
+cores	_	_
+exceeds	_	_
+the	_	_
+number	_	_
+of	_	_
+physical	_	_
+cores	_	_
+,	_	_
+or	_	_
+when	_	_
+HyperThreading	_	_
+is	_	_
+needed	_	_
+for	_	_
+virtual	_	_
+thread	_	_
+execution	_	_
+(	_	_
+although	_	_
+always	_	_
+enabled	_	_
+on	_	_
+the	_	_
+system	_	_
+during	_	_
+evaluation	_	_
+)	_	_
+,	_	_
+the	_	_
+results	_	_
+are	_	_
+separated	_	_
+into	_	_
+a	_	_
+bar	_	_
+graph	_	_
+in	_	_
+figure	_	_
+4	_	_
+.	_	_
+
+#554
+The	_	_
+HyperThreaded	_	_
+cores	_	_
+are	_	_
+a	_	_
+distinct	_	_
+type	_	_
+of	_	_
+resource	_	_
+from	_	_
+a	_	_
+physical	_	_
+core	_	_
+as	_	_
+the	_	_
+virtual	_	_
+cores	_	_
+share	_	_
+many	_	_
+of	_	_
+the	_	_
+same	_	_
+CPU	_	_
+physical	_	_
+resources	_	_
+such	_	_
+as	_	_
+cache	_	_
+and	_	_
+execution	_	_
+instructions	_	_
+with	_	_
+another	_	_
+.	_	_
+
+#555
+The	_	_
+addition	_	_
+of	_	_
+virtual	_	_
+cores	_	_
+is	_	_
+not	_	_
+expected	_	_
+to	_	_
+provide	_	_
+similar	_	_
+scalability	_	_
+as	_	_
+additional	_	_
+physical	_	_
+cores	_	_
+.	_	_
+
+#556
+Despite	_	_
+low	_	_
+efficiency	_	_
+or	_	_
+utilization	_	_
+of	_	_
+the	_	_
+virtual	_	_
+cores	_	_
+,	_	_
+our	_	_
+results	_	_
+demonstrate	_	_
+that	_	_
+utilizing	_	_
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+
+#557
+4.2	_	_
+Results	_	_
+11	_	_
+
+#558
+0	_	_
+10	_	_
+20	_	_
+30	_	_
+40	_	_
+0.2	_	_
+0.4	_	_
+0.6	_	_
+0.8	_	_
+1.0	_	_
+1.2	_	_
+1.4	_	_
+se	_	_
+co	_	_
+nd	_	_
+s	_	_
+Time	_	_
+44	_	_
+66	_	_
+88	_	_
+0.00	_	_
+0.02	_	_
+0.04	_	_
+0.06	_	_
+0.08	_	_
+0.10	_	_
+0.12	_	_
+HyperThreading	_	_
+0	_	_
+10	_	_
+20	_	_
+30	_	_
+40	_	_
+Number	_	_
+Of	_	_
+Threads	_	_
+se	_	_
+co	_	_
+nd	_	_
+s	_	_
+Without	_	_
+Connectivity	_	_
+With	_	_
+Connectivity	_	_
+44	_	_
+66	_	_
+88	_	_
+Number	_	_
+Of	_	_
+Threads	_	_
+Figure	_	_
+4	_	_
+:	_	_
+Execution	_	_
+times	_	_
+of	_	_
+the	_	_
+ITK	_	_
+SSLIC	_	_
+filter	_	_
+with	_	_
+a	_	_
+varied	_	_
+number	_	_
+of	_	_
+threads	_	_
+demonstrating	_	_
+SSLIC’s	_	_
+scalability	_	_
+.	_	_
+
+#559
+Top	_	_
+row	_	_
+:	_	_
+results	_	_
+obtained	_	_
+using	_	_
+a	_	_
+single	_	_
+2D	_	_
+slice	_	_
+of	_	_
+the	_	_
+Visible	_	_
+Human	_	_
+Male	_	_
+with	_	_
+[	_	_
+2048×	_	_
+1216	_	_
+]	_	_
+pixels	_	_
+.	_	_
+
+#560
+Bottom	_	_
+row	_	_
+:	_	_
+results	_	_
+obtained	_	_
+using	_	_
+the	_	_
+full	_	_
+3D	_	_
+cyrosection	_	_
+dataset	_	_
+at	_	_
+[	_	_
+2048×1216×1978	_	_
+]	_	_
+.	_	_
+
+#561
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+0	_	_
+10	_	_
+20	_	_
+30	_	_
+40	_	_
+Number	_	_
+Of	_	_
+Threads	_	_
+sp	_	_
+ee	_	_
+du	_	_
+p	_	_
+0	_	_
+10	_	_
+20	_	_
+30	_	_
+40	_	_
+Number	_	_
+Of	_	_
+Threads	_	_
+Without	_	_
+Connectivity	_	_
+With	_	_
+Connectivity	_	_
+linear	_	_
+Figure	_	_
+5	_	_
+:	_	_
+Speedup	_	_
+obtained	_	_
+by	_	_
+the	_	_
+ITK	_	_
+SSLIC	_	_
+filter	_	_
+with	_	_
+a	_	_
+varied	_	_
+number	_	_
+of	_	_
+threads	_	_
+.	_	_
+
+#562
+Comparison	_	_
+of	_	_
+the	_	_
+scalability	_	_
+on	_	_
+a	_	_
+2D	_	_
+slice	_	_
+(	_	_
+left	_	_
+)	_	_
+and	_	_
+the	_	_
+3D	_	_
+volume	_	_
+(	_	_
+right	_	_
+)	_	_
+.	_	_
+
+#563
+The	_	_
+ideal	_	_
+linear	_	_
+speed	_	_
+up	_	_
+is	_	_
+a	_	_
+green	_	_
+dotted	_	_
+line	_	_
+.	_	_
+
+#564
+HyperThreading	_	_
+yields	_	_
+improved	_	_
+performance	_	_
+and	_	_
+decreased	_	_
+execution	_	_
+time	_	_
+even	_	_
+in	_	_
+the	_	_
+extreme	_	_
+case	_	_
+with	_	_
+88	_	_
+threads	_	_
+.	_	_
+
+#565
+5	_	_
+Updating	_	_
+with	_	_
+Modern	_	_
+Threads	_	_
+
+#566
+The	_	_
+forthcoming	_	_
+ITK	_	_
+version	_	_
+5.0	_	_
+release	_	_
+includes	_	_
+a	_	_
+number	_	_
+of	_	_
+performance	_	_
+enhancements	_	_
+to	_	_
+modernize	_	_
+the	_	_
+classic	_	_
+ITK	_	_
+threading	_	_
+model	_	_
+.	_	_
+
+#567
+The	_	_
+additions	_	_
+include	_	_
+multiple	_	_
+threading	_	_
+back	_	_
+ends	_	_
+such	_	_
+as	_	_
+a	_	_
+threadpool	_	_
+and	_	_
+an	_	_
+Intel	_	_
+Threading	_	_
+Building	_	_
+Blocks	_	_
+(	_	_
+TBB	_	_
+)	_	_
+multi-threader	_	_
+interface	_	_
+.	_	_
+
+#568
+The	_	_
+latter	_	_
+supports	_	_
+dynamic	_	_
+load	_	_
+balancing	_	_
+and	_	_
+advanced	_	_
+task	_	_
+scheduling	_	_
+.	_	_
+
+#569
+Our	_	_
+initial	_	_
+development	_	_
+of	_	_
+SSLIC	_	_
+targeted	_	_
+the	_	_
+ITK	_	_
+version	_	_
+4	_	_
+interface	_	_
+.	_	_
+
+#570
+These	_	_
+emerging	_	_
+threading	_	_
+features	_	_
+were	_	_
+considered	_	_
+during	_	_
+the	_	_
+initial	_	_
+SSLIC	_	_
+implementation	_	_
+which	_	_
+enabled	_	_
+updates	_	_
+to	_	_
+support	_	_
+the	_	_
+new	_	_
+threading	_	_
+models	_	_
+.	_	_
+
+#571
+The	_	_
+SSLIC	_	_
+implementation	_	_
+is	_	_
+updated	_	_
+to	_	_
+use	_	_
+the	_	_
+ITK	_	_
+version	_	_
+5	_	_
+threading	_	_
+model	_	_
+while	_	_
+leaving	_	_
+the	_	_
+description	_	_
+of	_	_
+the	_	_
+parallelism	_	_
+identical	_	_
+.	_	_
+
+#572
+The	_	_
+implementation	_	_
+changes	_	_
+from	_	_
+using	_	_
+thread	_	_
+barriers	_	_
+in	_	_
+the	_	_
+ThreadedGenerateData	_	_
+method	_	_
+to	_	_
+a	_	_
+single	_	_
+threaded	_	_
+GenerateData	_	_
+method	_	_
+,	_	_
+which	_	_
+invokes	_	_
+the	_	_
+new	_	_
+ParallelizeArray	_	_
+and	_	_
+ParallelizeImageRegion	_	_
+methods	_	_
+for	_	_
+each	_	_
+parallel	_	_
+step	_	_
+as	_	_
+appropriate	_	_
+.	_	_
+
+#573
+Additionally	_	_
+,	_	_
+a	_	_
+mutex	_	_
+lock	_	_
+is	_	_
+introduced	_	_
+to	_	_
+control	_	_
+access	_	_
+for	_	_
+the	_	_
+accumulation	_	_
+of	_	_
+the	_	_
+updated	_	_
+clusters	_	_
+.	_	_
+
+#574
+With	_	_
+this	_	_
+updated	_	_
+implementation	_	_
+,	_	_
+thread	_	_
+identifiers	_	_
+and	_	_
+persistent	_	_
+per	_	_
+thread	_	_
+allocated	_	_
+storage	_	_
+are	_	_
+removed	_	_
+from	_	_
+the	_	_
+multi-threaded	_	_
+step	_	_
+methods	_	_
+.	_	_
+
+#575
+To	_	_
+evaluate	_	_
+the	_	_
+performance	_	_
+of	_	_
+this	_	_
+update	_	_
+the	_	_
+same	_	_
+88	_	_
+core	_	_
+system	_	_
+with	_	_
+the	_	_
+same	_	_
+GCC	_	_
+4.8.5	_	_
+compiler	_	_
+applied	_	_
+to	_	_
+the	_	_
+same	_	_
+extracted	_	_
+100th	_	_
+slice	_	_
+of	_	_
+the	_	_
+Visible	_	_
+Human	_	_
+with	_	_
+dimensions	_	_
+of	_	_
+[	_	_
+2048×	_	_
+1216	_	_
+]	_	_
+pixels	_	_
+is	_	_
+analyzed	_	_
+.	_	_
+
+#576
+The	_	_
+ITK	_	_
+code	_	_
+at	_	_
+hash	_	_
+‘5470170e‘	_	_
+is	_	_
+used	_	_
+for	_	_
+the	_	_
+original	_	_
+version	_	_
+of	_	_
+the	_	_
+SSLIC	_	_
+filter	_	_
+,	_	_
+and	_	_
+the	_	_
+update	_	_
+to	_	_
+the	_	_
+modern	_	_
+ITKv5	_	_
+threading	_	_
+model	_	_
+is	_	_
+applied	_	_
+.	_	_
+
+#577
+The	_	_
+SSLIC	_	_
+algorithm	_	_
+timed	_	_
+performance	_	_
+is	_	_
+sampled	_	_
+20	_	_
+times	_	_
+,	_	_
+an	_	_
+increase	_	_
+to	_	_
+account	_	_
+for	_	_
+sensitivity	_	_
+in	_	_
+the	_	_
+ratio	_	_
+used	_	_
+in	_	_
+the	_	_
+speedup	_	_
+formula	_	_
+.	_	_
+
+#578
+The	_	_
+reported	_	_
+time	_	_
+is	_	_
+the	_	_
+minimum	_	_
+of	_	_
+20	_	_
+executions	_	_
+for	_	_
+the	_	_
+algorithm	_	_
+.	_	_
+
+#579
+We	_	_
+run	_	_
+both	_	_
+the	_	_
+original	_	_
+version	_	_
+and	_	_
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+1	_	_
+2	_	_
+4	_	_
+8	_	_
+16	_	_
+24	_	_
+32	_	_
+44	_	_
+66	_	_
+88	_	_
+Number	_	_
+Of	_	_
+Threads	_	_
+0.0	_	_
+0.2	_	_
+0.4	_	_
+0.6	_	_
+0.8	_	_
+1.0	_	_
+1.2	_	_
+1.4	_	_
+se	_	_
+co	_	_
+nd	_	_
+s	_	_
+Without	_	_
+Connectivity	_	_
+1	_	_
+2	_	_
+4	_	_
+8	_	_
+16	_	_
+24	_	_
+32	_	_
+44	_	_
+66	_	_
+88	_	_
+Number	_	_
+Of	_	_
+Threads	_	_
+0.0	_	_
+0.2	_	_
+0.4	_	_
+0.6	_	_
+0.8	_	_
+1.0	_	_
+1.2	_	_
+1.4	_	_
+With	_	_
+Connectivity	_	_
+Platform-ITKv5	_	_
+Platform	_	_
+Pool-ITKv5	_	_
+Pool	_	_
+TBB-ITKv5	_	_
+TBB	_	_
+Figure	_	_
+6	_	_
+:	_	_
+Execution	_	_
+times	_	_
+of	_	_
+the	_	_
+SSLIC	_	_
+filter	_	_
+with	_	_
+a	_	_
+varied	_	_
+number	_	_
+of	_	_
+threads	_	_
+,	_	_
+the	_	_
+original	_	_
+ITKv4	_	_
+implementation	_	_
+,	_	_
+the	_	_
+ITKv5	_	_
+implementation	_	_
+,	_	_
+and	_	_
+varied	_	_
+with	_	_
+the	_	_
+different	_	_
+ITK	_	_
+multi-threaders	_	_
+using	_	_
+a	_	_
+single	_	_
+2D	_	_
+slice	_	_
+of	_	_
+the	_	_
+Visible	_	_
+Human	_	_
+Male	_	_
+with	_	_
+[	_	_
+2048×1216	_	_
+]	_	_
+left	_	_
+:	_	_
+without	_	_
+the	_	_
+connectivity	_	_
+step	_	_
+right	_	_
+:	_	_
+with	_	_
+the	_	_
+connectivity	_	_
+step	_	_
+that	_	_
+has	_	_
+a	_	_
+significant	_	_
+single	_	_
+threaded	_	_
+component	_	_
+.	_	_
+
+#580
+the	_	_
+new	_	_
+ITKv5	_	_
+implementation	_	_
+for	_	_
+the	_	_
+three	_	_
+supported	_	_
+multi-threaders	_	_
+:	_	_
+Intel	_	_
+TBB	_	_
+,	_	_
+thread	_	_
+pool	_	_
+,	_	_
+and	_	_
+native	_	_
+platform	_	_
+(	_	_
+Table	_	_
+3	_	_
+,	_	_
+4	_	_
+)	_	_
+.	_	_
+
+#581
+To	_	_
+quantify	_	_
+the	_	_
+performance	_	_
+difference	_	_
+of	_	_
+the	_	_
+new	_	_
+implementation	_	_
+we	_	_
+look	_	_
+at	_	_
+the	_	_
+speedup	_	_
+of	_	_
+the	_	_
+ITKv5	_	_
+update	_	_
+by	_	_
+the	_	_
+ratio	_	_
+of	_	_
+times	_	_
+:	_	_
+original	_	_
+time/new	_	_
+time	_	_
+.	_	_
+
+#582
+Also	_	_
+the	_	_
+speed	_	_
+up	_	_
+of	_	_
+ITKv5	_	_
+implementation	_	_
+compared	_	_
+to	_	_
+the	_	_
+classic	_	_
+platform	_	_
+multi-threader	_	_
+is	_	_
+evaluated	_	_
+(	_	_
+Table	_	_
+5	_	_
+,	_	_
+6	_	_
+)	_	_
+.	_	_
+
+#583
+The	_	_
+timing	_	_
+results	_	_
+are	_	_
+summarized	_	_
+in	_	_
+Figure	_	_
+6	_	_
+.	_	_
+
+#584
+Overall	_	_
+the	_	_
+performance	_	_
+is	_	_
+quite	_	_
+similar	_	_
+with	_	_
+regard	_	_
+to	_	_
+scalability	_	_
+and	_	_
+efficiency	_	_
+.	_	_
+
+#585
+However	_	_
+,	_	_
+with	_	_
+four	_	_
+or	_	_
+eight	_	_
+threads	_	_
+the	_	_
+timing	_	_
+is	_	_
+marginally	_	_
+faster	_	_
+for	_	_
+the	_	_
+original	_	_
+implementation	_	_
+,	_	_
+while	_	_
+with	_	_
+more	_	_
+than	_	_
+44	_	_
+threads	_	_
+the	_	_
+ITKv5	_	_
+implementation	_	_
+has	_	_
+a	_	_
+slight	_	_
+advantage	_	_
+.	_	_
+
+#586
+This	_	_
+is	_	_
+reflected	_	_
+in	_	_
+Figure	_	_
+7	_	_
+;	_	_
+we	_	_
+conjecture	_	_
+that	_	_
+the	_	_
+use	_	_
+of	_	_
+a	_	_
+barrier	_	_
+in	_	_
+the	_	_
+original	_	_
+implementation	_	_
+exhibited	_	_
+poor	_	_
+scalability	_	_
+,	_	_
+while	_	_
+the	_	_
+increase	_	_
+in	_	_
+the	_	_
+number	_	_
+of	_	_
+dynamic	_	_
+memory	_	_
+allocations	_	_
+is	_	_
+likely	_	_
+responsible	_	_
+for	_	_
+the	_	_
+decrease	_	_
+in	_	_
+performance	_	_
+with	_	_
+the	_	_
+ITKv5	_	_
+implementation	_	_
+.	_	_
+
+#587
+Further	_	_
+testing	_	_
+and	_	_
+profiling	_	_
+is	_	_
+required	_	_
+to	_	_
+verify	_	_
+these	_	_
+conjectures	_	_
+.	_	_
+
+#588
+6	_	_
+Discussion	_	_
+and	_	_
+Conclusion	_	_
+
+#589
+In	_	_
+this	_	_
+work	_	_
+we	_	_
+presented	_	_
+SSLIC	_	_
+,	_	_
+an	_	_
+ITK	_	_
+based	_	_
+extension	_	_
+of	_	_
+the	_	_
+SLIC	_	_
+algorithm	_	_
+that	_	_
+accommodates	_	_
+n-dimensional	_	_
+scalar	_	_
+and	_	_
+multi-channel	_	_
+images	_	_
+and	_	_
+parallelizes	_	_
+the	_	_
+original	_	_
+sequential	_	_
+implementation	_	_
+.	_	_
+
+#590
+Using	_	_
+a	_	_
+multi-core	_	_
+system	_	_
+we	_	_
+have	_	_
+shown	_	_
+that	_	_
+our	_	_
+implementation	_	_
+has	_	_
+strong	_	_
+scalability	_	_
+characteristics	_	_
+and	_	_
+is	_	_
+able	_	_
+to	_	_
+efficiently	_	_
+utilize	_	_
+additional	_	_
+computational	_	_
+resources	_	_
+.	_	_
+
+#591
+When	_	_
+compared	_	_
+to	_	_
+the	_	_
+SLIC	_	_
+implementation	_	_
+found	_	_
+in	_	_
+the	_	_
+scikit-image	_	_
+toolkit	_	_
+[	_	_
+18	_	_
+]	_	_
+we	_	_
+observed	_	_
+that	_	_
+on	_	_
+a	_	_
+2D	_	_
+image	_	_
+(	_	_
+Figure	_	_
+1	_	_
+)	_	_
+our	_	_
+single	_	_
+threaded	_	_
+SSLIC	_	_
+was	_	_
+slower	_	_
+than	_	_
+the	_	_
+scikit-image	_	_
+SLIC	_	_
+,	_	_
+315ms	_	_
+vs.	_	_
+166ms	_	_
+,	_	_
+but	_	_
+when	_	_
+using	_	_
+additional	_	_
+threads	_	_
+it	_	_
+was	_	_
+faster	_	_
+,	_	_
+at	_	_
+86ms	_	_
+for	_	_
+4	_	_
+threads	_	_
+and	_	_
+52ms	_	_
+for	_	_
+8	_	_
+threads	_	_
+.	_	_
+
+#592
+The	_	_
+closest	_	_
+work	_	_
+to	_	_
+ours	_	_
+is	_	_
+that	_	_
+presented	_	_
+in	_	_
+[	_	_
+5	_	_
+]	_	_
+which	_	_
+describes	_	_
+jSLIC	_	_
+,	_	_
+a	_	_
+SLIC	_	_
+plugin	_	_
+for	_	_
+the	_	_
+ImageJ	_	_
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+1	_	_
+2	_	_
+4	_	_
+8	_	_
+16	_	_
+24	_	_
+32	_	_
+44	_	_
+66	_	_
+88	_	_
+Number	_	_
+Of	_	_
+Threads	_	_
+0.9	_	_
+1.0	_	_
+1.1	_	_
+1.2	_	_
+1.3	_	_
+1.4	_	_
+Sp	_	_
+ee	_	_
+du	_	_
+p	_	_
+Without	_	_
+Connectivity	_	_
+1	_	_
+2	_	_
+4	_	_
+8	_	_
+16	_	_
+24	_	_
+32	_	_
+44	_	_
+66	_	_
+88	_	_
+Number	_	_
+Of	_	_
+Threads	_	_
+0.9	_	_
+1.0	_	_
+1.1	_	_
+1.2	_	_
+1.3	_	_
+1.4	_	_
+With	_	_
+Connectivity	_	_
+Platform/TBB-ITKv5	_	_
+TBB/TBB-ITKv5	_	_
+Pool/Pool-ITKv5	_	_
+Platform/Platform-ITKv5	_	_
+Figure	_	_
+7	_	_
+:	_	_
+Speedup	_	_
+obtained	_	_
+by	_	_
+the	_	_
+ITK	_	_
+SSLIC	_	_
+agorithm	_	_
+wiht	_	_
+the	_	_
+ITKv5	_	_
+implementation	_	_
+compared	_	_
+the	_	_
+original	_	_
+with	_	_
+a	_	_
+varied	_	_
+number	_	_
+of	_	_
+threads	_	_
+.	_	_
+
+#593
+left	_	_
+:	_	_
+without	_	_
+the	_	_
+connectivity	_	_
+step	_	_
+right	_	_
+:	_	_
+with	_	_
+the	_	_
+connectivity	_	_
+step	_	_
+that	_	_
+has	_	_
+a	_	_
+significant	_	_
+single	_	_
+threaded	_	_
+component	_	_
+.	_	_
+
+#594
+program	_	_
+.	_	_
+
+#595
+That	_	_
+work	_	_
+described	_	_
+a	_	_
+parallel	_	_
+implementation	_	_
+of	_	_
+the	_	_
+SLIC	_	_
+algorithm	_	_
+for	_	_
+color	_	_
+images	_	_
+.	_	_
+
+#596
+Beyond	_	_
+the	_	_
+parallelization	_	_
+,	_	_
+the	_	_
+jSLIC	_	_
+implementation	_	_
+describes	_	_
+a	_	_
+lookup	_	_
+table	_	_
+approach	_	_
+to	_	_
+conversion	_	_
+from	_	_
+RGB	_	_
+to	_	_
+CIE-Lab	_	_
+color	_	_
+space	_	_
+.	_	_
+
+#597
+As	_	_
+ITK	_	_
+does	_	_
+not	_	_
+explicitly	_	_
+support	_	_
+the	_	_
+notion	_	_
+of	_	_
+color	_	_
+spaces	_	_
+,	_	_
+both	_	_
+RGB	_	_
+and	_	_
+CIE-Lab	_	_
+images	_	_
+are	_	_
+three	_	_
+channel	_	_
+images	_	_
+.	_	_
+
+#598
+We	_	_
+assume	_	_
+the	_	_
+image	_	_
+is	_	_
+in	_	_
+CIE-Lab	_	_
+space	_	_
+when	_	_
+using	_	_
+the	_	_
+default	_	_
+weighting	_	_
+parameter	_	_
+value	_	_
+,	_	_
+otherwise	_	_
+the	_	_
+user	_	_
+needs	_	_
+to	_	_
+set	_	_
+it	_	_
+appropriately	_	_
+or	_	_
+convert	_	_
+the	_	_
+image	_	_
+to	_	_
+CIE-Lab	_	_
+representation	_	_
+.	_	_
+
+#599
+An	_	_
+additional	_	_
+significant	_	_
+difference	_	_
+is	_	_
+that	_	_
+the	_	_
+jSLIC	_	_
+algorithm	_	_
+only	_	_
+supports	_	_
+2D	_	_
+images	_	_
+while	_	_
+SSLIC	_	_
+supports	_	_
+n-dimensional	_	_
+images	_	_
+.	_	_
+
+#600
+The	_	_
+evaluation	_	_
+of	_	_
+the	_	_
+jSLIC	_	_
+method	_	_
+was	_	_
+carried	_	_
+out	_	_
+on	_	_
+a	_	_
+4	_	_
+core	_	_
+machine	_	_
+with	_	_
+8Gb	_	_
+RAM	_	_
+,	_	_
+with	_	_
+improved	_	_
+performance	_	_
+when	_	_
+using	_	_
+up	_	_
+to	_	_
+4	_	_
+threads	_	_
+.	_	_
+
+#601
+In	_	_
+our	_	_
+case	_	_
+we	_	_
+observed	_	_
+improved	_	_
+performance	_	_
+even	_	_
+when	_	_
+exceeding	_	_
+the	_	_
+number	_	_
+of	_	_
+physical	_	_
+cores	_	_
+on	_	_
+our	_	_
+system	_	_
+.	_	_
+
+#602
+Based	_	_
+on	_	_
+the	_	_
+graphs	_	_
+in	_	_
+the	_	_
+jSLIC	_	_
+paper	_	_
+it	_	_
+appears	_	_
+that	_	_
+the	_	_
+relative	_	_
+efficiency	_	_
+for	_	_
+2	_	_
+and	_	_
+4	_	_
+threads	_	_
+is	_	_
+approximately	_	_
+0.71	_	_
+and	_	_
+0.45	_	_
+for	_	_
+an	_	_
+image	_	_
+of	_	_
+size	_	_
+[	_	_
+8000×8000	_	_
+]	_	_
+while	_	_
+the	_	_
+SSLIC	_	_
+implementation	_	_
+shows	_	_
+better	_	_
+scalability	_	_
+with	_	_
+relative	_	_
+efficiency	_	_
+for	_	_
+2	_	_
+and	_	_
+4	_	_
+threads	_	_
+of	_	_
+0.94	_	_
+and	_	_
+0.84	_	_
+on	_	_
+a	_	_
+image	_	_
+of	_	_
+size	_	_
+[	_	_
+2048×1216	_	_
+]	_	_
+.	_	_
+
+#603
+We	_	_
+presented	_	_
+a	_	_
+scalable	_	_
+implementation	_	_
+of	_	_
+the	_	_
+SLIC	_	_
+algorithm	_	_
+,	_	_
+SSLIC	_	_
+,	_	_
+a	_	_
+useful	_	_
+addition	_	_
+to	_	_
+ITK	_	_
+.	_	_
+
+#604
+We	_	_
+demonstrated	_	_
+its	_	_
+performance	_	_
+both	_	_
+qualitatively	_	_
+and	_	_
+quantitatively	_	_
+on	_	_
+diverse	_	_
+datasets	_	_
+of	_	_
+2D	_	_
+and	_	_
+3D	_	_
+,	_	_
+scalar	_	_
+and	_	_
+multi-component	_	_
+,	_	_
+as	_	_
+well	_	_
+as	_	_
+2-dimensional	_	_
+and	_	_
+3-dimensional	_	_
+images	_	_
+.	_	_
+
+#605
+The	_	_
+SSLIC	_	_
+implementation	_	_
+is	_	_
+available	_	_
+in	_	_
+ITK	_	_
+version	_	_
+5	_	_
+in	_	_
+the	_	_
+SuperPixel	_	_
+module	_	_
+(	_	_
+https	_	_
+:	_	_
+//itk.org/	_	_
+Doxygen/html/group__ITKSuperPixel.html	_	_
+)	_	_
+,	_	_
+in	_	_
+ITK	_	_
+version	_	_
+4.13.1	_	_
+it	_	_
+is	_	_
+available	_	_
+in	_	_
+the	_	_
+SimpleITKFilters	_	_
+remote	_	_
+module	_	_
+(	_	_
+https	_	_
+:	_	_
+//github.com/SimpleITK/ITKSimpleITKFilters	_	_
+)	_	_
+,	_	_
+and	_	_
+it	_	_
+was	_	_
+originally	_	_
+implemented	_	_
+in	_	_
+a	_	_
+standalone	_	_
+remote	_	_
+module	_	_
+(	_	_
+https	_	_
+:	_	_
+//github.com/blowekamp/itkSuperPixel	_	_
+)	_	_
+.	_	_
+
+#606
+Latest	_	_
+version	_	_
+available	_	_
+at	_	_
+the	_	_
+Insight	_	_
+Journal	_	_
+[	_	_
+http	_	_
+:	_	_
+//hdl.handle.net/10380/3596	_	_
+]	_	_
+Distributed	_	_
+under	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+License	_	_
+References	_	_
+15	_	_
+Acknowledgments	_	_
+This	_	_
+work	_	_
+was	_	_
+supported	_	_
+by	_	_
+the	_	_
+Intramural	_	_
+Research	_	_
+Program	_	_
+of	_	_
+the	_	_
+U.S.	_	_
+National	_	_
+Institutes	_	_
+of	_	_
+Health	_	_
+,	_	_
+National	_	_
+Library	_	_
+of	_	_
+Medicine	_	_
+.	_	_

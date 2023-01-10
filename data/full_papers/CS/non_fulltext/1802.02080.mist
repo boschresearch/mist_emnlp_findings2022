@@ -1,0 +1,12079 @@
+#0
+Article	_	_
+Multi-Temporal	_	_
+Land	_	_
+Cover	_	_
+Classification	_	_
+with	_	_
+Sequential	_	_
+Recurrent	_	_
+Encoders	_	_
+Marc	_	_
+Rußwurm	_	_
+*	_	_
+ID	_	_
+and	_	_
+Marco	_	_
+Körner	_	_
+ID	_	_
+Chair	_	_
+of	_	_
+Remote	_	_
+Sensing	_	_
+Technology	_	_
+,	_	_
+TUM	_	_
+Department	_	_
+of	_	_
+Civil	_	_
+,	_	_
+Geo	_	_
+and	_	_
+Environmental	_	_
+Engineering	_	_
+,	_	_
+Technical	_	_
+University	_	_
+of	_	_
+Munich	_	_
+,	_	_
+Arcisstraße	_	_
+21	_	_
+,	_	_
+80333	_	_
+Munich	_	_
+,	_	_
+Germany	_	_
+;	_	_
+marco.koerner	_	_
+@	_	_
+tum.de	_	_
+*	_	_
+Correspondence	_	_
+:	_	_
+marc.russwurm	_	_
+@	_	_
+tum.de	_	_
+;	_	_
+Tel	_	_
+.	_	_
+
+#1
+:	_	_
++49-172-81-70-121	_	_
+Received	_	_
+:	_	_
+22	_	_
+January	_	_
+2018	_	_
+;	_	_
+Accepted	_	_
+:	_	_
+17	_	_
+March	_	_
+2018	_	_
+;	_	_
+Published	_	_
+:	_	_
+21	_	_
+March	_	_
+2018	_	_
+;	_	_
+Updated	_	_
+on	_	_
+ArXiv	_	_
+:	_	_
+7	_	_
+April	_	_
+2018	_	_
+Abstract	_	_
+:	_	_
+Earth	_	_
+observation	_	_
+(	_	_
+EO	_	_
+)	_	_
+sensors	_	_
+deliver	_	_
+data	_	_
+at	_	_
+daily	_	_
+or	_	_
+weekly	_	_
+intervals	_	_
+.	_	_
+
+#2
+Most	_	_
+land	_	_
+use	_	_
+and	_	_
+land	_	_
+cover	_	_
+classification	_	_
+(	_	_
+LULC	_	_
+)	_	_
+approaches	_	_
+,	_	_
+however	_	_
+,	_	_
+are	_	_
+designed	_	_
+for	_	_
+cloud-free	_	_
+and	_	_
+mono-temporal	_	_
+observations	_	_
+.	_	_
+
+#3
+The	_	_
+increasing	_	_
+temporal	_	_
+capabilities	_	_
+of	_	_
+today’s	_	_
+sensors	_	_
+enable	_	_
+the	_	_
+use	_	_
+of	_	_
+temporal	_	_
+,	_	_
+along	_	_
+with	_	_
+spectral	_	_
+and	_	_
+spatial	_	_
+features.Domains	_	_
+such	_	_
+as	_	_
+speech	_	_
+recognition	_	_
+or	_	_
+neural	_	_
+machine	_	_
+translation	_	_
+,	_	_
+work	_	_
+with	_	_
+inherently	_	_
+temporal	_	_
+data	_	_
+and	_	_
+,	_	_
+today	_	_
+,	_	_
+achieve	_	_
+impressive	_	_
+results	_	_
+by	_	_
+using	_	_
+sequential	_	_
+encoder-decoder	_	_
+structures	_	_
+.	_	_
+
+#4
+Inspired	_	_
+by	_	_
+these	_	_
+sequence-to-sequence	_	_
+models	_	_
+,	_	_
+we	_	_
+adapt	_	_
+an	_	_
+encoder	_	_
+structure	_	_
+with	_	_
+convolutional	_	_
+recurrent	_	_
+layers	_	_
+in	_	_
+order	_	_
+to	_	_
+approximate	_	_
+a	_	_
+phenological	_	_
+model	_	_
+for	_	_
+vegetation	_	_
+classes	_	_
+based	_	_
+on	_	_
+a	_	_
+temporal	_	_
+sequence	_	_
+of	_	_
+Sentinel	_	_
+2	_	_
+(	_	_
+S2	_	_
+)	_	_
+images	_	_
+.	_	_
+
+#5
+In	_	_
+our	_	_
+experiments	_	_
+,	_	_
+we	_	_
+visualize	_	_
+internal	_	_
+activations	_	_
+over	_	_
+a	_	_
+sequence	_	_
+of	_	_
+cloudy	_	_
+and	_	_
+non-cloudy	_	_
+images	_	_
+and	_	_
+find	_	_
+several	_	_
+recurrent	_	_
+cells	_	_
+that	_	_
+reduce	_	_
+the	_	_
+input	_	_
+activity	_	_
+for	_	_
+cloudy	_	_
+observations	_	_
+.	_	_
+
+#6
+Hence	_	_
+,	_	_
+we	_	_
+assume	_	_
+that	_	_
+our	_	_
+network	_	_
+has	_	_
+learned	_	_
+cloud-filtering	_	_
+schemes	_	_
+solely	_	_
+from	_	_
+input	_	_
+data	_	_
+,	_	_
+which	_	_
+could	capability-speculation	_
+alleviate	_	_
+the	_	_
+need	_	_
+for	_	_
+tedious	_	_
+cloud-filtering	_	_
+as	_	_
+a	_	_
+preprocessing	_	_
+step	_	_
+for	_	_
+many	_	_
+EO	_	_
+approaches	_	_
+.	_	_
+
+#7
+Moreover	_	_
+,	_	_
+using	_	_
+unfiltered	_	_
+temporal	_	_
+series	_	_
+of	_	_
+top-of-atmosphere	_	_
+(	_	_
+TOA	_	_
+)	_	_
+reflectance	_	_
+data	_	_
+,	_	_
+our	_	_
+experiments	_	_
+achieved	_	_
+state-of-the-art	_	_
+classification	_	_
+accuracies	_	_
+on	_	_
+a	_	_
+large	_	_
+number	_	_
+of	_	_
+crop	_	_
+classes	_	_
+with	_	_
+minimal	_	_
+preprocessing	_	_
+,	_	_
+compared	_	_
+to	_	_
+other	_	_
+classification	_	_
+approaches	_	_
+.	_	_
+
+#8
+Keywords	_	_
+:	_	_
+deep	_	_
+learning	_	_
+;	_	_
+multi-temporal	_	_
+classification	_	_
+;	_	_
+land	_	_
+use	_	_
+and	_	_
+land	_	_
+cover	_	_
+classification	_	_
+;	_	_
+recurrent	_	_
+networks	_	_
+;	_	_
+sequence	_	_
+encoder	_	_
+;	_	_
+crop	_	_
+classification	_	_
+;	_	_
+sequence-to-sequence	_	_
+;	_	_
+Sentinel	_	_
+2	_	_
+
+#9
+1.	_	_
+Introduction	_	_
+
+#10
+Land	_	_
+use	_	_
+and	_	_
+land	_	_
+cover	_	_
+classification	_	_
+(	_	_
+LULC	_	_
+)	_	_
+has	_	_
+been	_	_
+a	_	_
+central	_	_
+focus	_	_
+of	_	_
+Earth	_	_
+observation	_	_
+(	_	_
+EO	_	_
+)	_	_
+since	_	_
+the	_	_
+first	_	_
+air-	_	_
+and	_	_
+space-borne	_	_
+sensors	_	_
+began	_	_
+to	_	_
+provide	_	_
+data	_	_
+.	_	_
+
+#11
+For	_	_
+this	_	_
+purpose	_	_
+,	_	_
+optical	_	_
+sensors	_	_
+sample	_	_
+the	_	_
+spectral	_	_
+reflectivity	_	_
+of	_	_
+objects	_	_
+on	_	_
+the	_	_
+Earth’s	_	_
+surface	_	_
+in	_	_
+a	_	_
+spatial	_	_
+grid	_	_
+at	_	_
+repeated	_	_
+intervals	_	_
+.	_	_
+
+#12
+Hence	_	_
+,	_	_
+LULC	_	_
+classes	_	_
+can	_	_
+be	_	_
+characterized	_	_
+by	_	_
+spectral	_	_
+,	_	_
+spatial	_	_
+and	_	_
+temporal	_	_
+features	_	_
+.	_	_
+
+#13
+Today	_	_
+,	_	_
+most	_	_
+classification	_	_
+tasks	_	_
+focus	_	_
+on	_	_
+spatial	_	_
+and	_	_
+spectral	_	_
+features	_	_
+[	_	_
+?	_	_
+
+#14
+]	_	_
+,	_	_
+while	_	_
+utilizing	_	_
+the	_	_
+temporal	_	_
+domain	_	_
+had	_	_
+long	_	_
+proven	_	_
+challenging	_	_
+.	_	_
+
+#15
+This	_	_
+is	_	_
+mostly	_	_
+due	_	_
+to	_	_
+limitations	_	_
+on	_	_
+data	_	_
+availability	_	_
+,	_	_
+the	_	_
+cost	_	_
+of	_	_
+data	_	_
+acquisition	_	_
+,	_	_
+infrastructural	_	_
+challenges	_	_
+regarding	_	_
+data	_	_
+storage	_	_
+and	_	_
+processing	_	_
+and	_	_
+the	_	_
+complexity	_	_
+of	_	_
+model	_	_
+design	_	_
+and	_	_
+feature	_	_
+extraction	_	_
+over	_	_
+multiple	_	_
+time	_	_
+frames	_	_
+.	_	_
+
+#16
+Some	_	_
+LULC	_	_
+classes	_	_
+,	_	_
+such	_	_
+as	_	_
+urban	_	_
+structures	_	_
+,	_	_
+are	_	_
+mostly	_	_
+invariant	_	_
+to	_	_
+temporal	_	_
+changes	_	_
+and	_	_
+,	_	_
+hence	_	_
+,	_	_
+are	_	_
+suitable	_	_
+for	_	_
+mono-temporal	_	_
+approaches	_	_
+.	_	_
+
+#17
+Others	_	_
+,	_	_
+predominantly	_	_
+vegetation-related	_	_
+classes	_	_
+,	_	_
+change	_	_
+their	_	_
+spectral	_	_
+reflectivity	_	_
+based	_	_
+on	_	_
+biochemical	_	_
+processes	_	_
+initiated	_	_
+by	_	_
+phenological	_	_
+events	_	_
+related	_	_
+to	_	_
+the	_	_
+type	_	_
+of	_	_
+vegetation	_	_
+and	_	_
+to	_	_
+environmental	_	_
+conditions	_	_
+.	_	_
+
+#18
+These	_	_
+vegetation-characteristic	_	_
+phenological	_	_
+transitions	_	_
+have	_	_
+been	_	_
+utilized	_	_
+for	_	_
+crop	_	_
+yield	_	_
+prediction	_	_
+and	_	_
+,	_	_
+to	_	_
+some	_	_
+extent	_	_
+,	_	_
+for	_	_
+classification	_	_
+[	_	_
+1,2	_	_
+]	_	_
+.	_	_
+
+#19
+However	_	_
+,	_	_
+to	_	_
+circumvent	_	_
+the	_	_
+previously-mentioned	_	_
+challenges	_	_
+,	_	_
+the	_	_
+dimensionality	_	_
+of	_	_
+spectral	_	_
+bands	_	_
+has	_	_
+often	_	_
+been	_	_
+compressed	_	_
+by	_	_
+calculating	_	_
+task-specific	_	_
+indices	_	_
+,	_	_
+such	_	_
+as	_	_
+the	_	_
+normalized	_	_
+difference	_	_
+vegetation	_	_
+index	_	_
+(	_	_
+NDVI	_	_
+)	_	_
+,	_	_
+the	_	_
+normalized	_	_
+difference	_	_
+water	_	_
+index	_	_
+(	_	_
+NDWI	_	_
+)	_	_
+or	_	_
+the	_	_
+enhanced	_	_
+vegetation	_	_
+index	_	_
+(	_	_
+EVI	_	_
+)	_	_
+.	_	_
+
+#20
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#21
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#22
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+;	_	_
+doi:10.3390/ijgi7040129	_	_
+www.mdpi.com/journal/ijgi	_	_
+ar	_	_
+X	_	_
+iv	_	_
+:1	_	_
+2	_	_
+.	_	_
+
+#23
+0v	_	_
+4	_	_
+[	_	_
+cs	_	_
+.C	_	_
+V	_	_
+]	_	_
+7	_	_
+A	_	_
+pr	_	_
+2	_	_
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#24
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#25
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+2	_	_
+of	_	_
+19	_	_
+Today	_	_
+,	_	_
+most	_	_
+of	_	_
+these	_	_
+temporal	_	_
+data	_	_
+limitations	_	_
+have	_	_
+been	_	_
+alleviated	_	_
+by	_	_
+technological	_	_
+advances	_	_
+.	_	_
+
+#26
+Reasonable	_	_
+spatial	_	_
+and	_	_
+temporal	_	_
+resolution	_	_
+data	_	_
+of	_	_
+multi-spectral	_	_
+Earth	_	_
+observation	_	_
+sensors	_	_
+are	_	_
+available	_	_
+at	_	_
+no	_	_
+cost	_	_
+.	_	_
+
+#27
+Moreover	_	_
+,	_	_
+new	_	_
+services	_	_
+inexpensively	_	_
+provide	_	_
+high	_	_
+temporal	_	_
+and	_	_
+spatial	_	_
+resolution	_	_
+imagery	_	_
+.	_	_
+
+#28
+The	_	_
+cost	_	_
+of	_	_
+data	_	_
+storage	_	_
+has	_	_
+decreased	_	_
+,	_	_
+and	_	_
+data	_	_
+transmission	_	_
+has	_	_
+become	_	_
+sufficiently	_	_
+fast	_	_
+to	_	_
+allow	_	_
+gathering	_	_
+and	_	_
+processing	_	_
+all	_	_
+available	_	_
+images	_	_
+over	_	_
+a	_	_
+large	_	_
+area	_	_
+and	_	_
+multiple	_	_
+years	_	_
+.	_	_
+
+#29
+Finally	_	_
+,	_	_
+new	_	_
+advances	_	_
+in	_	_
+machine	_	_
+learning	_	_
+,	_	_
+accompanied	_	_
+by	_	_
+GPU-accelerated	_	_
+hardware	_	_
+,	_	_
+have	_	_
+made	_	_
+it	_	_
+possible	_	_
+to	_	_
+learn	_	_
+complex	_	_
+functional	_	_
+relationships	_	_
+,	_	_
+solely	_	_
+from	_	_
+the	_	_
+data	_	_
+provided	_	_
+.	_	_
+
+#30
+Since	_	_
+now	_	_
+data	_	_
+are	_	_
+available	_	_
+at	_	_
+high	_	_
+resolutions	_	_
+and	_	_
+processing	_	_
+is	_	_
+feasible	_	_
+,	_	_
+the	_	_
+temporal	_	_
+domain	_	_
+should	deontic	_
+be	_	_
+exploited	_	_
+for	_	_
+EO	_	_
+approaches	_	_
+.	_	_
+
+#31
+However	_	_
+,	_	_
+this	_	_
+exploitation	_	_
+requires	_	_
+suitable	_	_
+processing	_	_
+techniques	_	_
+utilizing	_	_
+all	_	_
+available	_	_
+temporal	_	_
+information	_	_
+at	_	_
+reasonable	_	_
+complexity	_	_
+.	_	_
+
+#32
+Other	_	_
+domains	_	_
+,	_	_
+such	_	_
+as	_	_
+machine	_	_
+translation	_	_
+[	_	_
+3	_	_
+]	_	_
+,	_	_
+text	_	_
+summarization	_	_
+[	_	_
+4–6	_	_
+]	_	_
+or	_	_
+speech	_	_
+recognition	_	_
+[	_	_
+7,8	_	_
+]	_	_
+,	_	_
+handle	_	_
+sequential	_	_
+data	_	_
+naturally	_	_
+.	_	_
+
+#33
+These	_	_
+domains	_	_
+have	_	_
+popularized	_	_
+sequence-to-sequence	_	_
+learning	_	_
+,	_	_
+which	_	_
+transforms	_	_
+a	_	_
+variable-length	_	_
+input	_	_
+sequence	_	_
+to	_	_
+an	_	_
+intermediate	_	_
+representation	_	_
+.	_	_
+
+#34
+This	_	_
+representation	_	_
+is	_	_
+then	_	_
+decoded	_	_
+to	_	_
+a	_	_
+variable-length	_	_
+output	_	_
+sequence	_	_
+.	_	_
+
+#35
+From	_	_
+this	_	_
+concept	_	_
+,	_	_
+we	_	_
+adopt	_	_
+the	_	_
+sequential	_	_
+encoder	_	_
+structure	_	_
+and	_	_
+extract	_	_
+characteristic	_	_
+temporal	_	_
+features	_	_
+from	_	_
+a	_	_
+sequence	_	_
+of	_	_
+Sentinel	_	_
+2	_	_
+(	_	_
+S2	_	_
+)	_	_
+images	_	_
+using	_	_
+a	_	_
+straightforward	_	_
+,	_	_
+two-layer	_	_
+network	_	_
+.	_	_
+
+#36
+Thus	_	_
+,	_	_
+the	_	_
+main	_	_
+contributions	_	_
+of	_	_
+this	_	_
+work	_	_
+are	_	_
+:	_	_
+(	_	_
+i	_	_
+)	_	_
+the	_	_
+adaptation	_	_
+of	_	_
+sequence	_	_
+encoders	_	_
+from	_	_
+the	_	_
+field	_	_
+of	_	_
+sequence-to-sequence	_	_
+learning	_	_
+to	_	_
+Earth	_	_
+observation	_	_
+(	_	_
+EO	_	_
+)	_	_
+,	_	_
+(	_	_
+ii	_	_
+)	_	_
+a	_	_
+visualization	_	_
+of	_	_
+internal	_	_
+gate	_	_
+activations	_	_
+on	_	_
+a	_	_
+sequence	_	_
+of	_	_
+satellite	_	_
+observations	_	_
+and	_	_
+,	_	_
+(	_	_
+iii	_	_
+)	_	_
+the	_	_
+application	_	_
+of	_	_
+crop	_	_
+classification	_	_
+over	_	_
+two	_	_
+seasons	_	_
+.	_	_
+
+#37
+2	_	_
+.	_	_
+
+#38
+Related	_	_
+Work	_	_
+As	_	_
+we	_	_
+aim	_	_
+to	_	_
+apply	_	_
+our	_	_
+network	_	_
+to	_	_
+vegetation	_	_
+classes	_	_
+,	_	_
+we	_	_
+first	_	_
+introduce	_	_
+common	_	_
+crop	_	_
+classification	_	_
+approaches	_	_
+,	_	_
+to	_	_
+which	_	_
+we	_	_
+will	_	_
+compare	_	_
+our	_	_
+results	_	_
+in	_	_
+Section	_	_
+6	_	_
+.	_	_
+
+#39
+Then	_	_
+,	_	_
+we	_	_
+motivate	_	_
+data-driven	_	_
+learning	_	_
+models	_	_
+and	_	_
+cover	_	_
+the	_	_
+latest	_	_
+work	_	_
+on	_	_
+recurrent	_	_
+network	_	_
+structures	_	_
+in	_	_
+the	_	_
+EO	_	_
+domain	_	_
+.	_	_
+
+#40
+Many	_	_
+remote	_	_
+sensing	_	_
+approaches	_	_
+have	_	_
+achieved	_	_
+adequate	_	_
+classification	_	_
+accuracies	_	_
+for	_	_
+multi-temporal	_	_
+crop	_	_
+data	_	_
+by	_	_
+using	_	_
+multiple	_	_
+preprocessing	_	_
+steps	_	_
+in	_	_
+order	_	_
+to	_	_
+improve	_	_
+feature	_	_
+separability	_	_
+.	_	_
+
+#41
+Common	_	_
+methods	_	_
+are	_	_
+atmospheric	_	_
+correction	_	_
+[	_	_
+9–13	_	_
+]	_	_
+,	_	_
+calculation	_	_
+of	_	_
+vegetation	_	_
+indices	_	_
+[	_	_
+9–13	_	_
+]	_	_
+or	_	_
+the	_	_
+extraction	_	_
+of	_	_
+sophisticated	_	_
+phenological	_	_
+features	_	_
+[	_	_
+12	_	_
+]	_	_
+.	_	_
+
+#42
+Additionally	_	_
+,	_	_
+some	_	_
+approaches	_	_
+utilize	_	_
+expert	_	_
+knowledge	_	_
+,	_	_
+for	_	_
+instance	_	_
+,	_	_
+by	_	_
+introducing	_	_
+additional	_	_
+agro-meteorological	_	_
+data	_	_
+[	_	_
+9	_	_
+]	_	_
+,	_	_
+by	_	_
+selecting	_	_
+suitable	_	_
+observation	_	_
+dates	_	_
+for	_	_
+the	_	_
+target	_	_
+crop-classes	_	_
+[	_	_
+13	_	_
+]	_	_
+or	_	_
+by	_	_
+determining	_	_
+rules	_	_
+for	_	_
+classification	_	_
+[	_	_
+10	_	_
+]	_	_
+.	_	_
+
+#43
+Pixel-based	_	_
+[	_	_
+9,12	_	_
+]	_	_
+and	_	_
+object-based	_	_
+[	_	_
+10	_	_
+,	_	_
+11,13	_	_
+]	_	_
+approaches	_	_
+have	_	_
+been	_	_
+proposed	_	_
+.	_	_
+
+#44
+Commonly	_	_
+,	_	_
+decision	_	_
+trees	_	_
+(	_	_
+DTs	_	_
+)	_	_
+[	_	_
+9,10,13	_	_
+]	_	_
+or	_	_
+random	_	_
+forests	_	_
+(	_	_
+RFs	_	_
+)	_	_
+[	_	_
+11,12	_	_
+]	_	_
+are	_	_
+used	_	_
+as	_	_
+classifiers	_	_
+,	_	_
+the	_	_
+rules	_	_
+of	_	_
+which	_	_
+are	_	_
+sometimes	_	_
+aided	_	_
+by	_	_
+additional	_	_
+expert	_	_
+knowledge	_	_
+[	_	_
+10	_	_
+]	_	_
+.	_	_
+
+#45
+These	_	_
+traditional	_	_
+approaches	_	_
+generally	_	_
+trade	_	_
+procedural	_	_
+complexity	_	_
+and	_	_
+the	_	_
+use	_	_
+of	_	_
+region-specific	_	_
+expert	_	_
+knowledge	_	_
+for	_	_
+good	_	_
+classification	_	_
+accuracies	_	_
+in	_	_
+the	_	_
+respective	_	_
+areas	_	_
+of	_	_
+interest	_	_
+(	_	_
+AOIs	_	_
+)	_	_
+.	_	_
+
+#46
+However	_	_
+,	_	_
+these	_	_
+approaches	_	_
+are	_	_
+,	_	_
+in	_	_
+general	_	_
+,	_	_
+difficult	_	_
+to	_	_
+apply	_	_
+to	_	_
+other	_	_
+regions	_	_
+.	_	_
+
+#47
+Furthermore	_	_
+,	_	_
+the	_	_
+processing	_	_
+structure	_	_
+requires	_	_
+supervision	_	_
+to	_	_
+varying	_	_
+degrees	_	_
+(	_	_
+e.g.	_	_
+,	_	_
+product	_	_
+selection	_	_
+,	_	_
+visual	_	_
+image	_	_
+inspection	_	_
+,	_	_
+parameter	_	_
+tuning	_	_
+)	_	_
+,	_	_
+which	_	_
+impedes	_	_
+application	_	_
+at	_	_
+larger	_	_
+scales	_	_
+.	_	_
+
+#48
+Today	_	_
+,	_	_
+we	_	_
+are	_	_
+experiencing	_	_
+a	_	_
+change	_	_
+in	_	_
+paradigm	_	_
+:	_	_
+away	_	_
+from	_	_
+the	_	_
+design	_	_
+of	_	_
+physically-interpretable	_	_
+,	_	_
+human-understandable	_	_
+models	_	_
+,	_	_
+which	_	_
+require	_	_
+task-specific	_	_
+expert	_	_
+knowledge	_	_
+,	_	_
+towards	_	_
+data-driven	_	_
+models	_	_
+,	_	_
+which	_	_
+are	_	_
+encoded	_	_
+in	_	_
+internal	_	_
+weight	_	_
+parameters	_	_
+and	_	_
+derived	_	_
+solely	_	_
+from	_	_
+observations	_	_
+.	_	_
+
+#49
+In	_	_
+that	_	_
+regard	_	_
+,	_	_
+hidden	_	_
+Markov	_	_
+models	_	_
+(	_	_
+HMMs	_	_
+)	_	_
+[	_	_
+14	_	_
+]	_	_
+and	_	_
+conditional	_	_
+random	_	_
+fields	_	_
+(	_	_
+CRFs	_	_
+)	_	_
+[	_	_
+15	_	_
+]	_	_
+have	_	_
+shown	_	_
+promising	_	_
+classification	_	_
+accuracies	_	_
+with	_	_
+multi-temporal	_	_
+data	_	_
+.	_	_
+
+#50
+However	_	_
+,	_	_
+the	_	_
+underlying	_	_
+Markov	_	_
+property	_	_
+limits	_	_
+long-term	_	_
+learning	_	_
+capabilities	_	_
+,	_	_
+as	_	_
+Markov-based	_	_
+approaches	_	_
+assume	_	_
+that	_	_
+the	_	_
+present	_	_
+state	_	_
+only	_	_
+depends	_	_
+on	_	_
+the	_	_
+current	_	_
+input	_	_
+and	_	_
+one	_	_
+previous	_	_
+state	_	_
+.	_	_
+
+#51
+Deep	_	_
+learning	_	_
+methods	_	_
+have	_	_
+had	_	_
+major	_	_
+success	_	_
+in	_	_
+fields	_	_
+,	_	_
+such	_	_
+as	_	_
+target	_	_
+recognition	_	_
+and	_	_
+scene	_	_
+understanding	_	_
+[	_	_
+?	_	_
+
+#52
+]	_	_
+,	_	_
+and	_	_
+are	_	_
+increasingly	_	_
+adopted	_	_
+by	_	_
+the	_	_
+remote	_	_
+sensing	_	_
+community	_	_
+.	_	_
+
+#53
+These	_	_
+methods	_	_
+have	_	_
+proven	_	_
+particularly	_	_
+beneficial	_	_
+for	_	_
+modeling	_	_
+physical	_	_
+relationships	_	_
+that	_	_
+are	_	_
+complicated	_	_
+,	_	_
+can	_	_
+not	_	_
+be	_	_
+generalized	_	_
+or	_	_
+are	_	_
+not	_	_
+well-understood	_	_
+[	_	_
+16	_	_
+]	_	_
+.	_	_
+
+#54
+Thus	_	_
+,	_	_
+deep	_	_
+learning	_	_
+is	_	_
+potentially	_	_
+well	_	_
+suited	_	_
+to	_	_
+approximate	_	_
+models	_	_
+of	_	_
+phenological	_	_
+changes	_	_
+,	_	_
+which	_	_
+depend	_	_
+on	_	_
+complex	_	_
+internal	_	_
+biochemical	_	_
+processes	_	_
+of	_	_
+which	_	_
+only	_	_
+the	_	_
+change	_	_
+of	_	_
+surface	_	_
+reflectivity	_	_
+can	_	_
+be	_	_
+observed	_	_
+by	_	_
+EO	_	_
+sensors	_	_
+.	_	_
+
+#55
+A	_	_
+purely	_	_
+data-driven	_	_
+approach	_	_
+might	capability-speculation	_
+alleviate	_	_
+the	_	_
+need	_	_
+to	_	_
+manually	_	_
+design	_	_
+a	_	_
+functional	_	_
+model	_	_
+for	_	_
+this	_	_
+complex	_	_
+relationship	_	_
+.	_	_
+
+#56
+However	_	_
+,	_	_
+caution	_	_
+is	_	_
+required	_	_
+,	_	_
+as	_	_
+external	_	_
+and	_	_
+non	_	_
+class-relevant	_	_
+factors	_	_
+,	_	_
+such	_	_
+as	_	_
+seasonal	_	_
+weather	_	_
+or	_	_
+observation	_	_
+configurations	_	_
+,	_	_
+are	_	_
+potentially	_	_
+incorporated	_	_
+into	_	_
+the	_	_
+model	_	_
+,	_	_
+which	_	_
+might	speculation	_
+remain	_	_
+undetected	_	_
+if	_	_
+these	_	_
+factors	_	_
+constantly	_	_
+bias	_	_
+the	_	_
+dataset	_	_
+.	_	_
+
+#57
+In	_	_
+remote	_	_
+sensing	_	_
+,	_	_
+convolutional	_	_
+networks	_	_
+have	_	_
+gained	_	_
+increasing	_	_
+popularity	_	_
+for	_	_
+mono-temporal	_	_
+observation	_	_
+tasks	_	_
+[	_	_
+17–20	_	_
+]	_	_
+.	_	_
+
+#58
+However	_	_
+,	_	_
+for	_	_
+sequential	_	_
+tasks	_	_
+,	_	_
+recurrent	_	_
+network	_	_
+architectures	_	_
+,	_	_
+which	_	_
+provide	_	_
+an	_	_
+iterative	_	_
+framework	_	_
+to	_	_
+process	_	_
+sequential	_	_
+information	_	_
+,	_	_
+are	_	_
+generally	_	_
+better	_	_
+suited	_	_
+.	_	_
+
+#59
+Recent	_	_
+approaches	_	_
+utilize	_	_
+recurrent	_	_
+architectures	_	_
+for	_	_
+change	_	_
+detection	_	_
+[	_	_
+21	_	_
+?	_	_
+?	_	_
+]	_	_
+,	_	_
+identification	_	_
+of	_	_
+sea	_	_
+level	_	_
+anomalies	_	_
+[	_	_
+22	_	_
+]	_	_
+and	_	_
+land	_	_
+cover	_	_
+classification	_	_
+[	_	_
+23	_	_
+]	_	_
+.	_	_
+
+#60
+For	_	_
+long-term	_	_
+dependencies	_	_
+,	_	_
+Jia	_	_
+et	_	_
+al.	_	_
+[	_	_
+21	_	_
+]	_	_
+proposed	_	_
+a	_	_
+new	_	_
+cell	_	_
+architecture	_	_
+,	_	_
+which	_	_
+maintains	_	_
+two	_	_
+separate	_	_
+cell	_	_
+states	_	_
+for	_	_
+single-	_	_
+and	_	_
+multi-seasonal	_	_
+long-term	_	_
+dependencies	_	_
+.	_	_
+
+#61
+However	_	_
+,	_	_
+the	_	_
+calculation	_	_
+of	_	_
+an	_	_
+additional	_	_
+cell	_	_
+state	_	_
+requires	_	_
+more	_	_
+weights	_	_
+,	_	_
+which	_	_
+may	options	_
+prolong	_	_
+training	_	_
+and	_	_
+require	_	_
+more	_	_
+training	_	_
+samples	_	_
+.	_	_
+
+#62
+In	_	_
+previous	_	_
+work	_	_
+,	_	_
+we	_	_
+have	_	_
+experimented	_	_
+with	_	_
+recurrent	_	_
+networks	_	_
+for	_	_
+crop	_	_
+classification	_	_
+[	_	_
+24	_	_
+]	_	_
+and	_	_
+achieved	_	_
+promising	_	_
+results	_	_
+.	_	_
+
+#63
+Based	_	_
+on	_	_
+this	_	_
+,	_	_
+we	_	_
+propose	_	_
+a	_	_
+network	_	_
+structure	_	_
+using	_	_
+convolutional	_	_
+recurrent	_	_
+layers	_	_
+and	_	_
+the	_	_
+aforementioned	_	_
+adaptation	_	_
+of	_	_
+a	_	_
+many-to-one	_	_
+classification	_	_
+scheme	_	_
+with	_	_
+sequence	_	_
+encoders	_	_
+.	_	_
+
+#64
+3	_	_
+.	_	_
+
+#65
+Methodology	_	_
+Section	_	_
+3.1	_	_
+incrementally	_	_
+introduces	_	_
+the	_	_
+concepts	_	_
+of	_	_
+artificial	_	_
+neural	_	_
+networks	_	_
+(	_	_
+ANNs	_	_
+)	_	_
+,	_	_
+feed-forward	_	_
+networks	_	_
+(	_	_
+FNNs	_	_
+)	_	_
+,	_	_
+and	_	_
+recurrent	_	_
+neural	_	_
+networks	_	_
+(	_	_
+RNNs	_	_
+)	_	_
+and	_	_
+illustrates	_	_
+the	_	_
+use	_	_
+of	_	_
+RNNs	_	_
+in	_	_
+sequence-to-sequence	_	_
+learning	_	_
+.	_	_
+
+#66
+We	_	_
+then	_	_
+describe	_	_
+details	_	_
+of	_	_
+the	_	_
+proposed	_	_
+network	_	_
+structure	_	_
+in	_	_
+Section	_	_
+3.3	_	_
+.	_	_
+
+#67
+3.1	_	_
+.	_	_
+
+#68
+Network	_	_
+Architectures	_	_
+and	_	_
+Sequential	_	_
+Encoders	_	_
+Artificial	_	_
+neural	_	_
+networks	_	_
+approximate	_	_
+a	_	_
+function	_	_
+ŷ	_	_
+=	_	_
+f	_	_
+(	_	_
+x	_	_
+;	_	_
+W	_	_
+)	_	_
+of	_	_
+outputs	_	_
+ŷ	_	_
+(	_	_
+e.g.	_	_
+,	_	_
+class	_	_
+labels	_	_
+)	_	_
+from	_	_
+input	_	_
+data	_	_
+x	_	_
+given	_	_
+a	_	_
+large	_	_
+set	_	_
+of	_	_
+weights	_	_
+W	_	_
+.	_	_
+
+#69
+This	_	_
+approximation	_	_
+is	_	_
+commonly	_	_
+referred	_	_
+to	_	_
+as	_	_
+the	_	_
+inference	_	_
+phase	_	_
+.	_	_
+
+#70
+These	_	_
+networks	_	_
+are	_	_
+typically	_	_
+composed	_	_
+of	_	_
+multiple	_	_
+cascaded	_	_
+layers	_	_
+with	_	_
+hidden	_	_
+vectors	_	_
+h	_	_
+as	_	_
+intermediate	_	_
+layer	_	_
+outputs	_	_
+.	_	_
+
+#71
+Analogous	_	_
+to	_	_
+the	_	_
+biological	_	_
+neural	_	_
+cortex	_	_
+,	_	_
+single	_	_
+elements	_	_
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#72
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#73
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+4	_	_
+of	_	_
+19	_	_
+ft	_	_
+it	_	_
+jt	_	_
+ot	_	_
++	_	_
+xt	_	_
+ht−1	_	_
+ctct−1	_	_
+ht	_	_
+rt	_	_
+ut	_	_
+h̃t	_	_
++	_	_
+ht−1	_	_
+xt	_	_
+ht	_	_
+a	_	_
+b	_	_
+[	_	_
+a‖b	_	_
+]	_	_
+concat	_	_
+a	_	_
+a	_	_
+a	_	_
+copy	_	_
+Figure	_	_
+1	_	_
+.	_	_
+
+#74
+Schematic	_	_
+illustration	_	_
+of	_	_
+long	_	_
+short-term	_	_
+memory	_	_
+(	_	_
+LSTM	_	_
+)	_	_
+and	_	_
+gated	_	_
+recurrent	_	_
+unit	_	_
+(	_	_
+GRU	_	_
+)	_	_
+cells	_	_
+analog	_	_
+to	_	_
+the	_	_
+cell	_	_
+definitions	_	_
+in	_	_
+Table	_	_
+1	_	_
+.	_	_
+
+#75
+The	_	_
+cell	_	_
+output	_	_
+ht	_	_
+is	_	_
+calculated	_	_
+via	_	_
+internal	_	_
+gates	_	_
+and	_	_
+based	_	_
+on	_	_
+the	_	_
+current	_	_
+input	_	_
+xt	_	_
+combined	_	_
+with	_	_
+prior	_	_
+context	_	_
+information	_	_
+ht−1	_	_
+,	_	_
+ct−1	_	_
+.	_	_
+
+#76
+LSTM	_	_
+cells	_	_
+are	_	_
+designed	_	_
+to	_	_
+separately	_	_
+accommodate	_	_
+long-term	_	_
+context	_	_
+in	_	_
+the	_	_
+internal	_	_
+cell	_	_
+state	_	_
+ct−1	_	_
+,	_	_
+from	_	_
+short-term	_	_
+context	_	_
+ht−1	_	_
+.	_	_
+
+#77
+GRU	_	_
+cells	_	_
+combine	_	_
+all	_	_
+context	_	_
+information	_	_
+in	_	_
+a	_	_
+single	_	_
+,	_	_
+but	_	_
+more	_	_
+sophisticated	_	_
+output	_	_
+ht−1	_	_
+.	_	_
+
+#78
+in	_	_
+these	_	_
+vectors	_	_
+are	_	_
+often	_	_
+referred	_	_
+to	_	_
+as	_	_
+neurons	_	_
+.	_	_
+
+#79
+The	_	_
+quality	_	_
+of	_	_
+the	_	_
+approximation	_	_
+ŷ	_	_
+with	_	_
+respect	_	_
+to	_	_
+ground	_	_
+truth	_	_
+y	_	_
+is	_	_
+determined	_	_
+by	_	_
+the	_	_
+loss	_	_
+function	_	_
+L	_	_
+(	_	_
+ŷ	_	_
+,	_	_
+y	_	_
+)	_	_
+.	_	_
+
+#80
+Based	_	_
+on	_	_
+this	_	_
+function	_	_
+,	_	_
+gradients	_	_
+are	_	_
+back-propagated	_	_
+through	_	_
+the	_	_
+ANN	_	_
+and	_	_
+adjust	_	_
+network	_	_
+weights	_	_
+W	_	_
+at	_	_
+each	_	_
+training	_	_
+step	_	_
+.	_	_
+
+#81
+Popular	_	_
+feed-forward	_	_
+networks	_	_
+often	_	_
+utilize	_	_
+convolutional	_	_
+or	_	_
+fully-connected	_	_
+layers	_	_
+at	_	_
+which	_	_
+the	_	_
+input	_	_
+data	_	_
+are	_	_
+propagated	_	_
+through	_	_
+the	_	_
+network	_	_
+once	_	_
+.	_	_
+
+#82
+This	_	_
+is	_	_
+realized	_	_
+by	_	_
+an	_	_
+affine	_	_
+transformation	_	_
+(	_	_
+fully-connected	_	_
+)	_	_
+h	_	_
+=	_	_
+σ	_	_
+(	_	_
+Wx	_	_
+)	_	_
+or	_	_
+a	_	_
+convolution	_	_
+h	_	_
+=	_	_
+σ	_	_
+(	_	_
+W	_	_
+∗	_	_
+x	_	_
+)	_	_
+followed	_	_
+by	_	_
+an	_	_
+element-wise	_	_
+,	_	_
+non-linear	_	_
+transformation	_	_
+σ	_	_
+:	_	_
+R	_	_
+7→	_	_
+R.	_	_
+However	_	_
+,	_	_
+domains	_	_
+like	_	_
+translation	_	_
+[	_	_
+3	_	_
+]	_	_
+,	_	_
+text	_	_
+summarization	_	_
+[	_	_
+4–6	_	_
+]	_	_
+or	_	_
+speech	_	_
+recognition	_	_
+[	_	_
+7,8	_	_
+]	_	_
+formulate	_	_
+input	_	_
+vectors	_	_
+naturally	_	_
+as	_	_
+a	_	_
+sequence	_	_
+of	_	_
+observations	_	_
+x	_	_
+=	_	_
+{	_	_
+x0	_	_
+,	_	_
+.	_	_
+
+#83
+.	_	_
+
+#84
+.	_	_
+
+#85
+,	_	_
+xT	_	_
+}	_	_
+.	_	_
+
+#86
+In	_	_
+these	_	_
+domains	_	_
+,	_	_
+individual	_	_
+samples	_	_
+are	_	_
+generally	_	_
+less	_	_
+expressive	_	_
+,	_	_
+and	_	_
+the	_	_
+overall	_	_
+model	_	_
+performance	_	_
+is	_	_
+based	_	_
+largely	_	_
+on	_	_
+contextual	_	_
+information	_	_
+.	_	_
+
+#87
+Sequential	_	_
+data	_	_
+are	_	_
+commonly	_	_
+processed	_	_
+with	_	_
+recurrent	_	_
+neural	_	_
+network	_	_
+(	_	_
+RNN	_	_
+)	_	_
+layers	_	_
+,	_	_
+in	_	_
+which	_	_
+the	_	_
+hidden	_	_
+layer	_	_
+output	_	_
+ht	_	_
+is	_	_
+determined	_	_
+at	_	_
+time	_	_
+t	_	_
+by	_	_
+current	_	_
+input	_	_
+xt	_	_
+in	_	_
+combination	_	_
+with	_	_
+the	_	_
+previous	_	_
+output	_	_
+ht−1	_	_
+.	_	_
+
+#88
+In	_	_
+theory	_	_
+,	_	_
+the	_	_
+iterative	_	_
+update	_	_
+of	_	_
+ht	_	_
+enables	_	_
+RNNs	_	_
+to	_	_
+simulate	_	_
+arbitrary	_	_
+procedures	_	_
+[	_	_
+27	_	_
+]	_	_
+,	_	_
+since	_	_
+these	_	_
+networks	_	_
+are	_	_
+Turing	_	_
+complete	_	_
+[	_	_
+28	_	_
+]	_	_
+.	_	_
+
+#89
+The	_	_
+standard	_	_
+RNN	_	_
+variant	_	_
+performs	_	_
+the	_	_
+update	_	_
+step	_	_
+ht	_	_
+=	_	_
+σ	_	_
+(	_	_
+W	_	_
+x̃	_	_
+)	_	_
+by	_	_
+an	_	_
+affine	_	_
+transformation	_	_
+of	_	_
+the	_	_
+concatenated	_	_
+vector	_	_
+x̃	_	_
+=	_	_
+[	_	_
+xt‖ht−1	_	_
+]	_	_
+followed	_	_
+by	_	_
+a	_	_
+non-linearity	_	_
+σ.	_	_
+Consequently	_	_
+,	_	_
+the	_	_
+internal	_	_
+weight	_	_
+matrix	_	_
+is	_	_
+multiplied	_	_
+at	_	_
+each	_	_
+iteration	_	_
+step	_	_
+,	_	_
+which	_	_
+essentially	_	_
+raises	_	_
+it	_	_
+to	_	_
+a	_	_
+high	_	_
+power	_	_
+[	_	_
+29	_	_
+]	_	_
+.	_	_
+
+#90
+At	_	_
+gradient	_	_
+back-propagation	_	_
+,	_	_
+this	_	_
+iterative	_	_
+matrix	_	_
+multiplication	_	_
+leads	_	_
+to	_	_
+vanishing	_	_
+and	_	_
+exploding	_	_
+gradients	_	_
+[	_	_
+30,31	_	_
+]	_	_
+.	_	_
+
+#91
+While	_	_
+exploding	_	_
+gradients	_	_
+can	_	_
+be	_	_
+avoided	_	_
+with	_	_
+gradient	_	_
+clipping	_	_
+,	_	_
+vanishing	_	_
+gradients	_	_
+impede	_	_
+the	_	_
+extraction	_	_
+of	_	_
+long-term	_	_
+feature	_	_
+relationships	_	_
+.	_	_
+
+#92
+This	_	_
+issue	_	_
+has	_	_
+been	_	_
+addressed	_	_
+by	_	_
+Hochreiter	_	_
+and	_	_
+Schmidhuber	_	_
+[	_	_
+25	_	_
+]	_	_
+,	_	_
+who	_	_
+introduced	_	_
+additional	_	_
+gates	_	_
+and	_	_
+an	_	_
+internal	_	_
+state	_	_
+vector	_	_
+ct	_	_
+in	_	_
+long	_	_
+short-term	_	_
+memory	_	_
+(	_	_
+LSTM	_	_
+)	_	_
+cells	_	_
+to	_	_
+control	_	_
+the	_	_
+gradient	_	_
+propagation	_	_
+through	_	_
+time	_	_
+and	_	_
+to	_	_
+enable	_	_
+long-term	_	_
+learning	_	_
+,	_	_
+respectively	_	_
+.	_	_
+
+#93
+Analogous	_	_
+to	_	_
+standard	_	_
+RNNs	_	_
+,	_	_
+the	_	_
+output	_	_
+gate	_	_
+ot	_	_
+balances	_	_
+the	_	_
+influence	_	_
+of	_	_
+the	_	_
+previous	_	_
+cell	_	_
+output	_	_
+ht−1	_	_
+and	_	_
+the	_	_
+current	_	_
+input	_	_
+xt	_	_
+.	_	_
+
+#94
+At	_	_
+LSTMs	_	_
+,	_	_
+the	_	_
+cell	_	_
+output	_	_
+ht	_	_
+is	_	_
+further	_	_
+augmented	_	_
+by	_	_
+an	_	_
+internal	_	_
+state	_	_
+vector	_	_
+ct	_	_
+,	_	_
+which	_	_
+is	_	_
+designed	_	_
+to	_	_
+contain	_	_
+long-term	_	_
+information	_	_
+.	_	_
+
+#95
+To	_	_
+avoid	_	_
+the	_	_
+aforementioned	_	_
+vanishing	_	_
+gradients	_	_
+,	_	_
+reading	_	_
+and	_	_
+writing	_	_
+to	_	_
+the	_	_
+cell	_	_
+state	_	_
+is	_	_
+controlled	_	_
+by	_	_
+three	_	_
+additional	_	_
+gates	_	_
+.	_	_
+
+#96
+The	_	_
+forget	_	_
+gate	_	_
+ft	_	_
+decreases	_	_
+previously-stored	_	_
+information	_	_
+by	_	_
+element-wise	_	_
+multiplication	_	_
+ct−1	_	_
+ft.	_	_
+New	_	_
+information	_	_
+is	_	_
+added	_	_
+by	_	_
+the	_	_
+product	_	_
+of	_	_
+input	_	_
+gate	_	_
+it	_	_
+and	_	_
+modulation	_	_
+gate	_	_
+jt	_	_
+.	_	_
+
+#97
+Illustrations	_	_
+of	_	_
+the	_	_
+internal	_	_
+calculation	_	_
+can	_	_
+be	_	_
+seen	_	_
+in	_	_
+Figure	_	_
+1	_	_
+,	_	_
+and	_	_
+the	_	_
+mathematical	_	_
+relations	_	_
+are	_	_
+shown	_	_
+in	_	_
+Table	_	_
+1	_	_
+.	_	_
+
+#98
+Besides	_	_
+LSTMs	_	_
+,	_	_
+gated	_	_
+recurrent	_	_
+units	_	_
+(	_	_
+GRUs	_	_
+)	_	_
+[	_	_
+26	_	_
+]	_	_
+have	_	_
+gained	_	_
+increasing	_	_
+popularity	_	_
+,	_	_
+as	_	_
+these	_	_
+cells	_	_
+achieve	_	_
+similar	_	_
+accuracies	_	_
+to	_	_
+LSTMs	_	_
+with	_	_
+fewer	_	_
+trainable	_	_
+parameters	_	_
+.	_	_
+
+#99
+Instead	_	_
+of	_	_
+separate	_	_
+vectors	_	_
+for	_	_
+long-	_	_
+and	_	_
+short-term	_	_
+memory	_	_
+,	_	_
+GRUs	_	_
+formulate	_	_
+a	_	_
+single	_	_
+,	_	_
+but	_	_
+more	_	_
+sophisticated	_	_
+,	_	_
+output	_	_
+vector	_	_
+.	_	_
+
+#100
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#101
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#102
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+5	_	_
+of	_	_
+19	_	_
+x1	_	_
+y1	_	_
+x2	_	_
+y2	_	_
+.	_	_
+
+#103
+.	_	_
+
+#104
+.	_	_
+
+#105
+.	_	_
+
+#106
+.	_	_
+
+#107
+.	_	_
+
+#108
+xT	_	_
+yT	_	_
+(	_	_
+a	_	_
+)	_	_
+Network	_	_
+structure	_	_
+employed	_	_
+in	_	_
+previous	_	_
+work	_	_
+[	_	_
+24	_	_
+]	_	_
+.	_	_
+
+#109
+I	_	_
+live	_	_
+in	_	_
+Munich	_	_
+Ich	_	_
+lebe	_	_
+in	_	_
+München	_	_
+intermediate	_	_
+representation	_	_
+c	_	_
+(	_	_
+b	_	_
+)	_	_
+Illustration	_	_
+of	_	_
+a	_	_
+sequence-to-sequence	_	_
+network	_	_
+[	_	_
+7	_	_
+]	_	_
+as	_	_
+often	_	_
+used	_	_
+in	_	_
+neural	_	_
+translation	_	_
+tasks	_	_
+.	_	_
+
+#110
+Figure	_	_
+2	_	_
+.	_	_
+
+#111
+Illustrations	_	_
+of	_	_
+recurrent	_	_
+network	_	_
+architectures	_	_
+which	_	_
+inspired	_	_
+this	_	_
+work	_	_
+.	_	_
+
+#112
+The	_	_
+network	_	_
+of	_	_
+previous	_	_
+work	_	_
+[	_	_
+24	_	_
+]	_	_
+shown	_	_
+in	_	_
+Figure	_	_
+2	_	_
+(	_	_
+a	_	_
+)	_	_
+creates	_	_
+a	_	_
+prediction	_	_
+yt	_	_
+at	_	_
+each	_	_
+observation	_	_
+t	_	_
+based	_	_
+on	_	_
+spectral	_	_
+input	_	_
+information	_	_
+xt	_	_
+and	_	_
+the	_	_
+previous	_	_
+context	_	_
+ht−1	_	_
+,	_	_
+ct−1	_	_
+.	_	_
+
+#113
+Sequence-to-sequence	_	_
+networks	_	_
+,	_	_
+as	_	_
+shown	_	_
+in	_	_
+Figure	_	_
+2	_	_
+(	_	_
+b	_	_
+)	_	_
+,	_	_
+aggregate	_	_
+sequential	_	_
+information	_	_
+to	_	_
+an	_	_
+intermediate	_	_
+state	_	_
+cT	_	_
+which	_	_
+is	_	_
+a	_	_
+representation	_	_
+of	_	_
+the	_	_
+entire	_	_
+series	_	_
+.	_	_
+
+#114
+To	_	_
+account	_	_
+for	_	_
+the	_	_
+more	_	_
+complicated	_	_
+design	_	_
+,	_	_
+recurrent	_	_
+layers	_	_
+are	_	_
+conventionally	_	_
+referred	_	_
+to	_	_
+as	_	_
+a	_	_
+collection	_	_
+of	_	_
+cells	_	_
+with	_	_
+a	_	_
+single	_	_
+cell	_	_
+representing	_	_
+the	_	_
+set	_	_
+of	_	_
+elements	_	_
+at	_	_
+one	_	_
+vector-index	_	_
+.	_	_
+
+#115
+The	_	_
+common	_	_
+output	_	_
+of	_	_
+recurrent	_	_
+layers	_	_
+provides	_	_
+a	_	_
+many-to-many	_	_
+relation	_	_
+by	_	_
+generating	_	_
+an	_	_
+output	_	_
+vector	_	_
+at	_	_
+each	_	_
+observation	_	_
+ht	_	_
+given	_	_
+previous	_	_
+context	_	_
+ht−1	_	_
+and	_	_
+ct−1	_	_
+,	_	_
+as	_	_
+shown	_	_
+in	_	_
+Figure	_	_
+?	_	_
+?	_	_
+a	_	_
+.	_	_
+
+#116
+However	_	_
+,	_	_
+encoding	_	_
+information	_	_
+of	_	_
+the	_	_
+entire	_	_
+sequence	_	_
+in	_	_
+a	_	_
+many-to-one	_	_
+relation	_	_
+is	_	_
+favored	_	_
+in	_	_
+many	_	_
+applications	_	_
+.	_	_
+
+#117
+Following	_	_
+this	_	_
+idea	_	_
+,	_	_
+sequence-to-sequence	_	_
+learning	_	_
+,	_	_
+illustrated	_	_
+in	_	_
+Figure	_	_
+?	_	_
+
+#118
+?	_	_
+b	_	_
+,	_	_
+has	_	_
+popularized	_	_
+the	_	_
+use	_	_
+of	_	_
+the	_	_
+cell	_	_
+state	_	_
+vector	_	_
+cT	_	_
+at	_	_
+the	_	_
+last-processed	_	_
+observation	_	_
+T	_	_
+as	_	_
+a	_	_
+representation	_	_
+of	_	_
+the	_	_
+entire	_	_
+input	_	_
+sequence	_	_
+.	_	_
+
+#119
+These	_	_
+encoding-decoding	_	_
+networks	_	_
+transform	_	_
+an	_	_
+input	_	_
+sequence	_	_
+of	_	_
+varying	_	_
+length	_	_
+to	_	_
+an	_	_
+intermediate	_	_
+state	_	_
+representation	_	_
+c	_	_
+of	_	_
+fixed	_	_
+size	_	_
+.	_	_
+
+#120
+Subsequently	_	_
+,	_	_
+the	_	_
+decoder	_	_
+generates	_	_
+a	_	_
+varying	_	_
+length	_	_
+output	_	_
+sequence	_	_
+from	_	_
+this	_	_
+intermediate	_	_
+representation	_	_
+.	_	_
+
+#121
+Further	_	_
+developments	_	_
+in	_	_
+this	_	_
+domain	_	_
+include	_	_
+attention	_	_
+schemes	_	_
+.	_	_
+
+#122
+These	_	_
+provide	_	_
+additional	_	_
+intermediate	_	_
+connections	_	_
+between	_	_
+encoder	_	_
+and	_	_
+decoder	_	_
+layers	_	_
+,	_	_
+which	_	_
+are	_	_
+beneficial	_	_
+for	_	_
+translations	_	_
+of	_	_
+longer	_	_
+sequences	_	_
+[	_	_
+3	_	_
+]	_	_
+.	_	_
+
+#123
+In	_	_
+many	_	_
+sequential	_	_
+applications	_	_
+,	_	_
+the	_	_
+common	_	_
+input	_	_
+form	_	_
+is	_	_
+xt	_	_
+∈	_	_
+Rd	_	_
+with	_	_
+a	_	_
+given	_	_
+depth	_	_
+d.	_	_
+The	_	_
+output	_	_
+vectors	_	_
+ht	_	_
+∈	_	_
+Rr	_	_
+are	_	_
+computed	_	_
+by	_	_
+matrix	_	_
+multiplication	_	_
+with	_	_
+internal	_	_
+weights	_	_
+W	_	_
+∈	_	_
+R	_	_
+(	_	_
+r+d	_	_
+)	_	_
+×r	_	_
+and	_	_
+r	_	_
+recurrent	_	_
+cells	_	_
+.	_	_
+
+#124
+However	_	_
+,	_	_
+other	_	_
+fields	_	_
+,	_	_
+such	_	_
+as	_	_
+image	_	_
+processing	_	_
+,	_	_
+commonly	_	_
+handle	_	_
+raster	_	_
+data	_	_
+xt	_	_
+∈	_	_
+Rh×w×d	_	_
+of	_	_
+specific	_	_
+width	_	_
+w	_	_
+,	_	_
+height	_	_
+h	_	_
+and	_	_
+spectral	_	_
+depth	_	_
+d.	_	_
+To	_	_
+account	_	_
+for	_	_
+neighborhood	_	_
+relationships	_	_
+and	_	_
+to	_	_
+circumvent	_	_
+the	_	_
+increasing	_	_
+complexity	_	_
+,	_	_
+convolutional	_	_
+variants	_	_
+of	_	_
+LSTMs	_	_
+[	_	_
+32	_	_
+]	_	_
+and	_	_
+GRUs	_	_
+have	_	_
+been	_	_
+introduced	_	_
+.	_	_
+
+#125
+These	_	_
+variants	_	_
+convolve	_	_
+the	_	_
+input	_	_
+tensors	_	_
+with	_	_
+weights	_	_
+W	_	_
+∈	_	_
+Rk×k×	_	_
+(	_	_
+r+d	_	_
+)	_	_
+×r	_	_
+augmented	_	_
+by	_	_
+the	_	_
+convolutional	_	_
+kernel	_	_
+size	_	_
+k	_	_
+,	_	_
+which	_	_
+is	_	_
+a	_	_
+hyper-parameter	_	_
+determining	_	_
+the	_	_
+perceptive	_	_
+field	_	_
+.	_	_
+
+#126
+3.2	_	_
+.	_	_
+
+#127
+Prior	_	_
+Work	_	_
+Given	_	_
+recurrent	_	_
+networks	_	_
+as	_	_
+popular	_	_
+architectures	_	_
+for	_	_
+sequential	_	_
+data	_	_
+processing	_	_
+,	_	_
+we	_	_
+experimented	_	_
+with	_	_
+recurrent	_	_
+layers	_	_
+for	_	_
+multi-temporal	_	_
+vegetation	_	_
+classification	_	_
+prior	_	_
+to	_	_
+this	_	_
+work	_	_
+[	_	_
+24	_	_
+]	_	_
+.	_	_
+
+#128
+In	_	_
+the	_	_
+conducted	_	_
+experiments	_	_
+,	_	_
+we	_	_
+used	_	_
+a	_	_
+network	_	_
+architecture	_	_
+similar	_	_
+to	_	_
+the	_	_
+illustration	_	_
+in	_	_
+Figure	_	_
+?	_	_
+?	_	_
+a	_	_
+.	_	_
+
+#129
+Following	_	_
+the	_	_
+input	_	_
+dimensions	_	_
+of	_	_
+standard	_	_
+recurrent	_	_
+layers	_	_
+,	_	_
+an	_	_
+input	_	_
+sequence	_	_
+x	_	_
+∈	_	_
+{	_	_
+x0	_	_
+,	_	_
+.	_	_
+
+#130
+.	_	_
+
+#131
+.	_	_
+
+#132
+,	_	_
+xT	_	_
+}	_	_
+of	_	_
+observations	_	_
+xt	_	_
+∈	_	_
+Rd	_	_
+was	_	_
+introduced	_	_
+to	_	_
+the	_	_
+network	_	_
+.	_	_
+
+#133
+Based	_	_
+on	_	_
+contextual	_	_
+information	_	_
+from	_	_
+previous	_	_
+observations	_	_
+,	_	_
+a	_	_
+classification	_	_
+for	_	_
+each	_	_
+observation	_	_
+yt	_	_
+was	_	_
+produced	_	_
+.	_	_
+
+#134
+We	_	_
+evaluated	_	_
+the	_	_
+effect	_	_
+of	_	_
+this	_	_
+information	_	_
+gain	_	_
+by	_	_
+comparing	_	_
+the	_	_
+recurrent	_	_
+network	_	_
+with	_	_
+convolutional	_	_
+neural	_	_
+networks	_	_
+(	_	_
+CNNs	_	_
+)	_	_
+and	_	_
+a	_	_
+support	_	_
+vector	_	_
+machine	_	_
+(	_	_
+SVM	_	_
+)	_	_
+.	_	_
+
+#135
+Standard	_	_
+RNNs	_	_
+and	_	_
+LSTMs	_	_
+outperformed	_	_
+their	_	_
+non-sequential	_	_
+SVMs	_	_
+and	_	_
+CNNs	_	_
+counterparts	_	_
+.	_	_
+
+#136
+Further	_	_
+,	_	_
+we	_	_
+observed	_	_
+an	_	_
+increase	_	_
+in	_	_
+accuracy	_	_
+at	_	_
+sequentially	_	_
+later	_	_
+observations	_	_
+,	_	_
+which	_	_
+were	_	_
+classified	_	_
+with	_	_
+more	_	_
+context	_	_
+information	_	_
+available	_	_
+.	_	_
+
+#137
+Overall	_	_
+,	_	_
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#138
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#139
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+6	_	_
+of	_	_
+19	_	_
+we	_	_
+concluded	_	_
+that	_	_
+recurrent	_	_
+network	_	_
+architectures	_	_
+are	_	_
+well	_	_
+suited	_	_
+for	_	_
+the	_	_
+extraction	_	_
+of	_	_
+temporal	_	_
+features	_	_
+from	_	_
+multi-temporal	_	_
+EO	_	_
+imagery	_	_
+,	_	_
+which	_	_
+is	_	_
+consistent	_	_
+with	_	_
+other	_	_
+recent	_	_
+findings	_	_
+[	_	_
+21–23	_	_
+]	_	_
+.	_	_
+
+#140
+However	_	_
+,	_	_
+the	_	_
+experimental	_	_
+setup	_	_
+introduced	_	_
+some	_	_
+limitations	_	_
+regarding	_	_
+applicability	_	_
+in	_	_
+real-world	_	_
+scenarios	_	_
+.	_	_
+
+#141
+We	_	_
+followed	_	_
+the	_	_
+standard	_	_
+formulation	_	_
+of	_	_
+recurrent	_	_
+networks	_	_
+,	_	_
+which	_	_
+process	_	_
+a	_	_
+d-dimensional	_	_
+input	_	_
+vector	_	_
+.	_	_
+
+#142
+This	_	_
+vector	_	_
+included	_	_
+the	_	_
+concatenated	_	_
+bottom-of-atmosphere	_	_
+(	_	_
+BOA	_	_
+)	_	_
+reflectances	_	_
+of	_	_
+nine	_	_
+pixels	_	_
+neighboring	_	_
+one	_	_
+point-of-interest	_	_
+.	_	_
+
+#143
+The	_	_
+point-wise	_	_
+classification	_	_
+was	_	_
+sufficient	_	_
+for	_	_
+quantitative	_	_
+accuracy	_	_
+evaluation	_	_
+,	_	_
+but	_	_
+could	capability	_
+not	_	_
+produce	_	_
+areal	_	_
+classification	_	_
+maps	_	_
+.	_	_
+
+#144
+Since	_	_
+a	_	_
+class	_	_
+prediction	_	_
+was	_	_
+performed	_	_
+on	_	_
+every	_	_
+observation	_	_
+,	_	_
+we	_	_
+introduced	_	_
+additional	_	_
+covered	_	_
+classes	_	_
+for	_	_
+cloudy	_	_
+pixels	_	_
+at	_	_
+single	_	_
+images	_	_
+.	_	_
+
+#145
+These	_	_
+were	_	_
+derived	_	_
+from	_	_
+the	_	_
+scene	_	_
+classification	_	_
+of	_	_
+the	_	_
+SEN2COR	_	_
+atmospheric	_	_
+correction	_	_
+algorithm	_	_
+,	_	_
+which	_	_
+required	_	_
+additional	_	_
+preprocessing	_	_
+.	_	_
+
+#146
+A	_	_
+single	_	_
+representative	_	_
+classification	_	_
+for	_	_
+the	_	_
+entire	_	_
+time-series	_	_
+would	_	_
+have	_	_
+required	_	_
+additional	_	_
+post-processing	_	_
+to	_	_
+further	_	_
+aggregate	_	_
+the	_	_
+predicted	_	_
+labels	_	_
+for	_	_
+each	_	_
+observation	_	_
+.	_	_
+
+#147
+Finally	_	_
+,	_	_
+the	_	_
+mono-directional	_	_
+iterative	_	_
+processing	_	_
+introduced	_	_
+a	_	_
+bias	_	_
+towards	_	_
+last	_	_
+observations	_	_
+.	_	_
+
+#148
+With	_	_
+more	_	_
+contextual	_	_
+information	_	_
+available	_	_
+,	_	_
+later	_	_
+observation	_	_
+showed	_	_
+better	_	_
+classification	_	_
+accuracies	_	_
+compared	_	_
+to	_	_
+observations	_	_
+earlier	_	_
+in	_	_
+the	_	_
+sequence	_	_
+.	_	_
+
+#149
+3.3	_	_
+.	_	_
+
+#150
+This	_	_
+Approach	_	_
+To	_	_
+address	_	_
+the	_	_
+limitations	_	_
+of	_	_
+previous	_	_
+work	_	_
+,	_	_
+we	_	_
+redesigned	_	_
+and	_	_
+streamlined	_	_
+the	_	_
+network	_	_
+structure	_	_
+and	_	_
+processing	_	_
+pipeline	_	_
+.	_	_
+
+#151
+Inspired	_	_
+by	_	_
+sequence-to-sequence	_	_
+structures	_	_
+described	_	_
+in	_	_
+Section	_	_
+3	_	_
+,	_	_
+the	_	_
+proposed	_	_
+network	_	_
+aggregates	_	_
+the	_	_
+information	_	_
+encoded	_	_
+in	_	_
+the	_	_
+cell	_	_
+state	_	_
+ct	_	_
+within	_	_
+the	_	_
+recurrent	_	_
+cell	_	_
+.	_	_
+
+#152
+Since	_	_
+one	_	_
+class	_	_
+prediction	_	_
+for	_	_
+the	_	_
+entire	_	_
+temporal	_	_
+series	_	_
+is	_	_
+produced	_	_
+,	_	_
+atmospheric	_	_
+perturbations	_	_
+can	_	_
+be	_	_
+treated	_	_
+as	_	_
+temporal	_	_
+noise	_	_
+.	_	_
+
+#153
+Hence	_	_
+,	_	_
+explicitly	_	_
+introduced	_	_
+cloud-related	_	_
+labels	_	_
+are	_	_
+not	_	_
+required	_	_
+,	_	_
+which	_	_
+alleviates	_	_
+the	_	_
+need	_	_
+for	_	_
+prior	_	_
+cloud	_	_
+classification	_	_
+.	_	_
+
+#154
+Without	_	_
+the	_	_
+need	_	_
+for	_	_
+prior	_	_
+scene	_	_
+classification	_	_
+to	_	_
+obtain	_	_
+these	_	_
+classes	_	_
+,	_	_
+the	_	_
+performance	_	_
+on	_	_
+atmospherically	_	_
+uncorrected	_	_
+top-of-atmosphere	_	_
+(	_	_
+TOA	_	_
+)	_	_
+reflectance	_	_
+data	_	_
+can	_	_
+be	_	_
+evaluated	_	_
+.	_	_
+
+#155
+We	_	_
+further	_	_
+implemented	_	_
+convolutional	_	_
+recurrent	_	_
+cell	_	_
+variants	_	_
+,	_	_
+as	_	_
+formulated	_	_
+in	_	_
+Table	_	_
+1	_	_
+,	_	_
+to	_	_
+process	_	_
+input	_	_
+tensors	_	_
+xt	_	_
+of	_	_
+given	_	_
+height	_	_
+h	_	_
+,	_	_
+width	_	_
+w	_	_
+and	_	_
+depth	_	_
+d.	_	_
+Hence	_	_
+,	_	_
+the	_	_
+proposed	_	_
+network	_	_
+produces	_	_
+areal	_	_
+prediction	_	_
+maps	_	_
+as	_	_
+shown	_	_
+in	_	_
+the	_	_
+qualitative	_	_
+results	_	_
+Section	_	_
+5.3	_	_
+.	_	_
+
+#156
+Finally	_	_
+,	_	_
+we	_	_
+introduce	_	_
+the	_	_
+input	_	_
+sequence	_	_
+in	_	_
+a	_	_
+bidirectional	_	_
+manner	_	_
+to	_	_
+eliminate	_	_
+any	_	_
+bias	_	_
+towards	_	_
+the	_	_
+later	_	_
+elements	_	_
+in	_	_
+the	_	_
+observation	_	_
+sequence	_	_
+.	_	_
+
+#157
+Overall	_	_
+,	_	_
+we	_	_
+employ	_	_
+a	_	_
+bidirectional	_	_
+sequential	_	_
+encoder	_	_
+for	_	_
+the	_	_
+task	_	_
+of	_	_
+multi-temporal	_	_
+land	_	_
+cover	_	_
+classification	_	_
+.	_	_
+
+#158
+As	_	_
+Earth	_	_
+observation	_	_
+data	_	_
+are	_	_
+gathered	_	_
+in	_	_
+a	_	_
+periodic	_	_
+manner	_	_
+,	_	_
+many	_	_
+observations	_	_
+of	_	_
+the	_	_
+same	_	_
+area	_	_
+at	_	_
+consecutive	_	_
+times	_	_
+are	_	_
+available	_	_
+,	_	_
+which	_	_
+may	speculation	_
+contribute	_	_
+to	_	_
+the	_	_
+classification	_	_
+decision	_	_
+.	_	_
+
+#159
+Inspired	_	_
+by	_	_
+sequence-to-sequence	_	_
+models	_	_
+,	_	_
+the	_	_
+proposed	_	_
+model	_	_
+encodes	_	_
+this	_	_
+sequence	_	_
+of	_	_
+images	_	_
+into	_	_
+a	_	_
+fixed-length	_	_
+representation	_	_
+.	_	_
+
+#160
+Compared	_	_
+to	_	_
+previous	_	_
+work	_	_
+,	_	_
+this	_	_
+is	_	_
+an	_	_
+elegant	_	_
+way	_	_
+to	_	_
+condense	_	_
+the	_	_
+available	_	_
+temporal	_	_
+dimension	_	_
+without	_	_
+further	_	_
+post-processing	_	_
+.	_	_
+
+#161
+A	_	_
+classification	_	_
+map	_	_
+for	_	_
+each	_	_
+class	_	_
+is	_	_
+derived	_	_
+from	_	_
+this	_	_
+sequence	_	_
+representation	_	_
+.	_	_
+
+#162
+Many	_	_
+optical	_	_
+observations	_	_
+are	_	_
+covered	_	_
+by	_	_
+clouds	_	_
+,	_	_
+and	_	_
+prior	_	_
+cloud	_	_
+classification	_	_
+is	_	_
+often	_	_
+required	_	_
+as	_	_
+additional	_	_
+preprocessing	_	_
+step	_	_
+.	_	_
+
+#163
+As	_	_
+clouds	_	_
+do	_	_
+not	_	_
+contribute	_	_
+to	_	_
+the	_	_
+classification	_	_
+decision	_	_
+,	_	_
+these	_	_
+observations	_	_
+can	_	_
+be	_	_
+treated	_	_
+as	_	_
+temporal	_	_
+noise	_	_
+and	_	_
+may	feasibility-options	_
+be	_	_
+potentially	_	_
+ignored	_	_
+by	_	_
+this	_	_
+encoding	_	_
+scheme	_	_
+.	_	_
+
+#164
+In	_	_
+Section	_	_
+5.1	_	_
+,	_	_
+we	_	_
+investigate	_	_
+this	_	_
+by	_	_
+visualizing	_	_
+internal	_	_
+activation	_	_
+states	_	_
+on	_	_
+cloudy	_	_
+and	_	_
+non-cloudy	_	_
+observations	_	_
+.	_	_
+
+#165
+Figure	_	_
+3	_	_
+presents	_	_
+the	_	_
+proposed	_	_
+network	_	_
+structure	_	_
+schematically	_	_
+.	_	_
+
+#166
+The	_	_
+input	_	_
+image	_	_
+sequence	_	_
+x	_	_
+=	_	_
+{	_	_
+xt	_	_
+,	_	_
+.	_	_
+
+#167
+.	_	_
+
+#168
+.	_	_
+
+#169
+,	_	_
+xT	_	_
+}	_	_
+of	_	_
+observations	_	_
+x	_	_
+∈	_	_
+Rh×w×d	_	_
+is	_	_
+passed	_	_
+to	_	_
+gated	_	_
+recurrent	_	_
+layers	_	_
+at	_	_
+each	_	_
+observation	_	_
+time	_	_
+t.	_	_
+The	_	_
+index	_	_
+T	_	_
+denotes	_	_
+the	_	_
+maximum	_	_
+length	_	_
+of	_	_
+the	_	_
+sequence	_	_
+and	_	_
+d	_	_
+the	_	_
+input	_	_
+feature	_	_
+depth	_	_
+.	_	_
+
+#170
+In	_	_
+practice	_	_
+,	_	_
+sequence	_	_
+lengths	_	_
+are	_	_
+often	_	_
+shorter	_	_
+than	_	_
+T	_	_
+,	_	_
+as	_	_
+the	_	_
+availability	_	_
+of	_	_
+satellite	_	_
+acquisitions	_	_
+is	_	_
+variable	_	_
+over	_	_
+larger	_	_
+scales	_	_
+.	_	_
+
+#171
+If	_	_
+less	_	_
+than	_	_
+T	_	_
+observations	_	_
+are	_	_
+present	_	_
+,	_	_
+sequence	_	_
+elements	_	_
+are	_	_
+padded	_	_
+with	_	_
+a	_	_
+constant	_	_
+value	_	_
+and	_	_
+are	_	_
+subsequently	_	_
+ignored	_	_
+at	_	_
+the	_	_
+iterative	_	_
+encoding	_	_
+steps	_	_
+.	_	_
+
+#172
+To	_	_
+eliminate	_	_
+bias	_	_
+towards	_	_
+the	_	_
+last	_	_
+observations	_	_
+in	_	_
+the	_	_
+sequence	_	_
+,	_	_
+the	_	_
+data	_	_
+are	_	_
+passed	_	_
+to	_	_
+the	_	_
+encoder	_	_
+in	_	_
+both	_	_
+sequential	_	_
+(	_	_
+seq	_	_
+)	_	_
+and	_	_
+reversed	_	_
+(	_	_
+rev	_	_
+)	_	_
+order	_	_
+.	_	_
+
+#173
+Network	_	_
+weights	_	_
+are	_	_
+shared	_	_
+between	_	_
+both	_	_
+passes	_	_
+.	_	_
+
+#174
+The	_	_
+initial	_	_
+cell	_	_
+states	_	_
+cseq	_	_
+0	_	_
+,	_	_
+crev	_	_
+T	_	_
+∈	_	_
+Rh×w×r	_	_
+and	_	_
+output	_	_
+hseq	_	_
+0	_	_
+,	_	_
+hrev	_	_
+T	_	_
+∈	_	_
+Rh×w×r	_	_
+are	_	_
+initialized	_	_
+with	_	_
+zeros	_	_
+.	_	_
+
+#175
+The	_	_
+concatenated	_	_
+final	_	_
+states	_	_
+cT	_	_
+=	_	_
+[	_	_
+cseq	_	_
+T	_	_
+‖cinv	_	_
+0	_	_
+]	_	_
+are	_	_
+the	_	_
+representation	_	_
+of	_	_
+the	_	_
+entire	_	_
+sequence	_	_
+and	_	_
+are	_	_
+passed	_	_
+to	_	_
+a	_	_
+convolutional	_	_
+layer	_	_
+for	_	_
+classification	_	_
+.	_	_
+
+#176
+A	_	_
+second	_	_
+convolutional	_	_
+classification	_	_
+layer	_	_
+projects	_	_
+the	_	_
+sequence	_	_
+representation	_	_
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#177
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#178
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+7	_	_
+of	_	_
+19	_	_
+in	_	_
+sequence	_	_
+reversed	_	_
+classification	_	_
+x0	_	_
+x1	_	_
+.	_	_
+
+#179
+.	_	_
+
+#180
+.	_	_
+
+#181
+xT	_	_
+xT	_	_
+xT−1	_	_
+.	_	_
+
+#182
+.	_	_
+
+#183
+.	_	_
+
+#184
+x0	_	_
+hseq	_	_
+0	_	_
+=	_	_
+0	_	_
+cseq	_	_
+0	_	_
+=	_	_
+0	_	_
+hrev	_	_
+T	_	_
+=	_	_
+0	_	_
+crev	_	_
+T	_	_
+=	_	_
+0	_	_
+cseq	_	_
+T	_	_
+crev	_	_
+prediction	_	_
+label	_	_
+argmax	_	_
+H	_	_
+(	_	_
+y	_	_
+,	_	_
+ŷ	_	_
+)	_	_
+Figure	_	_
+3	_	_
+.	_	_
+
+#185
+Schematicial	_	_
+illustration	_	_
+of	_	_
+our	_	_
+proposed	_	_
+bidirectional	_	_
+sequential	_	_
+encoder	_	_
+network	_	_
+.	_	_
+
+#186
+The	_	_
+input	_	_
+sequence	_	_
+x	_	_
+∈	_	_
+{	_	_
+x0	_	_
+,	_	_
+.	_	_
+
+#187
+.	_	_
+
+#188
+.	_	_
+
+#189
+,	_	_
+xT	_	_
+}	_	_
+of	_	_
+observations	_	_
+xt	_	_
+∈	_	_
+Rh×w×d	_	_
+is	_	_
+encoded	_	_
+to	_	_
+a	_	_
+representation	_	_
+cT	_	_
+=	_	_
+[	_	_
+cseq	_	_
+T	_	_
+‖c	_	_
+inv	_	_
+0	_	_
+]	_	_
+.	_	_
+
+#190
+The	_	_
+observations	_	_
+are	_	_
+passed	_	_
+in	_	_
+sequence	_	_
+(	_	_
+seq	_	_
+)	_	_
+and	_	_
+reversed	_	_
+(	_	_
+rev	_	_
+)	_	_
+order	_	_
+to	_	_
+the	_	_
+encoder	_	_
+to	_	_
+eliminate	_	_
+bias	_	_
+towards	_	_
+recent	_	_
+observations	_	_
+.	_	_
+
+#191
+The	_	_
+concatenated	_	_
+representation	_	_
+of	_	_
+both	_	_
+passes	_	_
+cT	_	_
+is	_	_
+then	_	_
+projected	_	_
+to	_	_
+softmax-normalized	_	_
+feature	_	_
+maps	_	_
+for	_	_
+each	_	_
+class	_	_
+using	_	_
+a	_	_
+convolutional	_	_
+layer	_	_
+.	_	_
+
+#192
+cT	_	_
+to	_	_
+softmax-normalized	_	_
+activation	_	_
+maps	_	_
+ŷ	_	_
+for	_	_
+n	_	_
+classes	_	_
+:	_	_
+cT	_	_
+∈	_	_
+Rh×w×2r	_	_
+7→	_	_
+ŷ	_	_
+∈	_	_
+Rh×w×n	_	_
+.	_	_
+
+#193
+This	_	_
+layer	_	_
+is	_	_
+composed	_	_
+of	_	_
+a	_	_
+convolution	_	_
+with	_	_
+a	_	_
+kernel	_	_
+size	_	_
+of	_	_
+kclass	_	_
+,	_	_
+followed	_	_
+by	_	_
+batch	_	_
+normalization	_	_
+and	_	_
+a	_	_
+rectified	_	_
+linear	_	_
+unit	_	_
+(	_	_
+ReLU	_	_
+)	_	_
+[	_	_
+34	_	_
+]	_	_
+or	_	_
+leaky	_	_
+ReLU	_	_
+[	_	_
+33	_	_
+]	_	_
+non-linear	_	_
+activation	_	_
+function	_	_
+.	_	_
+
+#194
+At	_	_
+each	_	_
+training	_	_
+step	_	_
+,	_	_
+the	_	_
+cross-entropy	_	_
+loss	_	_
+H	_	_
+(	_	_
+ŷ	_	_
+,	_	_
+y	_	_
+)	_	_
+=	_	_
+−∑	_	_
+i	_	_
+yilog	_	_
+(	_	_
+ŷi	_	_
+)	_	_
+(	_	_
+1	_	_
+)	_	_
+between	_	_
+the	_	_
+predicted	_	_
+activations	_	_
+ŷ	_	_
+and	_	_
+an	_	_
+one-hot	_	_
+representation	_	_
+of	_	_
+the	_	_
+ground	_	_
+truth	_	_
+labels	_	_
+y	_	_
+evaluates	_	_
+the	_	_
+prediction	_	_
+quality	_	_
+.	_	_
+
+#195
+Tunable	_	_
+hyper-parameters	_	_
+are	_	_
+the	_	_
+number	_	_
+of	_	_
+recurrent	_	_
+cells	_	_
+r	_	_
+and	_	_
+the	_	_
+sizes	_	_
+of	_	_
+the	_	_
+convolutional	_	_
+kernel	_	_
+krnn	_	_
+and	_	_
+the	_	_
+classification	_	_
+kernel	_	_
+kclass	_	_
+.	_	_
+
+#196
+4	_	_
+.	_	_
+
+#197
+Dataset	_	_
+For	_	_
+the	_	_
+evaluation	_	_
+of	_	_
+our	_	_
+approach	_	_
+,	_	_
+we	_	_
+defined	_	_
+a	_	_
+large	_	_
+area	_	_
+of	_	_
+interest	_	_
+(	_	_
+AOI	_	_
+)	_	_
+of	_	_
+102	_	_
+km	_	_
+×	_	_
+42	_	_
+km	_	_
+north	_	_
+of	_	_
+Munich	_	_
+,	_	_
+Germany	_	_
+.	_	_
+
+#198
+An	_	_
+overview	_	_
+of	_	_
+the	_	_
+AOI	_	_
+at	_	_
+multiple	_	_
+scales	_	_
+is	_	_
+shown	_	_
+in	_	_
+Figure	_	_
+4	_	_
+.	_	_
+
+#199
+The	_	_
+AOI	_	_
+was	_	_
+further	_	_
+subdivided	_	_
+into	_	_
+squared	_	_
+blocks	_	_
+of	_	_
+3.84	_	_
+km	_	_
+×	_	_
+3.84	_	_
+km	_	_
+(	_	_
+multiples	_	_
+of	_	_
+240	_	_
+m	_	_
+and	_	_
+480	_	_
+m	_	_
+)	_	_
+to	_	_
+ensure	_	_
+dataset	_	_
+independence	_	_
+while	_	_
+maintaining	_	_
+similar	_	_
+class	_	_
+distributions	_	_
+.	_	_
+
+#200
+These	_	_
+blocks	_	_
+were	_	_
+then	_	_
+randomly	_	_
+assigned	_	_
+to	_	_
+partitions	_	_
+for	_	_
+network	_	_
+training	_	_
+,	_	_
+hyper-parameter	_	_
+validation	_	_
+and	_	_
+model	_	_
+evaluation	_	_
+in	_	_
+a	_	_
+ratio	_	_
+of	_	_
+4:1:1	_	_
+similar	_	_
+to	_	_
+previous	_	_
+work	_	_
+[	_	_
+24	_	_
+]	_	_
+.	_	_
+
+#201
+The	_	_
+spatial	_	_
+extent	_	_
+of	_	_
+single	_	_
+samples	_	_
+x	_	_
+is	_	_
+determined	_	_
+by	_	_
+tile-grids	_	_
+of	_	_
+240	_	_
+m	_	_
+and	_	_
+480	_	_
+m.	_	_
+We	_	_
+bilinearly	_	_
+interpolated	_	_
+the	_	_
+20	_	_
+m	_	_
+and	_	_
+60	_	_
+m	_	_
+S2	_	_
+bands	_	_
+to	_	_
+10	_	_
+m	_	_
+ground	_	_
+sampling	_	_
+distance	_	_
+(	_	_
+GSD	_	_
+)	_	_
+to	_	_
+harmonize	_	_
+the	_	_
+raster	_	_
+data	_	_
+dimensions	_	_
+.	_	_
+
+#202
+To	_	_
+provide	_	_
+additional	_	_
+temporal	_	_
+meta	_	_
+information	_	_
+,	_	_
+the	_	_
+year	_	_
+and	_	_
+day-of-year	_	_
+of	_	_
+the	_	_
+individual	_	_
+observations	_	_
+were	_	_
+added	_	_
+as	_	_
+matrices	_	_
+to	_	_
+the	_	_
+input	_	_
+tensor	_	_
+.	_	_
+
+#203
+Hence	_	_
+,	_	_
+the	_	_
+input	_	_
+feature	_	_
+depth	_	_
+d	_	_
+=	_	_
+15	_	_
+is	_	_
+composed	_	_
+of	_	_
+four	_	_
+10	_	_
+m	_	_
+(	_	_
+B4	_	_
+,	_	_
+B3	_	_
+,	_	_
+B2	_	_
+,	_	_
+B8	_	_
+)	_	_
+,	_	_
+six	_	_
+20	_	_
+m	_	_
+(	_	_
+B5	_	_
+,	_	_
+B6	_	_
+,	_	_
+B7	_	_
+,	_	_
+B8A	_	_
+)	_	_
+and	_	_
+three	_	_
+60	_	_
+m	_	_
+(	_	_
+B1	_	_
+,	_	_
+B11	_	_
+,	_	_
+B12	_	_
+)	_	_
+bands	_	_
+combined	_	_
+with	_	_
+year	_	_
+and	_	_
+day-of-year	_	_
+.	_	_
+
+#204
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#205
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#206
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+8	_	_
+of	_	_
+19	_	_
+Berlin	_	_
+Munich	_	_
+102	_	_
+km	_	_
+km	_	_
+3840	_	_
+m	_	_
+blocks	_	_
+(	_	_
+14	_	_
+240	_	_
+m	_	_
+tiles	_	_
+,	_	_
+480	_	_
+m	_	_
+margin	_	_
+)	_	_
+training	_	_
+validation	_	_
+evaluation	_	_
+tile	_	_
+(	_	_
+240	_	_
+m	_	_
+)	_	_
+margin	_	_
+(	_	_
+480	_	_
+m	_	_
+)	_	_
+Figure	_	_
+4	_	_
+.	_	_
+
+#207
+Area	_	_
+of	_	_
+interest	_	_
+(	_	_
+AOI	_	_
+)	_	_
+north	_	_
+of	_	_
+Munich	_	_
+containing	_	_
+430	_	_
+kha	_	_
+and	_	_
+137	_	_
+k	_	_
+field	_	_
+parcels	_	_
+.	_	_
+
+#208
+The	_	_
+AOI	_	_
+is	_	_
+further	_	_
+tiled	_	_
+at	_	_
+multiple	_	_
+scales	_	_
+into	_	_
+datasets	_	_
+for	_	_
+training	_	_
+,	_	_
+validation	_	_
+and	_	_
+evaluation	_	_
+and	_	_
+footprints	_	_
+of	_	_
+individual	_	_
+samples	_	_
+.	_	_
+
+#209
+With	_	_
+ground	_	_
+truth	_	_
+labels	_	_
+of	_	_
+two	_	_
+growing	_	_
+seasons	_	_
+2016	_	_
+and	_	_
+2017	_	_
+available	_	_
+,	_	_
+we	_	_
+gathered	_	_
+274	_	_
+(	_	_
+108	_	_
+in	_	_
+2016	_	_
+;	_	_
+166	_	_
+in	_	_
+2017	_	_
+)	_	_
+Sentinel	_	_
+2	_	_
+products	_	_
+at	_	_
+98	_	_
+(	_	_
+46	_	_
+in	_	_
+2017	_	_
+;	_	_
+52	_	_
+in	_	_
+2017	_	_
+)	_	_
+observation	_	_
+dates	_	_
+between	_	_
+3	_	_
+January	_	_
+2016	_	_
+and	_	_
+15	_	_
+November	_	_
+2017	_	_
+.	_	_
+
+#210
+The	_	_
+obtained	_	_
+time	_	_
+series	_	_
+represents	_	_
+all	_	_
+available	_	_
+S2	_	_
+products	_	_
+labeled	_	_
+with	_	_
+cloud	_	_
+coverage	_	_
+less	_	_
+than	_	_
+80	_	_
+%	_	_
+.	_	_
+
+#211
+In	_	_
+some	_	_
+S2	_	_
+images	_	_
+,	_	_
+we	_	_
+noticed	_	_
+a	_	_
+spatial	_	_
+offset	_	_
+in	_	_
+the	_	_
+scale	_	_
+of	_	_
+one	_	_
+pixel	_	_
+.	_	_
+
+#212
+However	_	_
+,	_	_
+we	_	_
+did	_	_
+not	_	_
+perform	_	_
+additional	_	_
+georeferencing	_	_
+and	_	_
+treated	_	_
+the	_	_
+spatial	_	_
+offset	_	_
+as	_	_
+data-inherent	_	_
+observation	_	_
+noise	_	_
+.	_	_
+
+#213
+Overall	_	_
+,	_	_
+we	_	_
+relied	_	_
+on	_	_
+the	_	_
+geometrical	_	_
+and	_	_
+spectral	_	_
+reference	_	_
+as	_	_
+provided	_	_
+by	_	_
+the	_	_
+COPERNICUS	_	_
+ground	_	_
+segment	_	_
+.	_	_
+
+#214
+Ground	_	_
+truth	_	_
+information	_	_
+was	_	_
+provided	_	_
+by	_	_
+the	_	_
+Bavarian	_	_
+Ministry	_	_
+of	_	_
+Food	_	_
+,	_	_
+Agriculture	_	_
+and	_	_
+Forestry	_	_
+(	_	_
+StMELF	_	_
+)	_	_
+in	_	_
+the	_	_
+form	_	_
+of	_	_
+geometry	_	_
+and	_	_
+semantic	_	_
+labels	_	_
+of	_	_
+137	_	_
+k	_	_
+field	_	_
+parcels	_	_
+.	_	_
+
+#215
+The	_	_
+crop-type	_	_
+is	_	_
+reported	_	_
+by	_	_
+farmers	_	_
+to	_	_
+the	_	_
+ministry	_	_
+as	_	_
+mandated	_	_
+by	_	_
+the	_	_
+European	_	_
+crop	_	_
+subsidy	_	_
+program	_	_
+.	_	_
+
+#216
+We	_	_
+selected	_	_
+and	_	_
+aggregated	_	_
+17	_	_
+crop-classes	_	_
+from	_	_
+approximately	_	_
+200	_	_
+distinct	_	_
+field	_	_
+labels	_	_
+,	_	_
+occurring	_	_
+at	_	_
+least	_	_
+400	_	_
+times	_	_
+in	_	_
+the	_	_
+AOI	_	_
+.	_	_
+
+#217
+With	_	_
+modern	_	_
+agriculture	_	_
+,	_	_
+centered	_	_
+on	_	_
+a	_	_
+few	_	_
+predominant	_	_
+crops	_	_
+,	_	_
+the	_	_
+distribution	_	_
+of	_	_
+classes	_	_
+is	_	_
+not	_	_
+uniform	_	_
+,	_	_
+as	_	_
+can	_	_
+be	_	_
+observed	_	_
+from	_	_
+Figure	_	_
+5a	_	_
+.	_	_
+
+#218
+This	_	_
+non-uniform	_	_
+class	_	_
+distribution	_	_
+is	_	_
+generally	_	_
+not	_	_
+optimal	_	_
+for	_	_
+the	_	_
+classification	_	_
+evaluation	_	_
+as	_	_
+it	_	_
+skews	_	_
+the	_	_
+overall	_	_
+accuracy	_	_
+metric	_	_
+towards	_	_
+classes	_	_
+of	_	_
+high	_	_
+frequency	_	_
+.	_	_
+
+#219
+Hence	_	_
+,	_	_
+we	_	_
+additionally	_	_
+calculated	_	_
+kappa	_	_
+metrics	_	_
+[	_	_
+36	_	_
+]	_	_
+for	_	_
+the	_	_
+quantitative	_	_
+evaluation	_	_
+in	_	_
+Section	_	_
+5.2	_	_
+to	_	_
+compensate	_	_
+for	_	_
+unbalanced	_	_
+distributions	_	_
+.	_	_
+
+#220
+5	_	_
+.	_	_
+
+#221
+Results	_	_
+In	_	_
+this	_	_
+section	_	_
+,	_	_
+we	_	_
+first	_	_
+visualize	_	_
+internal	_	_
+state	_	_
+activations	_	_
+in	_	_
+Section	_	_
+5.1	_	_
+to	_	_
+gain	_	_
+a	_	_
+visual	_	_
+understanding	_	_
+of	_	_
+the	_	_
+sequential	_	_
+encoding	_	_
+process	_	_
+.	_	_
+
+#222
+Further	_	_
+findings	_	_
+on	_	_
+internal	_	_
+cloud	_	_
+masking	_	_
+are	_	_
+maize	_	_
+wheat	_	_
+meadow	_	_
+winter	_	_
+barle	_	_
+y	_	_
+potatoe	_	_
+rapeseed	_	_
+summer	_	_
+barle	_	_
+y	_	_
+hop	_	_
+trit	_	_
+ica	_	_
+leoatrye	_	_
+sugar	_	_
+beet	_	_
+spelt	_	_
+asparagus	_	_
+beans	_	_
+peas	_	_
+soybeans	_	_
+1,000	_	_
+3,000	_	_
+10,000	_	_
+30,000	_	_
+crop	_	_
+classes	_	_
+fie	_	_
+ld	_	_
+pa	_	_
+rc	_	_
+el	_	_
+s	_	_
+2016	_	_
+2017	_	_
+(	_	_
+a	_	_
+)	_	_
+Non-uniform	_	_
+distribution	_	_
+of	_	_
+field	_	_
+classes	_	_
+in	_	_
+the	_	_
+AOI	_	_
+01	_	_
+04	_	_
+07	_	_
+10	_	_
+02	_	_
+05	_	_
+08	_	_
+12	_	_
+S2A	_	_
+S2B	_	_
+2016	_	_
+2017	_	_
+(	_	_
+b	_	_
+)	_	_
+Acquired	_	_
+Sentinel	_	_
+2	_	_
+(	_	_
+S2	_	_
+)	_	_
+observations	_	_
+of	_	_
+the	_	_
+twin	_	_
+satellites	_	_
+S2A	_	_
+and	_	_
+S2B	_	_
+Figure	_	_
+5	_	_
+.	_	_
+
+#223
+Information	_	_
+of	_	_
+the	_	_
+area	_	_
+of	_	_
+interest	_	_
+containing	_	_
+location	_	_
+,	_	_
+division	_	_
+schemes	_	_
+,	_	_
+class	_	_
+distributions	_	_
+and	_	_
+dates	_	_
+of	_	_
+acquired	_	_
+satellite	_	_
+imagery	_	_
+.	_	_
+
+#224
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#225
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#226
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+9	_	_
+of	_	_
+19	_	_
+presented	_	_
+before	_	_
+the	_	_
+classification	_	_
+results	_	_
+on	_	_
+crop	_	_
+classes	_	_
+are	_	_
+quantitatively	_	_
+and	_	_
+qualitatively	_	_
+evaluated	_	_
+in	_	_
+Sections	_	_
+5.2	_	_
+and	_	_
+5.3	_	_
+.	_	_
+
+#227
+5.1	_	_
+.	_	_
+
+#228
+Internal	_	_
+Network	_	_
+Activations	_	_
+In	_	_
+Section	_	_
+3.1	_	_
+,	_	_
+we	_	_
+gave	_	_
+an	_	_
+overview	_	_
+of	_	_
+the	_	_
+functionality	_	_
+of	_	_
+recurrent	_	_
+layers	_	_
+and	_	_
+discussed	_	_
+the	_	_
+property	_	_
+of	_	_
+LSTM	_	_
+state	_	_
+vectors	_	_
+ct	_	_
+∈	_	_
+Rh×w×r	_	_
+to	_	_
+encode	_	_
+sequential	_	_
+information	_	_
+over	_	_
+a	_	_
+series	_	_
+of	_	_
+observations	_	_
+.	_	_
+
+#229
+The	_	_
+cell	_	_
+state	_	_
+is	_	_
+updated	_	_
+by	_	_
+internal	_	_
+gates	_	_
+it	_	_
+,	_	_
+jt	_	_
+,	_	_
+ft	_	_
+∈	_	_
+Rh×w×r	_	_
+,	_	_
+which	_	_
+in	_	_
+turn	_	_
+are	_	_
+calculated	_	_
+based	_	_
+on	_	_
+previous	_	_
+cell	_	_
+output	_	_
+ht−1	_	_
+and	_	_
+cell	_	_
+state	_	_
+ct−1	_	_
+(	_	_
+see	_	_
+Table	_	_
+1	_	_
+)	_	_
+.	_	_
+
+#230
+To	_	_
+assess	_	_
+prior	_	_
+assumptions	_	_
+regarding	_	_
+cloud	_	_
+filtering	_	_
+and	_	_
+to	_	_
+visually	_	_
+assess	_	_
+the	_	_
+encoding	_	_
+process	_	_
+,	_	_
+we	_	_
+visualized	_	_
+internal	_	_
+LSTM	_	_
+cell	_	_
+tensors	_	_
+for	_	_
+a	_	_
+sequence	_	_
+of	_	_
+images	_	_
+and	_	_
+show	_	_
+representative	_	_
+activations	_	_
+of	_	_
+three	_	_
+cells	_	_
+in	_	_
+Figure	_	_
+6	_	_
+.	_	_
+
+#231
+The	_	_
+LSTM	_	_
+network	_	_
+,	_	_
+from	_	_
+which	_	_
+these	_	_
+activations	_	_
+are	_	_
+extracted	_	_
+,	_	_
+was	_	_
+trained	_	_
+on	_	_
+24	_	_
+px	_	_
+×	_	_
+24	_	_
+px	_	_
+tiles	_	_
+with	_	_
+r	_	_
+=	_	_
+256	_	_
+recurrent	_	_
+cells	_	_
+and	_	_
+krnn	_	_
+=	_	_
+kclass	_	_
+=	_	_
+3	_	_
+px	_	_
+.	_	_
+
+#232
+Additionally	_	_
+,	_	_
+we	_	_
+inferred	_	_
+the	_	_
+network	_	_
+with	_	_
+tiles	_	_
+of	_	_
+height	_	_
+h	_	_
+and	_	_
+width	_	_
+w	_	_
+of	_	_
+48	_	_
+px	_	_
+.	_	_
+
+#233
+Experiments	_	_
+with	_	_
+the	_	_
+input	_	_
+size	_	_
+of	_	_
+24	_	_
+px	_	_
+show	_	_
+similar	_	_
+results	_	_
+and	_	_
+are	_	_
+included	_	_
+in	_	_
+the	_	_
+Supplementary	_	_
+Material	_	_
+to	_	_
+this	_	_
+work	_	_
+.	_	_
+
+#234
+In	_	_
+the	_	_
+first	_	_
+row	_	_
+,	_	_
+a	_	_
+4σ	_	_
+band-normalized	_	_
+RGB	_	_
+image	_	_
+represents	_	_
+the	_	_
+input	_	_
+satellite	_	_
+image	_	_
+xt	_	_
+∈	_	_
+Rh=48	_	_
+×Rw=48	_	_
+×Rd=15	_	_
+at	_	_
+each	_	_
+time	_	_
+frame	_	_
+t.	_	_
+The	_	_
+next	_	_
+rows	_	_
+show	_	_
+the	_	_
+activations	_	_
+of	_	_
+input	_	_
+gate	_	_
+ii	_	_
+t	_	_
+,	_	_
+modulation	_	_
+gate	_	_
+ji	_	_
+t	_	_
+,	_	_
+forget	_	_
+gate	_	_
+f	_	_
+i	_	_
+t	_	_
+and	_	_
+cell	_	_
+state	_	_
+ci	_	_
+t	_	_
+at	_	_
+three	_	_
+selected	_	_
+recurrent	_	_
+cells	_	_
+,	_	_
+which	_	_
+are	_	_
+denoted	_	_
+by	_	_
+the	_	_
+raised	_	_
+index	_	_
+i	_	_
+∈	_	_
+{	_	_
+3	_	_
+,	_	_
+22	_	_
+,	_	_
+47	_	_
+}	_	_
+.	_	_
+
+#235
+After	_	_
+iteratively	_	_
+processing	_	_
+the	_	_
+sequence	_	_
+,	_	_
+the	_	_
+final	_	_
+cell	_	_
+state	_	_
+cT=36	_	_
+is	_	_
+used	_	_
+to	_	_
+produce	_	_
+activations	_	_
+for	_	_
+each	_	_
+class	_	_
+,	_	_
+as	_	_
+described	_	_
+in	_	_
+Section	_	_
+3.3	_	_
+.	_	_
+
+#236
+In	_	_
+the	_	_
+encoding	_	_
+process	_	_
+,	_	_
+the	_	_
+detail	_	_
+of	_	_
+structures	_	_
+at	_	_
+the	_	_
+cell	_	_
+state	_	_
+tensor	_	_
+increased	_	_
+gradually	_	_
+.	_	_
+
+#237
+This	_	_
+may	feasibility-options	_
+be	_	_
+interpreted	_	_
+as	_	_
+additional	_	_
+information	_	_
+written	_	_
+to	_	_
+the	_	_
+cell	_	_
+state	_	_
+.	_	_
+
+#238
+It	_	_
+further	_	_
+appeared	_	_
+that	_	_
+the	_	_
+structures	_	_
+visible	_	_
+at	_	_
+the	_	_
+cell	_	_
+states	_	_
+resembled	_	_
+shapes	_	_
+,	_	_
+which	_	_
+were	_	_
+present	_	_
+in	_	_
+cloud-free	_	_
+RGB	_	_
+images	_	_
+(	_	_
+e.g.	_	_
+,	_	_
+c	_	_
+(	_	_
+3	_	_
+)	_	_
+t=15	_	_
+or	_	_
+c	_	_
+(	_	_
+22	_	_
+)	_	_
+t=28	_	_
+)	_	_
+.	_	_
+
+#239
+Some	_	_
+cells	_	_
+(	_	_
+e.g.	_	_
+,	_	_
+Cell	_	_
+3	_	_
+or	_	_
+Cell	_	_
+22	_	_
+)	_	_
+changed	_	_
+their	_	_
+activations	_	_
+gradually	_	_
+over	_	_
+the	_	_
+span	_	_
+of	_	_
+multiple	_	_
+observations	_	_
+,	_	_
+while	_	_
+others	_	_
+(	_	_
+e.g.	_	_
+,	_	_
+48	_	_
+)	_	_
+changed	_	_
+more	_	_
+frequently	_	_
+.	_	_
+
+#240
+Forget	_	_
+gate	_	_
+f	_	_
+activations	_	_
+are	_	_
+element-wise	_	_
+multiplied	_	_
+with	_	_
+the	_	_
+previous	_	_
+cell	_	_
+state	_	_
+ct−1	_	_
+and	_	_
+range	_	_
+between	_	_
+zero	_	_
+and	_	_
+one	_	_
+.	_	_
+
+#241
+Low	_	_
+values	_	_
+in	_	_
+this	_	_
+gate	_	_
+numerically	_	_
+reduce	_	_
+the	_	_
+cell	_	_
+state	_	_
+,	_	_
+which	_	_
+can	_	_
+be	_	_
+potentially	_	_
+interpreted	_	_
+as	_	_
+a	_	_
+change	_	_
+of	_	_
+decision	_	_
+.	_	_
+
+#242
+The	_	_
+input	_	_
+i	_	_
+and	_	_
+modulation	_	_
+gate	_	_
+j	_	_
+control	_	_
+the	_	_
+degree	_	_
+of	_	_
+new	_	_
+information	_	_
+written	_	_
+to	_	_
+the	_	_
+cell	_	_
+state	_	_
+.	_	_
+
+#243
+While	_	_
+the	_	_
+input	_	_
+gate	_	_
+is	_	_
+scaled	_	_
+between	_	_
+zero	_	_
+and	_	_
+one	_	_
+,	_	_
+the	_	_
+modulation	_	_
+gate	_	_
+j	_	_
+∈	_	_
+[	_	_
+−1	_	_
+,	_	_
+1	_	_
+]	_	_
+determines	_	_
+the	_	_
+sign	_	_
+of	_	_
+change	_	_
+.	_	_
+
+#244
+In	_	_
+general	_	_
+,	_	_
+we	_	_
+found	_	_
+the	_	_
+activity	_	_
+of	_	_
+a	_	_
+majority	_	_
+of	_	_
+cells	_	_
+(	_	_
+e.g.	_	_
+,	_	_
+Cell	_	_
+3	_	_
+or	_	_
+Cell	_	_
+22	_	_
+)	_	_
+difficult	_	_
+to	_	_
+associate	_	_
+with	_	_
+distinct	_	_
+events	_	_
+in	_	_
+the	_	_
+current	_	_
+input	_	_
+.	_	_
+
+#245
+However	_	_
+,	_	_
+we	_	_
+assumed	_	_
+that	_	_
+classification-relevant	_	_
+features	_	_
+were	_	_
+expressed	_	_
+as	_	_
+a	_	_
+combination	_	_
+of	_	_
+cell	_	_
+activations	_	_
+similar	_	_
+to	_	_
+other	_	_
+neural	_	_
+network	_	_
+approaches	_	_
+.	_	_
+
+#246
+Nevertheless	_	_
+,	_	_
+we	_	_
+could	capability-feasibility	_
+identify	_	_
+a	_	_
+proportionally	_	_
+small	_	_
+number	_	_
+of	_	_
+cells	_	_
+,	_	_
+in	_	_
+which	_	_
+the	_	_
+shape	_	_
+of	_	_
+clouds	_	_
+visible	_	_
+in	_	_
+the	_	_
+image	_	_
+was	_	_
+projected	_	_
+on	_	_
+the	_	_
+internal	_	_
+state	_	_
+activations	_	_
+.	_	_
+
+#247
+One	_	_
+of	_	_
+these	_	_
+was	_	_
+cell	_	_
+i	_	_
+=	_	_
+47	_	_
+.	_	_
+
+#248
+For	_	_
+cloudy	_	_
+observations	_	_
+,	_	_
+the	_	_
+input	_	_
+gate	_	_
+approached	_	_
+zero	_	_
+either	_	_
+over	_	_
+the	_	_
+entire	_	_
+tile	_	_
+(	_	_
+e.g.	_	_
+,	_	_
+t	_	_
+=	_	_
+{	_	_
+10	_	_
+,	_	_
+18	_	_
+,	_	_
+19	_	_
+,	_	_
+36	_	_
+}	_	_
+)	_	_
+or	_	_
+over	_	_
+patches	_	_
+of	_	_
+cloudy	_	_
+pixels	_	_
+(	_	_
+e.g.	_	_
+,	_	_
+t	_	_
+=	_	_
+{	_	_
+11	_	_
+,	_	_
+13	_	_
+,	_	_
+31	_	_
+,	_	_
+33	_	_
+}	_	_
+)	_	_
+.	_	_
+
+#249
+At	_	_
+some	_	_
+observation	_	_
+times	_	_
+(	_	_
+e.g.	_	_
+,	_	_
+t	_	_
+=	_	_
+{	_	_
+13	_	_
+,	_	_
+31	_	_
+,	_	_
+32	_	_
+}	_	_
+)	_	_
+,	_	_
+the	_	_
+modulation	_	_
+gate	_	_
+j	_	_
+(	_	_
+47	_	_
+)	_	_
+t	_	_
+additionally	_	_
+changed	_	_
+the	_	_
+sign	_	_
+.	_	_
+
+#250
+In	_	_
+a	_	_
+similar	_	_
+fashion	_	_
+,	_	_
+Karpathy	_	_
+[	_	_
+37	_	_
+]	_	_
+evaluated	_	_
+cell	_	_
+activations	_	_
+for	_	_
+the	_	_
+task	_	_
+of	_	_
+text	_	_
+processing	_	_
+.	_	_
+
+#251
+He	_	_
+could	capability-feasibility	_
+associate	_	_
+a	_	_
+small	_	_
+number	_	_
+of	_	_
+cells	_	_
+with	_	_
+a	_	_
+set	_	_
+of	_	_
+distinct	_	_
+tasks	_	_
+,	_	_
+such	_	_
+as	_	_
+monitoring	_	_
+the	_	_
+lengths	_	_
+of	_	_
+a	_	_
+sentence	_	_
+or	_	_
+maintaining	_	_
+a	_	_
+state-flag	_	_
+for	_	_
+text	_	_
+inside	_	_
+and	_	_
+outside	_	_
+of	_	_
+brackets	_	_
+.	_	_
+
+#252
+Summarizing	_	_
+this	_	_
+experiment	_	_
+,	_	_
+the	_	_
+majority	_	_
+of	_	_
+cells	_	_
+showed	_	_
+increasingly	_	_
+detailed	_	_
+structures	_	_
+when	_	_
+new	_	_
+information	_	_
+was	_	_
+provided	_	_
+in	_	_
+the	_	_
+input	_	_
+sequence	_	_
+.	_	_
+
+#253
+It	_	_
+is	_	_
+likely	_	_
+that	_	_
+the	_	_
+grammar	_	_
+of	_	_
+crop-characteristic	_	_
+phenological	_	_
+changes	_	_
+was	_	_
+encoded	_	_
+in	_	_
+the	_	_
+network	_	_
+weights	_	_
+,	_	_
+and	_	_
+we	_	_
+suspect	_	_
+that	_	_
+a	_	_
+certain	_	_
+amount	_	_
+of	_	_
+these	_	_
+cells	_	_
+was	_	_
+sensitive	_	_
+to	_	_
+distinct	_	_
+events	_	_
+relevant	_	_
+for	_	_
+crop	_	_
+identification	_	_
+.	_	_
+
+#254
+However	_	_
+,	_	_
+these	_	_
+events	_	_
+may	_	_
+be	_	_
+encoded	_	_
+in	_	_
+multiple	_	_
+cells	_	_
+and	_	_
+were	_	_
+difficult	_	_
+to	_	_
+visually	_	_
+interpret	_	_
+.	_	_
+
+#255
+A	_	_
+small	_	_
+set	_	_
+of	_	_
+cells	_	_
+could	feasibility	_
+be	_	_
+visually	_	_
+associated	_	_
+with	_	_
+individual	_	_
+cloud	_	_
+covers	_	_
+and	_	_
+may	_	_
+be	_	_
+used	_	_
+for	_	_
+internal	_	_
+cloud	_	_
+masking	_	_
+.	_	_
+
+#256
+Based	_	_
+on	_	_
+these	_	_
+findings	_	_
+,	_	_
+we	_	_
+are	_	_
+confident	_	_
+that	_	_
+our	_	_
+network	_	_
+has	_	_
+learned	_	_
+to	_	_
+internally	_	_
+filter	_	_
+clouds	_	_
+without	_	_
+explicitly	_	_
+introducing	_	_
+cloud-related	_	_
+labels	_	_
+.	_	_
+
+#257
+5.2.	_	_
+Quanititative	_	_
+Classificaton	_	_
+Evaluation	_	_
+
+#258
+For	_	_
+the	_	_
+quantitative	_	_
+evaluation	_	_
+of	_	_
+our	_	_
+approach	_	_
+,	_	_
+we	_	_
+trained	_	_
+networks	_	_
+with	_	_
+bidirectional	_	_
+convolutional	_	_
+LSTM	_	_
+and	_	_
+GRU	_	_
+cells	_	_
+with	_	_
+r	_	_
+∈	_	_
+{	_	_
+128	_	_
+,	_	_
+256	_	_
+}	_	_
+recurrent	_	_
+cells	_	_
+.	_	_
+
+#259
+Kernel	_	_
+sizes	_	_
+of	_	_
+krnn	_	_
+=	_	_
+kclass	_	_
+=	_	_
+3	_	_
+were	_	_
+used	_	_
+for	_	_
+the	_	_
+evaluation	_	_
+since	_	_
+previous	_	_
+tests	_	_
+with	_	_
+larger	_	_
+kernel	_	_
+sizes	_	_
+showed	_	_
+similar	_	_
+accuracies	_	_
+.	_	_
+
+#260
+For	_	_
+these	_	_
+initial	_	_
+experiments	_	_
+,	_	_
+we	_	_
+predominantly	_	_
+tested	_	_
+network	_	_
+variants	_	_
+with	_	_
+r	_	_
+=	_	_
+128	_	_
+recurrent	_	_
+cells	_	_
+,	_	_
+as	_	_
+these	_	_
+networks	_	_
+could	capability-feasibility	_
+be	_	_
+trained	_	_
+within	_	_
+a	_	_
+reasonable	_	_
+time	_	_
+frame	_	_
+.	_	_
+
+#261
+We	_	_
+decided	_	_
+to	_	_
+use	_	_
+networks	_	_
+with	_	_
+r	_	_
+=	_	_
+256	_	_
+recurrent	_	_
+cells	_	_
+for	_	_
+the	_	_
+final	_	_
+accuracy	_	_
+evaluation	_	_
+,	_	_
+as	_	_
+we	_	_
+found	_	_
+that	_	_
+these	_	_
+variants	_	_
+achieved	_	_
+slightly	_	_
+better	_	_
+results	_	_
+in	_	_
+prior	_	_
+tests	_	_
+.	_	_
+
+#262
+The	_	_
+convolutional	_	_
+GRU	_	_
+and	_	_
+LSTM	_	_
+networks	_	_
+were	_	_
+trained	_	_
+on	_	_
+a	_	_
+P100	_	_
+GPU	_	_
+for	_	_
+60	_	_
+epochs	_	_
+(	_	_
+3.51	_	_
+Mio	_	_
+24	_	_
+px	_	_
+×	_	_
+24	_	_
+px	_	_
+tiles	_	_
+seen	_	_
+)	_	_
+and	_	_
+took	_	_
+58	_	_
+h	_	_
+and	_	_
+51	_	_
+h	_	_
+,	_	_
+respectively	_	_
+.	_	_
+
+#263
+However	_	_
+,	_	_
+reasonable	_	_
+accuracies	_	_
+were	_	_
+achieved	_	_
+within	_	_
+the	_	_
+first	_	_
+twelve	_	_
+hours	_	_
+,	_	_
+and	_	_
+further	_	_
+training	_	_
+increased	_	_
+the	_	_
+accuracies	_	_
+on	_	_
+validation	_	_
+data	_	_
+only	_	_
+marginally	_	_
+.	_	_
+
+#264
+At	_	_
+each	_	_
+training	_	_
+step	_	_
+,	_	_
+a	_	_
+subset	_	_
+of	_	_
+30	_	_
+observations	_	_
+was	_	_
+randomly	_	_
+sampled	_	_
+from	_	_
+all	_	_
+available	_	_
+46	_	_
+(	_	_
+2016	_	_
+)	_	_
+and	_	_
+52	_	_
+(	_	_
+2017	_	_
+)	_	_
+observations	_	_
+to	_	_
+randomize	_	_
+the	_	_
+sequence	_	_
+while	_	_
+the	_	_
+sequential	_	_
+order	_	_
+was	_	_
+maintained	_	_
+.	_	_
+
+#265
+For	_	_
+all	_	_
+our	_	_
+tests	_	_
+,	_	_
+the	_	_
+performance	_	_
+of	_	_
+LSTM	_	_
+and	_	_
+GRU	_	_
+networks	_	_
+was	_	_
+similar	_	_
+.	_	_
+
+#266
+The	_	_
+fewer	_	_
+weights	_	_
+of	_	_
+GRU	_	_
+cells	_	_
+,	_	_
+however	_	_
+,	_	_
+allowed	_	_
+using	_	_
+a	_	_
+slightly	_	_
+larger	_	_
+batch	_	_
+size	_	_
+of	_	_
+32	_	_
+samples	_	_
+compared	_	_
+to	_	_
+28	_	_
+samples	_	_
+of	_	_
+the	_	_
+LSTM	_	_
+variant	_	_
+.	_	_
+
+#267
+This	_	_
+led	_	_
+to	_	_
+a	_	_
+seven-hour	_	_
+faster	_	_
+training	_	_
+compared	_	_
+to	_	_
+the	_	_
+LSTM	_	_
+variant	_	_
+.	_	_
+
+#268
+For	_	_
+these	_	_
+reasons	_	_
+,	_	_
+we	_	_
+decided	_	_
+to	_	_
+report	_	_
+evaluation	_	_
+results	_	_
+of	_	_
+the	_	_
+GRU	_	_
+network	_	_
+in	_	_
+Table	_	_
+2	_	_
+.	_	_
+
+#269
+Precision	_	_
+and	_	_
+recall	_	_
+are	_	_
+common	_	_
+accuracy	_	_
+measures	_	_
+that	_	_
+normalize	_	_
+the	_	_
+sum	_	_
+of	_	_
+correctly-predicted	_	_
+samples	_	_
+with	_	_
+the	_	_
+total	_	_
+number	_	_
+of	_	_
+predicted	_	_
+and	_	_
+reference	_	_
+samples	_	_
+of	_	_
+a	_	_
+given	_	_
+class	_	_
+,	_	_
+respectively	_	_
+.	_	_
+
+#270
+These	_	_
+measures	_	_
+are	_	_
+equivalent	_	_
+to	_	_
+user’s	_	_
+and	_	_
+producer’s	_	_
+accuracies	_	_
+and	_	_
+inverse	_	_
+to	_	_
+errors	_	_
+of	_	_
+commission	_	_
+and	_	_
+omission	_	_
+,	_	_
+which	_	_
+are	_	_
+popular	_	_
+metrics	_	_
+in	_	_
+the	_	_
+remote	_	_
+sensing	_	_
+community	_	_
+.	_	_
+
+#271
+We	_	_
+further	_	_
+calculated	_	_
+the	_	_
+f	_	_
+-measure	_	_
+as	_	_
+the	_	_
+harmonic	_	_
+average	_	_
+of	_	_
+precision	_	_
+and	_	_
+recall	_	_
+and	_	_
+the	_	_
+overall	_	_
+accuracy	_	_
+as	_	_
+the	_	_
+sum	_	_
+of	_	_
+correctly-classified	_	_
+samples	_	_
+normalized	_	_
+by	_	_
+the	_	_
+total	_	_
+number	_	_
+of	_	_
+samples	_	_
+.	_	_
+
+#272
+These	_	_
+metrics	_	_
+weight	_	_
+each	_	_
+sample	_	_
+equally	_	_
+.	_	_
+
+#273
+This	_	_
+introduces	_	_
+a	_	_
+bias	_	_
+towards	_	_
+frequent	_	_
+classes	_	_
+in	_	_
+the	_	_
+dataset	_	_
+,	_	_
+such	_	_
+as	_	_
+maize	_	_
+or	_	_
+wheat	_	_
+.	_	_
+
+#274
+To	_	_
+compensate	_	_
+for	_	_
+the	_	_
+non-uniform	_	_
+class	_	_
+distribution	_	_
+,	_	_
+we	_	_
+additionally	_	_
+report	_	_
+the	_	_
+conditional	_	_
+[	_	_
+38	_	_
+]	_	_
+and	_	_
+overall	_	_
+kappa	_	_
+[	_	_
+36	_	_
+]	_	_
+coefficients	_	_
+,	_	_
+which	_	_
+are	_	_
+normalized	_	_
+by	_	_
+the	_	_
+probability	_	_
+of	_	_
+a	_	_
+hypothetical	_	_
+correct	_	_
+classification	_	_
+by	_	_
+chance	_	_
+.	_	_
+
+#275
+The	_	_
+kappa	_	_
+coefficient	_	_
+κ	_	_
+is	_	_
+a	_	_
+measure	_	_
+of	_	_
+agreement	_	_
+and	_	_
+typically	_	_
+ranges	_	_
+between	_	_
+κ	_	_
+=	_	_
+0	_	_
+for	_	_
+no	_	_
+and	_	_
+κ	_	_
+=	_	_
+1	_	_
+for	_	_
+complete	_	_
+agreement	_	_
+.	_	_
+
+#276
+McHugh	_	_
+[	_	_
+39	_	_
+]	_	_
+provides	_	_
+an	_	_
+interpretative	_	_
+table	_	_
+in	_	_
+which	_	_
+values	_	_
+0.4	_	_
+≤	_	_
+κ	_	_
+<	_	_
+0.6	_	_
+are	_	_
+considered	_	_
+‘weak’	_	_
+,	_	_
+values	_	_
+0.6	_	_
+≤	_	_
+κ	_	_
+<	_	_
+0.8	_	_
+‘moderate’	_	_
+,	_	_
+0.8	_	_
+≤	_	_
+κ	_	_
+≤	_	_
+0.9	_	_
+considered	_	_
+‘strong’	_	_
+and	_	_
+values	_	_
+beyond	_	_
+0.9	_	_
+‘almost	_	_
+perfect’	_	_
+.	_	_
+
+#277
+The	_	_
+provided	_	_
+table	_	_
+of	_	_
+accuracies	_	_
+shows	_	_
+precision	_	_
+,	_	_
+recall	_	_
+,	_	_
+f	_	_
+-measure	_	_
+and	_	_
+the	_	_
+conditional	_	_
+kappa	_	_
+coefficient	_	_
+for	_	_
+each	_	_
+class	_	_
+over	_	_
+the	_	_
+two	_	_
+evaluated	_	_
+seasons	_	_
+.	_	_
+
+#278
+Furthermore	_	_
+,	_	_
+overall	_	_
+accuracy	_	_
+and	_	_
+overall	_	_
+kappa	_	_
+coefficients	_	_
+indicate	_	_
+the	_	_
+quality	_	_
+for	_	_
+the	_	_
+classification	_	_
+and	_	_
+report	_	_
+good	_	_
+accuracies	_	_
+.	_	_
+
+#279
+The	_	_
+pixel-averaged	_	_
+achieved	_	_
+precision	_	_
+,	_	_
+recall	_	_
+and	_	_
+f	_	_
+-score	_	_
+accuracies	_	_
+were	_	_
+consistent	_	_
+and	_	_
+ranged	_	_
+between	_	_
+89.3	_	_
+%	_	_
+and	_	_
+89.9	_	_
+%	_	_
+.The	_	_
+kappa	_	_
+coefficients	_	_
+of	_	_
+0.870	_	_
+and	_	_
+overall	_	_
+accuracies	_	_
+of	_	_
+89.7	_	_
+%	_	_
+and	_	_
+89.5	_	_
+%	_	_
+show	_	_
+similar	_	_
+consistency	_	_
+.	_	_
+
+#280
+While	_	_
+these	_	_
+classification	_	_
+measures	_	_
+reported	_	_
+good	_	_
+performances	_	_
+,	_	_
+the	_	_
+class-wise	_	_
+accuracies	_	_
+varied	_	_
+largely	_	_
+between	_	_
+41.5	_	_
+%	_	_
+(	_	_
+peas	_	_
+)	_	_
+and	_	_
+96.8	_	_
+%	_	_
+(	_	_
+maize	_	_
+)	_	_
+.	_	_
+
+#281
+For	_	_
+better	_	_
+visibility	_	_
+,	_	_
+we	_	_
+emphasized	_	_
+the	_	_
+best	_	_
+and	_	_
+worst	_	_
+metrics	_	_
+by	_	_
+boldface	_	_
+.	_	_
+
+#282
+The	_	_
+conditional	_	_
+kappa	_	_
+scores	_	_
+are	_	_
+similarly	_	_
+variable	_	_
+and	_	_
+range	_	_
+between	_	_
+0.414	_	_
+(	_	_
+peas	_	_
+)	_	_
+and	_	_
+0.957	_	_
+(	_	_
+rapeseed	_	_
+)	_	_
+.	_	_
+
+#283
+Frequent	_	_
+classes	_	_
+(	_	_
+e.g.	_	_
+,	_	_
+maize	_	_
+,	_	_
+meadow	_	_
+)	_	_
+have	_	_
+been	_	_
+in	_	_
+general	_	_
+more	_	_
+confidently	_	_
+classified	_	_
+than	_	_
+less	_	_
+frequent	_	_
+classes	_	_
+(	_	_
+e.g.	_	_
+,	_	_
+peas	_	_
+,	_	_
+summer	_	_
+oat	_	_
+,	_	_
+winter	_	_
+spelt	_	_
+,	_	_
+winter	_	_
+triticale	_	_
+)	_	_
+.	_	_
+
+#284
+Nonetheless	_	_
+this	_	_
+relation	_	_
+has	_	_
+exceptions	_	_
+.	_	_
+
+#285
+The	_	_
+least	_	_
+frequent	_	_
+class	_	_
+,	_	_
+peas	_	_
+,	_	_
+performed	_	_
+relatively	_	_
+well	_	_
+on	_	_
+data	_	_
+of	_	_
+2016	_	_
+,	_	_
+and	_	_
+other	_	_
+less	_	_
+frequent	_	_
+classes	_	_
+,	_	_
+such	_	_
+as	_	_
+asparagus	_	_
+or	_	_
+hop	_	_
+,	_	_
+showed	_	_
+good	_	_
+performances	_	_
+despite	_	_
+their	_	_
+underrepresentation	_	_
+in	_	_
+the	_	_
+dataset	_	_
+.	_	_
+
+#286
+To	_	_
+investigate	_	_
+the	_	_
+causes	_	_
+of	_	_
+the	_	_
+varying	_	_
+accuracies	_	_
+,	_	_
+we	_	_
+calculated	_	_
+confusion	_	_
+matrices	_	_
+for	_	_
+both	_	_
+seasons	_	_
+as	_	_
+shown	_	_
+in	_	_
+Figure	_	_
+7	_	_
+.	_	_
+
+#287
+These	_	_
+error	_	_
+matrices	_	_
+are	_	_
+two-dimensional	_	_
+histograms	_	_
+of	_	_
+classification	_	_
+samples	_	_
+aggregated	_	_
+by	_	_
+the	_	_
+class	_	_
+prediction	_	_
+and	_	_
+ground	_	_
+truth	_	_
+reference	_	_
+.	_	_
+
+#288
+To	_	_
+account	_	_
+for	_	_
+the	_	_
+non-uniform	_	_
+class	_	_
+distribution	_	_
+,	_	_
+the	_	_
+absolute	_	_
+number	_	_
+of	_	_
+samples	_	_
+for	_	_
+each	_	_
+row-column	_	_
+pair	_	_
+is	_	_
+normalized	_	_
+.	_	_
+
+#289
+We	_	_
+decided	_	_
+to	_	_
+normalize	_	_
+the	_	_
+confusion	_	_
+matrices	_	_
+by	_	_
+row	_	_
+to	_	_
+obtain	_	_
+recall	_	_
+(	_	_
+producer’s	_	_
+)	_	_
+accuracies	_	_
+,	_	_
+due	_	_
+to	_	_
+their	_	_
+direct	_	_
+relation	_	_
+to	_	_
+available	_	_
+ground	_	_
+truth	_	_
+labels	_	_
+.	_	_
+
+#290
+The	_	_
+diagonal	_	_
+elements	_	_
+of	_	_
+the	_	_
+matrices	_	_
+represent	_	_
+correctly-classified	_	_
+samples	_	_
+with	_	_
+values	_	_
+equivalent	_	_
+to	_	_
+Table	_	_
+2	_	_
+.	_	_
+
+#291
+Structures	_	_
+outside	_	_
+the	_	_
+diagonal	_	_
+indicate	_	_
+systematic	_	_
+confusions	_	_
+between	_	_
+classes	_	_
+and	_	_
+may	_	_
+give	_	_
+insight	_	_
+into	_	_
+the	_	_
+reasoning	_	_
+behind	_	_
+varying	_	_
+classification	_	_
+accuracies	_	_
+.	_	_
+
+#292
+Some	_	_
+crops	_	_
+likely	_	_
+share	_	_
+common	_	_
+spectral	_	_
+or	_	_
+phenological	_	_
+characteristics	_	_
+.	_	_
+
+#293
+Hence	_	_
+,	_	_
+we	_	_
+expected	_	_
+some	_	_
+symmetric	_	_
+confusion	_	_
+between	_	_
+classes	_	_
+,	_	_
+which	_	_
+would	_	_
+be	_	_
+expressed	_	_
+as	_	_
+diagonal	_	_
+symmetric	_	_
+confusions	_	_
+consistent	_	_
+in	_	_
+both	_	_
+years	_	_
+.	_	_
+
+#294
+Examples	_	_
+of	_	_
+this	_	_
+were	_	_
+triticale	_	_
+and	_	_
+rye	_	_
+or	_	_
+oat	_	_
+and	_	_
+summer	_	_
+barley	_	_
+.	_	_
+
+#295
+However	_	_
+,	_	_
+these	_	_
+relations	_	_
+were	_	_
+not	_	_
+frequent	_	_
+in	_	_
+the	_	_
+dataset	_	_
+,	_	_
+which	_	_
+indicates	_	_
+that	_	_
+the	_	_
+network	_	_
+had	_	_
+sufficient	_	_
+capacity	_	_
+to	_	_
+separate	_	_
+the	_	_
+classes	_	_
+by	_	_
+provided	_	_
+features	_	_
+.	_	_
+
+#296
+In	_	_
+some	_	_
+cases	_	_
+,	_	_
+one	_	_
+class	_	_
+may	_	_
+share	_	_
+characteristics	_	_
+with	_	_
+another	_	_
+class	_	_
+.	_	_
+
+#297
+This	_	_
+class	_	_
+may	_	_
+be	_	_
+further	_	_
+distinguished	_	_
+by	_	_
+additional	_	_
+unique	_	_
+features	_	_
+,	_	_
+which	_	_
+would	_	_
+be	_	_
+expressed	_	_
+by	_	_
+asymmetric	_	_
+confusions	_	_
+between	_	_
+these	_	_
+two	_	_
+classes	_	_
+in	_	_
+both	_	_
+seasons	_	_
+.	_	_
+
+#298
+Relations	_	_
+of	_	_
+this	_	_
+type	_	_
+were	_	_
+more	_	_
+dominantly	_	_
+visible	_	_
+in	_	_
+the	_	_
+matrices	_	_
+and	_	_
+included	_	_
+confusions	_	_
+between	_	_
+barley	_	_
+and	_	_
+triticale	_	_
+,	_	_
+triticale	_	_
+and	_	_
+spelt	_	_
+or	_	_
+wheat	_	_
+confused	_	_
+with	_	_
+triticale	_	_
+and	_	_
+spelt	_	_
+.	_	_
+
+#299
+These	_	_
+types	_	_
+of	_	_
+confusion	_	_
+were	_	_
+consistent	_	_
+over	_	_
+both	_	_
+seasons	_	_
+and	_	_
+may	_	_
+be	_	_
+explained	_	_
+by	_	_
+a	_	_
+spectral	_	_
+or	_	_
+phenological	_	_
+similarity	_	_
+between	_	_
+individual	_	_
+crop-types	_	_
+.	_	_
+
+#300
+More	_	_
+dominantly	_	_
+,	_	_
+many	_	_
+confusions	_	_
+were	_	_
+not	_	_
+consistent	_	_
+over	_	_
+the	_	_
+two	_	_
+growing	_	_
+seasons	_	_
+.	_	_
+
+#301
+For	_	_
+instance	_	_
+,	_	_
+confusions	_	_
+occurring	_	_
+only	_	_
+in	_	_
+the	_	_
+2017	_	_
+season	_	_
+were	_	_
+soybeans	_	_
+with	_	_
+potato	_	_
+or	_	_
+peas	_	_
+with	_	_
+meadow	_	_
+and	_	_
+potato	_	_
+.	_	_
+
+#302
+Since	_	_
+the	_	_
+cultivated	_	_
+crops	_	_
+are	_	_
+identical	_	_
+in	_	_
+these	_	_
+years	_	_
+and	_	_
+the	_	_
+class	_	_
+distributions	_	_
+were	_	_
+consistent	_	_
+,	_	_
+seasonally-variable	_	_
+factors	_	_
+were	_	_
+likely	_	_
+responsible	_	_
+for	_	_
+these	_	_
+relations	_	_
+.	_	_
+
+#303
+As	_	_
+reported	_	_
+in	_	_
+Table	_	_
+2	_	_
+,	_	_
+peas	_	_
+have	_	_
+been	_	_
+classified	_	_
+well	_	_
+in	_	_
+2016	_	_
+,	_	_
+but	_	_
+poorly	_	_
+in	_	_
+2017	_	_
+,	_	_
+due	_	_
+to	_	_
+the	_	_
+aforementioned	_	_
+confusions	_	_
+with	_	_
+meadow	_	_
+and	_	_
+potato	_	_
+.	_	_
+
+#304
+These	_	_
+results	_	_
+indicate	_	_
+that	_	_
+external	_	_
+and	_	_
+not	_	_
+crop-type-related	_	_
+factors	_	_
+had	_	_
+a	_	_
+negative	_	_
+influence	_	_
+on	_	_
+classification	_	_
+accuracies	_	_
+,	_	_
+which	_	_
+appeared	_	_
+unique	_	_
+to	_	_
+one	_	_
+season	_	_
+.	_	_
+
+#305
+One	_	_
+of	_	_
+these	_	_
+might	options	_
+be	_	_
+the	_	_
+variable	_	_
+onset	_	_
+of	_	_
+phenological	_	_
+events	_	_
+,	_	_
+which	_	_
+are	_	_
+indirectly	_	_
+observed	_	_
+by	_	_
+the	_	_
+change	_	_
+of	_	_
+reflectances	_	_
+by	_	_
+the	_	_
+sensors	_	_
+.	_	_
+
+#306
+These	_	_
+events	_	_
+are	_	_
+influenced	_	_
+by	_	_
+local	_	_
+weather	_	_
+and	_	_
+sun	_	_
+exposure	_	_
+,	_	_
+which	_	_
+may	_	_
+vary	_	_
+over	_	_
+large	_	_
+regional	_	_
+scales	_	_
+or	_	_
+multiple	_	_
+years	_	_
+.	_	_
+
+#307
+5.3.	_	_
+Qualitative	_	_
+Classification	_	_
+Evaluation	_	_
+
+#308
+For	_	_
+the	_	_
+qualitative	_	_
+evaluation	_	_
+,	_	_
+we	_	_
+used	_	_
+the	_	_
+same	_	_
+network	_	_
+structure	_	_
+as	_	_
+in	_	_
+the	_	_
+previous	_	_
+section	_	_
+.	_	_
+
+#309
+We	_	_
+inferred	_	_
+the	_	_
+network	_	_
+with	_	_
+48	_	_
+px	_	_
+tiles	_	_
+from	_	_
+the	_	_
+evaluation	_	_
+dataset	_	_
+of	_	_
+2017	_	_
+for	_	_
+better	_	_
+visibility	_	_
+.	_	_
+
+#310
+In	_	_
+Figure	_	_
+8	_	_
+,	_	_
+a	_	_
+series	_	_
+of	_	_
+good	_	_
+(	_	_
+A–D	_	_
+)	_	_
+and	_	_
+bad	_	_
+(	_	_
+E	_	_
+,	_	_
+F	_	_
+)	_	_
+classification	_	_
+examples	_	_
+are	_	_
+shown	_	_
+.	_	_
+
+#311
+The	_	_
+first	_	_
+column	_	_
+represents	_	_
+the	_	_
+input	_	_
+sequence	_	_
+x	_	_
+as	_	_
+band-normalized	_	_
+RGB	_	_
+images	_	_
+from	_	_
+one	_	_
+selected	_	_
+cloud-free	_	_
+observation	_	_
+xRGB	_	_
+,	_	_
+t	_	_
+.	_	_
+
+#312
+Further	_	_
+columns	_	_
+show	_	_
+the	_	_
+available	_	_
+ground	_	_
+truth	_	_
+labels	_	_
+y	_	_
+,	_	_
+predictions	_	_
+ŷ	_	_
+and	_	_
+the	_	_
+cross-entropy	_	_
+loss	_	_
+H	_	_
+(	_	_
+y	_	_
+,	_	_
+ŷ	_	_
+)	_	_
+.	_	_
+
+#313
+Additionally	_	_
+,	_	_
+four	_	_
+selected	_	_
+softmax-normalized	_	_
+class	_	_
+activations	_	_
+are	_	_
+displayed	_	_
+in	_	_
+the	_	_
+last	_	_
+columns	_	_
+.	_	_
+
+#314
+These	_	_
+activations	_	_
+can	_	_
+be	_	_
+interpreted	_	_
+as	_	_
+classification	_	_
+confidences	_	_
+for	_	_
+each	_	_
+class	_	_
+.	_	_
+
+#315
+The	_	_
+prediction	_	_
+map	_	_
+contains	_	_
+the	_	_
+index	_	_
+of	_	_
+the	_	_
+most	_	_
+activated	_	_
+class	_	_
+at	_	_
+each	_	_
+pixel	_	_
+,	_	_
+which	_	_
+may	_	_
+be	_	_
+interpreted	_	_
+as	_	_
+the	_	_
+class	_	_
+of	_	_
+highest	_	_
+confidence	_	_
+.	_	_
+
+#316
+The	_	_
+cross-entropy	_	_
+loss	_	_
+is	_	_
+the	_	_
+measure	_	_
+the	_	_
+agreement	_	_
+between	_	_
+the	_	_
+one-hot	_	_
+representation	_	_
+of	_	_
+the	_	_
+ground	_	_
+truth	_	_
+labels	_	_
+and	_	_
+the	_	_
+activations	_	_
+per	_	_
+class	_	_
+.	_	_
+
+#317
+It	_	_
+is	_	_
+used	_	_
+as	_	_
+the	_	_
+objective	_	_
+function	_	_
+,	_	_
+as	_	_
+network	_	_
+training	_	_
+indicates	_	_
+disagreement	_	_
+between	_	_
+ground	_	_
+truth	_	_
+and	_	_
+prediction	_	_
+even	_	_
+if	_	_
+the	_	_
+final	_	_
+class	_	_
+prediction	_	_
+is	_	_
+correct	_	_
+.	_	_
+
+#318
+This	_	_
+relation	_	_
+can	_	_
+be	_	_
+observed	_	_
+in	_	_
+fields	_	_
+of	_	_
+several	_	_
+examples	_	_
+,	_	_
+such	_	_
+as	_	_
+peas	_	_
+in	_	_
+Example	_	_
+A	_	_
+,	_	_
+spelt	_	_
+in	_	_
+Example	_	_
+B	_	_
+and	_	_
+oat	_	_
+in	_	_
+Example	_	_
+C.	_	_
+However	_	_
+,	_	_
+most	_	_
+classifications	_	_
+for	_	_
+these	_	_
+examples	_	_
+were	_	_
+accurate	_	_
+,	_	_
+which	_	_
+is	_	_
+expressed	_	_
+by	_	_
+well-defined	_	_
+activation	_	_
+maps	_	_
+.	_	_
+
+#319
+Often	_	_
+,	_	_
+classifiers	_	_
+use	_	_
+low-pass	_	_
+filters	_	_
+in	_	_
+the	_	_
+spatial	_	_
+dimensions	_	_
+to	_	_
+compensate	_	_
+for	_	_
+high-frequent	_	_
+noise	_	_
+.	_	_
+
+#320
+These	_	_
+filters	_	_
+typically	_	_
+limit	_	_
+the	_	_
+ability	_	_
+to	_	_
+classify	_	_
+small	_	_
+objects	_	_
+.	_	_
+
+#321
+To	_	_
+evaluate	_	_
+to	_	_
+what	_	_
+degree	_	_
+the	_	_
+network	_	_
+has	_	_
+learned	_	_
+to	_	_
+apply	_	_
+low-pass	_	_
+filtering	_	_
+,	_	_
+we	_	_
+show	_	_
+a	_	_
+tile	_	_
+with	_	_
+a	_	_
+series	_	_
+of	_	_
+narrow	_	_
+fields	_	_
+in	_	_
+Example	_	_
+D.	_	_
+Two	_	_
+thin	_	_
+wheat	_	_
+and	_	_
+maize	_	_
+fields	_	_
+have	_	_
+been	_	_
+classified	_	_
+correctly	_	_
+.	_	_
+
+#322
+However	_	_
+,	_	_
+some	_	_
+errors	_	_
+occurred	_	_
+on	_	_
+the	_	_
+southern	_	_
+end	_	_
+of	_	_
+an	_	_
+adjacent	_	_
+potato	_	_
+field	_	_
+,	_	_
+as	_	_
+indicated	_	_
+by	_	_
+the	_	_
+loss	_	_
+map	_	_
+.	_	_
+
+#323
+It	_	_
+appears	_	_
+that	_	_
+the	_	_
+network	_	_
+was	_	_
+able	_	_
+to	_	_
+resolve	_	_
+high-frequency	_	_
+spatial	_	_
+changes	_	_
+and	_	_
+did	_	_
+not	_	_
+apply	_	_
+smoothing	_	_
+of	_	_
+the	_	_
+class	_	_
+activations	_	_
+,	_	_
+as	_	_
+in	_	_
+Example	_	_
+F.	_	_
+Two	_	_
+misclassified	_	_
+fields	_	_
+are	_	_
+shown	_	_
+in	_	_
+Example	_	_
+E.	_	_
+The	_	_
+upper	_	_
+wheat	_	_
+field	_	_
+has	_	_
+been	_	_
+confidently	_	_
+misclassified	_	_
+to	_	_
+summer	_	_
+barley	_	_
+.	_	_
+
+#324
+Underneath	_	_
+,	_	_
+the	_	_
+classification	_	_
+of	_	_
+a	_	_
+second	_	_
+rye	_	_
+field	_	_
+was	_	_
+uncertain	_	_
+between	_	_
+rye	_	_
+,	_	_
+wheat	_	_
+and	_	_
+triticale	_	_
+.	_	_
+
+#325
+While	_	_
+triticale	_	_
+,	_	_
+as	_	_
+the	_	_
+least	_	_
+activated	_	_
+class	_	_
+,	_	_
+was	_	_
+not	_	_
+present	_	_
+in	_	_
+the	_	_
+prediction	_	_
+map	_	_
+,	_	_
+the	_	_
+mixture	_	_
+of	_	_
+rye	_	_
+and	_	_
+wheat	_	_
+is	_	_
+visible	_	_
+in	_	_
+the	_	_
+class	_	_
+predictions	_	_
+.	_	_
+
+#326
+Example	_	_
+F	_	_
+shows	_	_
+a	_	_
+mostly	_	_
+misclassified	_	_
+tile	_	_
+.	_	_
+
+#327
+Only	_	_
+a	_	_
+few	_	_
+patches	_	_
+of	_	_
+meadow	_	_
+and	_	_
+winter	_	_
+barley	_	_
+were	_	_
+correctly	_	_
+predicted	_	_
+.	_	_
+
+#328
+The	_	_
+activations	_	_
+of	_	_
+these	_	_
+classes	_	_
+were	_	_
+,	_	_
+compared	_	_
+to	_	_
+previous	_	_
+examples	_	_
+,	_	_
+generally	_	_
+more	_	_
+blurred	_	_
+and	_	_
+of	_	_
+lower	_	_
+amplitude	_	_
+.	_	_
+
+#329
+Similar	_	_
+to	_	_
+Example	_	_
+D	_	_
+,	_	_
+the	_	_
+most	_	_
+activated	_	_
+classes	_	_
+are	_	_
+also	_	_
+the	_	_
+most	_	_
+frequent	_	_
+in	_	_
+the	_	_
+dataset	_	_
+.	_	_
+
+#330
+In	_	_
+fact	_	_
+,	_	_
+the	_	_
+entire	_	_
+region	_	_
+around	_	_
+the	_	_
+displayed	_	_
+tile	_	_
+seemed	_	_
+to	_	_
+be	_	_
+classified	_	_
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#331
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#332
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+14	_	_
+of	_	_
+19	_	_
+xRGB	_	_
+,	_	_
+t	_	_
+labels	_	_
+y	_	_
+pred	_	_
+.	_	_
+
+#333
+ŷ	_	_
+loss	_	_
+H	_	_
+(	_	_
+y	_	_
+,	_	_
+ŷ	_	_
+)	_	_
+activation	_	_
+activation	_	_
+activation	_	_
+activation	_	_
+A	_	_
+maize	_	_
+meadow	_	_
+peas	_	_
+rape	_	_
+B	_	_
+spelt	_	_
+wheat	_	_
+s.	_	_
+barley	_	_
+maize	_	_
+C	_	_
+meadow	_	_
+wheat	_	_
+oat	_	_
+maize	_	_
+D	_	_
+meadow	_	_
+wheat	_	_
+potato	_	_
+maize	_	_
+E	_	_
+rye	_	_
+wheat	_	_
+triticale	_	_
+s.	_	_
+barley	_	_
+F	_	_
+wheat	_	_
+meadow	_	_
+maize	_	_
+w.barley	_	_
+aspar	_	_
+.	_	_
+
+#334
+bean	_	_
+hop	_	_
+maize	_	_
+mead	_	_
+.	_	_
+
+#335
+peas	_	_
+pot	_	_
+.	_	_
+
+#336
+rape	_	_
+soyb	_	_
+.	_	_
+
+#337
+beet	_	_
+s.barl	_	_
+oat	_	_
+w.barl	_	_
+rye	_	_
+spelt	_	_
+tritic	_	_
+wheat	_	_
+Figure	_	_
+8	_	_
+.	_	_
+
+#338
+Qualitative	_	_
+results	_	_
+of	_	_
+the	_	_
+convolutional	_	_
+GRU	_	_
+sequential	_	_
+encoder	_	_
+.	_	_
+
+#339
+Examples	_	_
+A-D	_	_
+show	_	_
+good	_	_
+classification	_	_
+results	_	_
+.	_	_
+
+#340
+At	_	_
+example	_	_
+E	_	_
+the	_	_
+network	_	_
+misclassified	_	_
+one	_	_
+maize	_	_
+parcel	_	_
+with	_	_
+high	_	_
+confidence	_	_
+,	_	_
+which	_	_
+is	_	_
+indicated	_	_
+by	_	_
+incorrect	_	_
+,	_	_
+but	_	_
+well	_	_
+defined	_	_
+activations	_	_
+.	_	_
+
+#341
+At	_	_
+a	_	_
+second	_	_
+field	_	_
+the	_	_
+class	_	_
+activations	_	_
+reveal	_	_
+a	_	_
+confusion	_	_
+between	_	_
+wheat	_	_
+,	_	_
+meadow	_	_
+and	_	_
+maize	_	_
+.	_	_
+
+#342
+At	_	_
+example	_	_
+F	_	_
+most	_	_
+pixels	_	_
+are	_	_
+misclassified	_	_
+.	_	_
+
+#343
+However	_	_
+,	_	_
+the	_	_
+class	_	_
+activations	_	_
+show	_	_
+uncertainty	_	_
+in	_	_
+the	_	_
+classification	_	_
+decision	_	_
+.	_	_
+
+#344
+poorly	_	_
+.	_	_
+
+#345
+This	_	_
+region	_	_
+was	_	_
+located	_	_
+on	_	_
+the	_	_
+northwest	_	_
+border	_	_
+of	_	_
+the	_	_
+AOI	_	_
+.	_	_
+
+#346
+Further	_	_
+examination	_	_
+showed	_	_
+that	_	_
+for	_	_
+this	_	_
+region	_	_
+,	_	_
+fewer	_	_
+satellite	_	_
+images	_	_
+were	_	_
+available	_	_
+.	_	_
+
+#347
+The	_	_
+lack	_	_
+of	_	_
+temporal	_	_
+information	_	_
+likely	_	_
+explains	_	_
+the	_	_
+poor	_	_
+classification	_	_
+accuracies	_	_
+.	_	_
+
+#348
+However	_	_
+,	_	_
+this	_	_
+example	_	_
+illustrates	_	_
+that	_	_
+the	_	_
+class	_	_
+activations	_	_
+give	_	_
+an	_	_
+indication	_	_
+of	_	_
+the	_	_
+classification	_	_
+confidence	_	_
+independent	_	_
+of	_	_
+the	_	_
+ground	_	_
+truth	_	_
+information	_	_
+.	_	_
+
+#349
+6	_	_
+.	_	_
+
+#350
+Discussion	_	_
+In	_	_
+this	_	_
+section	_	_
+,	_	_
+we	_	_
+compare	_	_
+our	_	_
+approach	_	_
+with	_	_
+other	_	_
+multi-temporal	_	_
+classifications	_	_
+.	_	_
+
+#351
+Unfortunately	_	_
+,	_	_
+to	_	_
+the	_	_
+best	_	_
+of	_	_
+our	_	_
+knowledge	_	_
+,	_	_
+no	_	_
+multi-temporal	_	_
+benchmark	_	_
+dataset	_	_
+is	_	_
+available	_	_
+to	_	_
+compare	_	_
+remote	_	_
+sensing	_	_
+approaches	_	_
+on	_	_
+equal	_	_
+footing	_	_
+.	_	_
+
+#352
+Nevertheless	_	_
+,	_	_
+we	_	_
+provide	_	_
+some	_	_
+perspective	_	_
+of	_	_
+the	_	_
+study	_	_
+domain	_	_
+by	_	_
+gathering	_	_
+multi-temporal	_	_
+crop	_	_
+classification	_	_
+approaches	_	_
+in	_	_
+Table	_	_
+3	_	_
+and	_	_
+categorizing	_	_
+these	_	_
+by	_	_
+their	_	_
+applied	_	_
+methodology	_	_
+and	_	_
+achieved	_	_
+overall	_	_
+accuracy	_	_
+.	_	_
+
+#353
+However	_	_
+,	_	_
+the	_	_
+heterogeneity	_	_
+of	_	_
+data	_	_
+sources	_	_
+,	_	_
+the	_	_
+varying	_	_
+extents	_	_
+of	_	_
+their	_	_
+evaluated	_	_
+areas	_	_
+and	_	_
+the	_	_
+number	_	_
+of	_	_
+classes	_	_
+used	_	_
+in	_	_
+these	_	_
+studies	_	_
+impedes	_	_
+a	_	_
+numerical	_	_
+comparison	_	_
+of	_	_
+the	_	_
+achieved	_	_
+accuracies	_	_
+.	_	_
+
+#354
+Despite	_	_
+this	_	_
+,	_	_
+we	_	_
+hope	_	_
+that	_	_
+this	_	_
+table	_	_
+will	_	_
+provide	_	_
+an	_	_
+overview	_	_
+of	_	_
+the	_	_
+state-of-the-art	_	_
+in	_	_
+multi-temporal	_	_
+crop	_	_
+identification	_	_
+.	_	_
+
+#355
+Earth	_	_
+observation	_	_
+(	_	_
+EO	_	_
+)	_	_
+data	_	_
+are	_	_
+acquired	_	_
+in	_	_
+periodic	_	_
+intervals	_	_
+at	_	_
+high	_	_
+spatial	_	_
+resolutions	_	_
+.	_	_
+
+#356
+From	_	_
+an	_	_
+information	_	_
+theoretical	_	_
+perspective	_	_
+,	_	_
+utilizing	_	_
+additional	_	_
+data	_	_
+should	inference	_
+lead	_	_
+to	_	_
+better	_	_
+classification	_	_
+performance	_	_
+.	_	_
+
+#357
+However	_	_
+,	_	_
+the	_	_
+large	_	_
+quantity	_	_
+of	_	_
+data	_	_
+requires	_	_
+methods	_	_
+that	_	_
+are	_	_
+able	_	_
+to	_	_
+process	_	_
+this	_	_
+information	_	_
+and	_	_
+are	_	_
+robust	_	_
+with	_	_
+regard	_	_
+to	_	_
+observation	_	_
+noise	_	_
+.	_	_
+
+#358
+Optimally	_	_
+,	_	_
+these	_	_
+approaches	_	_
+are	_	_
+scalable	_	_
+with	_	_
+minimal	_	_
+supervision	_	_
+so	_	_
+that	_	_
+data	_	_
+of	_	_
+multiple	_	_
+years	_	_
+can	_	_
+be	_	_
+included	_	_
+over	_	_
+large	_	_
+regions	_	_
+.	_	_
+
+#359
+Existing	_	_
+approaches	_	_
+in	_	_
+multi-temporal	_	_
+EO	_	_
+tasks	_	_
+often	_	_
+use	_	_
+multiple	_	_
+separate	_	_
+processing	_	_
+steps	_	_
+,	_	_
+such	_	_
+as	_	_
+preprocessing	_	_
+,	_	_
+feature	_	_
+extraction	_	_
+and	_	_
+classification	_	_
+,	_	_
+as	_	_
+summarized	_	_
+by	_	_
+Ünsalan	_	_
+and	_	_
+Boyer	_	_
+[	_	_
+40	_	_
+]	_	_
+.	_	_
+
+#360
+Generally	_	_
+,	_	_
+these	_	_
+steps	_	_
+require	_	_
+manual	_	_
+supervision	_	_
+or	_	_
+the	_	_
+selection	_	_
+of	_	_
+additional	_	_
+parameters	_	_
+based	_	_
+on	_	_
+region-specific	_	_
+expert	_	_
+knowledge	_	_
+,	_	_
+a	_	_
+process	_	_
+that	_	_
+impedes	_	_
+applicability	_	_
+at	_	_
+large	_	_
+scales	_	_
+.	_	_
+
+#361
+The	_	_
+cost	_	_
+of	_	_
+data	_	_
+acquisition	_	_
+is	_	_
+an	_	_
+additional	_	_
+barrier	_	_
+,	_	_
+as	_	_
+multiple	_	_
+and	_	_
+potentially	_	_
+expensive	_	_
+satellite	_	_
+images	_	_
+are	_	_
+required	_	_
+.	_	_
+
+#362
+Commercial	_	_
+satellites	_	_
+,	_	_
+such	_	_
+as	_	_
+RapidEye	_	_
+(	_	_
+RE	_	_
+)	_	_
+,	_	_
+Satellite	_	_
+Pour	_	_
+l’Observation	_	_
+de	_	_
+la	_	_
+Terre	_	_
+(	_	_
+SPOT	_	_
+)	_	_
+or	_	_
+QuickBird	_	_
+(	_	_
+QB	_	_
+)	_	_
+,	_	_
+provide	_	_
+images	_	_
+at	_	_
+excellent	_	_
+spatial	_	_
+resolution	_	_
+.	_	_
+
+#363
+However	_	_
+,	_	_
+predominantly	_	_
+inexpensive	_	_
+sensors	_	_
+,	_	_
+such	_	_
+as	_	_
+Landsat	_	_
+(	_	_
+LS	_	_
+)	_	_
+,	_	_
+Sentinel	_	_
+2	_	_
+(	_	_
+S2	_	_
+)	_	_
+,	_	_
+Moderate-resolution	_	_
+Imaging	_	_
+Spectroradiometer	_	_
+(	_	_
+MODIS	_	_
+)	_	_
+or	_	_
+Advanced	_	_
+Spaceborne	_	_
+Thermal	_	_
+Emission	_	_
+and	_	_
+Reflection	_	_
+Radiometer	_	_
+(	_	_
+ASTER	_	_
+)	_	_
+,	_	_
+can	_	_
+be	_	_
+applied	_	_
+at	_	_
+large	_	_
+scales	_	_
+,	_	_
+since	_	_
+the	_	_
+decreasing	_	_
+information	_	_
+gain	_	_
+of	_	_
+additional	_	_
+observations	_	_
+must	deontic	_
+justify	_	_
+image	_	_
+acquisition	_	_
+costs	_	_
+.	_	_
+
+#364
+Many	_	_
+approaches	_	_
+use	_	_
+spectral	_	_
+indices	_	_
+,	_	_
+such	_	_
+as	_	_
+normalized	_	_
+difference	_	_
+vegetation	_	_
+index	_	_
+(	_	_
+NDVI	_	_
+)	_	_
+,	_	_
+normalized	_	_
+difference	_	_
+water	_	_
+index	_	_
+(	_	_
+NDWI	_	_
+)	_	_
+or	_	_
+enhanced	_	_
+vegetation	_	_
+index	_	_
+(	_	_
+EVI	_	_
+)	_	_
+,	_	_
+to	_	_
+extract	_	_
+statistical	_	_
+features	_	_
+from	_	_
+vegetation-related	_	_
+signals	_	_
+and	_	_
+are	_	_
+invariant	_	_
+to	_	_
+atmospheric	_	_
+perturbations	_	_
+.	_	_
+
+#365
+Commonly	_	_
+,	_	_
+decision	_	_
+trees	_	_
+(	_	_
+DTs	_	_
+)	_	_
+or	_	_
+random	_	_
+forests	_	_
+(	_	_
+RFs	_	_
+)	_	_
+are	_	_
+used	_	_
+for	_	_
+classification	_	_
+.	_	_
+
+#366
+The	_	_
+exclusive	_	_
+use	_	_
+of	_	_
+spectral	_	_
+indices	_	_
+simplifies	_	_
+the	_	_
+task	_	_
+of	_	_
+feature	_	_
+extraction	_	_
+.	_	_
+
+#367
+However	_	_
+,	_	_
+these	_	_
+indices	_	_
+utilize	_	_
+only	_	_
+a	_	_
+small	_	_
+number	_	_
+of	_	_
+available	_	_
+spectral	_	_
+bands	_	_
+(	_	_
+predominantly	_	_
+blue	_	_
+,	_	_
+red	_	_
+and	_	_
+near-infrared	_	_
+)	_	_
+.	_	_
+
+#368
+Thus	_	_
+,	_	_
+methods	_	_
+that	_	_
+utilize	_	_
+all	_	_
+reflectance	_	_
+measurements	_	_
+,	_	_
+either	_	_
+at	_	_
+top-of-atmosphere	_	_
+(	_	_
+TOA	_	_
+)	_	_
+,	_	_
+or	_	_
+atmospherically-corrected	_	_
+to	_	_
+bottom-of-atmosphere	_	_
+(	_	_
+BOA	_	_
+)	_	_
+,	_	_
+are	_	_
+favorable	_	_
+,	_	_
+since	_	_
+all	_	_
+potential	_	_
+spectral	_	_
+information	_	_
+can	_	_
+be	_	_
+extracted	_	_
+.	_	_
+
+#369
+In	_	_
+general	_	_
+,	_	_
+a	_	_
+direct	_	_
+numerical	_	_
+comparison	_	_
+of	_	_
+classification	_	_
+accuracies	_	_
+is	_	_
+difficult	_	_
+,	_	_
+since	_	_
+these	_	_
+are	_	_
+dependent	_	_
+on	_	_
+the	_	_
+number	_	_
+of	_	_
+evaluated	_	_
+samples	_	_
+,	_	_
+the	_	_
+extent	_	_
+of	_	_
+evaluated	_	_
+area	_	_
+and	_	_
+the	_	_
+number	_	_
+of	_	_
+classified	_	_
+categories	_	_
+.	_	_
+
+#370
+Nonetheless	_	_
+,	_	_
+we	_	_
+compare	_	_
+our	_	_
+method	_	_
+with	_	_
+the	_	_
+approaches	_	_
+of	_	_
+Siachalou	_	_
+et	_	_
+al.	_	_
+[	_	_
+14	_	_
+]	_	_
+and	_	_
+Hao	_	_
+et	_	_
+al.	_	_
+[	_	_
+12	_	_
+]	_	_
+in	_	_
+detail	_	_
+since	_	_
+their	_	_
+achieved	_	_
+classification	_	_
+accuracies	_	_
+are	_	_
+on	_	_
+a	_	_
+similar	_	_
+level	_	_
+as	_	_
+ours	_	_
+.	_	_
+
+#371
+Hao	_	_
+et	_	_
+al.	_	_
+[	_	_
+12	_	_
+]	_	_
+used	_	_
+an	_	_
+RF	_	_
+classifier	_	_
+on	_	_
+phenological	_	_
+features	_	_
+,	_	_
+which	_	_
+were	_	_
+extracted	_	_
+from	_	_
+NDVI	_	_
+and	_	_
+NDWI	_	_
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#372
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#373
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+16	_	_
+of	_	_
+19	_	_
+time	_	_
+series	_	_
+of	_	_
+MODIS	_	_
+data	_	_
+.	_	_
+
+#374
+Their	_	_
+results	_	_
+demonstrate	_	_
+that	_	_
+good	_	_
+classification	_	_
+accuracies	_	_
+with	_	_
+hand-crafted	_	_
+feature	_	_
+extraction	_	_
+and	_	_
+classification	_	_
+methods	_	_
+can	_	_
+be	_	_
+achieved	_	_
+if	_	_
+data	_	_
+of	_	_
+sufficient	_	_
+temporal	_	_
+resolution	_	_
+are	_	_
+available	_	_
+.	_	_
+
+#375
+However	_	_
+,	_	_
+the	_	_
+large	_	_
+spatial	_	_
+resolution	_	_
+(	_	_
+500	_	_
+m	_	_
+)	_	_
+of	_	_
+the	_	_
+MODIS	_	_
+sensor	_	_
+limits	_	_
+the	_	_
+applicability	_	_
+of	_	_
+this	_	_
+approach	_	_
+to	_	_
+areas	_	_
+of	_	_
+large	_	_
+homogeneous	_	_
+regions	_	_
+.	_	_
+
+#376
+On	_	_
+a	_	_
+smaller	_	_
+scale	_	_
+,	_	_
+Siachalou	_	_
+et	_	_
+al.	_	_
+[	_	_
+14	_	_
+]	_	_
+report	_	_
+good	_	_
+levels	_	_
+of	_	_
+accuracy	_	_
+on	_	_
+small	_	_
+fields	_	_
+.	_	_
+
+#377
+For	_	_
+this	_	_
+,	_	_
+they	_	_
+used	_	_
+a	_	_
+hidden	_	_
+Markov	_	_
+models	_	_
+(	_	_
+HMMs	_	_
+)	_	_
+with	_	_
+a	_	_
+temporal	_	_
+series	_	_
+of	_	_
+four	_	_
+LS	_	_
+images	_	_
+combined	_	_
+with	_	_
+one	_	_
+single	_	_
+RapidEye	_	_
+(	_	_
+RE	_	_
+)	_	_
+image	_	_
+for	_	_
+field	_	_
+border	_	_
+delineation	_	_
+.	_	_
+
+#378
+Methodologically	_	_
+,	_	_
+HMMs	_	_
+and	_	_
+conditional	_	_
+random	_	_
+fields	_	_
+(	_	_
+CRFs	_	_
+)	_	_
+[	_	_
+15	_	_
+]	_	_
+are	_	_
+closer	_	_
+to	_	_
+our	_	_
+approach	_	_
+since	_	_
+the	_	_
+phenological	_	_
+model	_	_
+is	_	_
+approximated	_	_
+with	_	_
+an	_	_
+internal	_	_
+chain	_	_
+of	_	_
+hidden	_	_
+states	_	_
+.	_	_
+
+#379
+However	_	_
+,	_	_
+these	_	_
+methods	_	_
+might	speculation	_
+not	_	_
+be	_	_
+applicable	_	_
+for	_	_
+long	_	_
+temporal	_	_
+series	_	_
+,	_	_
+since	_	_
+Markov-based	_	_
+approaches	_	_
+assume	_	_
+that	_	_
+only	_	_
+one	_	_
+previous	_	_
+state	_	_
+contains	_	_
+classification-relevant	_	_
+information	_	_
+.	_	_
+
+#380
+Overall	_	_
+,	_	_
+this	_	_
+comparison	_	_
+shows	_	_
+that	_	_
+our	_	_
+proposed	_	_
+network	_	_
+can	_	_
+achieve	_	_
+state-of-the-art	_	_
+classification	_	_
+accuracy	_	_
+with	_	_
+a	_	_
+comparatively	_	_
+large	_	_
+number	_	_
+of	_	_
+classes	_	_
+.	_	_
+
+#381
+Furthermore	_	_
+,	_	_
+the	_	_
+S2	_	_
+data	_	_
+of	_	_
+non-atmospherically-corrected	_	_
+TOA	_	_
+values	_	_
+can	_	_
+be	_	_
+acquired	_	_
+easily	_	_
+and	_	_
+does	_	_
+not	_	_
+require	_	_
+further	_	_
+preprocessing	_	_
+.	_	_
+
+#382
+Compared	_	_
+to	_	_
+previous	_	_
+work	_	_
+,	_	_
+we	_	_
+were	_	_
+able	_	_
+to	_	_
+process	_	_
+larger	_	_
+tiles	_	_
+by	_	_
+using	_	_
+convolutional	_	_
+recurrent	_	_
+cells	_	_
+with	_	_
+only	_	_
+a	_	_
+single	_	_
+recurrent	_	_
+encoding	_	_
+layer	_	_
+.	_	_
+
+#383
+Moreover	_	_
+,	_	_
+we	_	_
+neither	_	_
+required	_	_
+atmospheric	_	_
+correction	_	_
+,	_	_
+nor	_	_
+additional	_	_
+cloud	_	_
+classes	_	_
+,	_	_
+since	_	_
+one	_	_
+classification	_	_
+decision	_	_
+is	_	_
+derived	_	_
+from	_	_
+the	_	_
+entire	_	_
+sequence	_	_
+of	_	_
+observations	_	_
+.	_	_
+
+#384
+7	_	_
+.	_	_
+
+#385
+Conclusion	_	_
+In	_	_
+this	_	_
+work	_	_
+,	_	_
+we	_	_
+proposed	_	_
+an	_	_
+automated	_	_
+end-to-end	_	_
+approach	_	_
+for	_	_
+multi-temporal	_	_
+classification	_	_
+,	_	_
+which	_	_
+achieved	_	_
+state-of-the-art	_	_
+accuracies	_	_
+in	_	_
+crop	_	_
+classification	_	_
+tasks	_	_
+with	_	_
+a	_	_
+large	_	_
+number	_	_
+of	_	_
+crop	_	_
+classes	_	_
+.	_	_
+
+#386
+Furthermore	_	_
+,	_	_
+the	_	_
+reported	_	_
+accuracies	_	_
+were	_	_
+achieved	_	_
+without	_	_
+radiometric	_	_
+and	_	_
+geometric	_	_
+preprocessing	_	_
+.	_	_
+
+#387
+The	_	_
+trained	_	_
+and	_	_
+inferred	_	_
+data	_	_
+were	_	_
+atmospherically	_	_
+uncorrected	_	_
+and	_	_
+contained	_	_
+clouds	_	_
+.	_	_
+
+#388
+In	_	_
+traditional	_	_
+approaches	_	_
+,	_	_
+multi-temporal	_	_
+cloud	_	_
+detection	_	_
+algorithms	_	_
+utilize	_	_
+the	_	_
+sudden	_	_
+positive	_	_
+change	_	_
+in	_	_
+reflectivity	_	_
+of	_	_
+cloudy	_	_
+pixels	_	_
+and	_	_
+achieve	_	_
+better	_	_
+results	_	_
+than	_	_
+other	_	_
+traditional	_	_
+mono-temporal	_	_
+remote	_	_
+sensing	_	_
+classifiers	_	_
+[	_	_
+43	_	_
+]	_	_
+.	_	_
+
+#389
+Results	_	_
+of	_	_
+this	_	_
+work	_	_
+indicate	_	_
+that	_	_
+cloud	_	_
+masking	_	_
+can	_	_
+be	_	_
+learned	_	_
+jointly	_	_
+together	_	_
+with	_	_
+classification	_	_
+.	_	_
+
+#390
+By	_	_
+visualizing	_	_
+internal	_	_
+gate	_	_
+activations	_	_
+in	_	_
+our	_	_
+network	_	_
+in	_	_
+Section	_	_
+5.1	_	_
+,	_	_
+we	_	_
+found	_	_
+evidence	_	_
+that	_	_
+some	_	_
+recurrent	_	_
+cells	_	_
+were	_	_
+sensitive	_	_
+to	_	_
+cloud	_	_
+coverage	_	_
+.	_	_
+
+#391
+These	_	_
+cells	_	_
+may	_	_
+be	_	_
+used	_	_
+by	_	_
+the	_	_
+network	_	_
+to	_	_
+internally	_	_
+mask	_	_
+cloudy	_	_
+pixels	_	_
+similar	_	_
+to	_	_
+an	_	_
+external	_	_
+cloud	_	_
+filtering	_	_
+algorithm	_	_
+.	_	_
+
+#392
+In	_	_
+Sections	_	_
+5.2	_	_
+and	_	_
+5.3	_	_
+,	_	_
+we	_	_
+further	_	_
+evaluated	_	_
+the	_	_
+classification	_	_
+results	_	_
+quantitatively	_	_
+and	_	_
+qualitatively	_	_
+.	_	_
+
+#393
+Based	_	_
+on	_	_
+several	_	_
+findings	_	_
+,	_	_
+we	_	_
+derived	_	_
+that	_	_
+the	_	_
+network	_	_
+has	_	_
+approximated	_	_
+a	_	_
+discriminative	_	_
+crop-specific	_	_
+phenological	_	_
+model	_	_
+based	_	_
+on	_	_
+a	_	_
+raw	_	_
+series	_	_
+of	_	_
+TOA	_	_
+S2	_	_
+observations	_	_
+.	_	_
+
+#394
+Further	_	_
+inspection	_	_
+revealed	_	_
+that	_	_
+some	_	_
+crops	_	_
+were	_	_
+inconsistently	_	_
+classified	_	_
+in	_	_
+both	_	_
+growing	_	_
+seasons	_	_
+.	_	_
+
+#395
+This	_	_
+may	_	_
+be	_	_
+caused	_	_
+by	_	_
+seasonally-variable	_	_
+environmental	_	_
+conditions	_	_
+,	_	_
+which	_	_
+may	_	_
+have	_	_
+been	_	_
+implicitly	_	_
+integrated	_	_
+into	_	_
+the	_	_
+encoded	_	_
+phenological	_	_
+model	_	_
+.	_	_
+
+#396
+We	_	_
+employed	_	_
+our	_	_
+network	_	_
+for	_	_
+the	_	_
+task	_	_
+crop	_	_
+classification	_	_
+since	_	_
+vegetative	_	_
+classes	_	_
+are	_	_
+well	_	_
+characterized	_	_
+by	_	_
+their	_	_
+inherently	_	_
+temporal	_	_
+phenology	_	_
+.	_	_
+
+#397
+However	_	_
+,	_	_
+the	_	_
+network	_	_
+architecture	_	_
+is	_	_
+methodologically	_	_
+not	_	_
+limited	_	_
+to	_	_
+vegetation	_	_
+modeling	_	_
+and	_	_
+may	_	_
+be	_	_
+employed	_	_
+for	_	_
+further	_	_
+tasks	_	_
+,	_	_
+which	_	_
+may	_	_
+benefit	_	_
+from	_	_
+the	_	_
+extraction	_	_
+of	_	_
+temporal	_	_
+features	_	_
+.	_	_
+
+#398
+We	_	_
+hope	_	_
+that	_	_
+our	_	_
+results	_	_
+encourage	_	_
+the	_	_
+research	_	_
+community	_	_
+to	_	_
+utilize	_	_
+the	_	_
+temporal	_	_
+domain	_	_
+for	_	_
+their	_	_
+applications	_	_
+.	_	_
+
+#399
+In	_	_
+this	_	_
+regard	_	_
+,	_	_
+we	_	_
+publish	_	_
+the	_	_
+TENSORFLOW	_	_
+source	_	_
+code	_	_
+of	_	_
+our	_	_
+network	_	_
+along	_	_
+with	_	_
+the	_	_
+evaluations	_	_
+and	_	_
+experiments	_	_
+from	_	_
+this	_	_
+work	_	_
+.	_	_
+
+#400
+Supplementary	_	_
+Materials	_	_
+:	_	_
+The	_	_
+source	_	_
+code	_	_
+of	_	_
+the	_	_
+network	_	_
+implementation	_	_
+and	_	_
+further	_	_
+material	_	_
+is	_	_
+made	_	_
+publicly	_	_
+available	_	_
+at	_	_
+https	_	_
+:	_	_
+//github.com/TUM-LMF/MTLCC	_	_
+.	_	_
+
+#401
+Acknowledgments	_	_
+:	_	_
+We	_	_
+would	_	_
+like	_	_
+to	_	_
+thank	_	_
+the	_	_
+Bavarian	_	_
+Ministry	_	_
+of	_	_
+Food	_	_
+,	_	_
+Agriculture	_	_
+and	_	_
+Forestry	_	_
+(	_	_
+StMELF	_	_
+)	_	_
+for	_	_
+providing	_	_
+ground	_	_
+truth	_	_
+data	_	_
+in	_	_
+excellent	_	_
+semantic	_	_
+and	_	_
+geometric	_	_
+quality	_	_
+.	_	_
+
+#402
+Furthermore	_	_
+,	_	_
+we	_	_
+thank	_	_
+the	_	_
+Leibnitz	_	_
+Supercomputing	_	_
+Centre	_	_
+(	_	_
+LRZ	_	_
+)	_	_
+for	_	_
+providing	_	_
+access	_	_
+to	_	_
+computational	_	_
+resources	_	_
+,	_	_
+such	_	_
+as	_	_
+the	_	_
+DGX-1	_	_
+and	_	_
+P100servers	_	_
+and	_	_
+NVIDIA	_	_
+for	_	_
+providing	_	_
+one	_	_
+TITAN	_	_
+X	_	_
+GPU	_	_
+.	_	_
+
+#403
+Author	_	_
+Contributions	_	_
+:	_	_
+M.R	_	_
+.	_	_
+
+#404
+and	_	_
+M.K	_	_
+.	_	_
+
+#405
+conceived	_	_
+and	_	_
+designed	_	_
+the	_	_
+experiments	_	_
+.	_	_
+
+#406
+M.R	_	_
+implemented	_	_
+the	_	_
+network	_	_
+and	_	_
+performed	_	_
+the	_	_
+experiments	_	_
+.	_	_
+
+#407
+Both	_	_
+authors	_	_
+analyzed	_	_
+the	_	_
+data	_	_
+and	_	_
+M.R	_	_
+.	_	_
+
+#408
+wrote	_	_
+the	_	_
+paper	_	_
+.	_	_
+
+#409
+Both	_	_
+authors	_	_
+read	_	_
+and	_	_
+approved	_	_
+the	_	_
+final	_	_
+manuscript	_	_
+.	_	_
+
+#410
+Conflicts	_	_
+of	_	_
+Interest	_	_
+:	_	_
+The	_	_
+authors	_	_
+declare	_	_
+no	_	_
+conflict	_	_
+of	_	_
+interest	_	_
+.	_	_
+
+#411
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#412
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#413
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+17	_	_
+of	_	_
+19	_	_
+ArXiv	_	_
+version	_	_
+history	_	_
+v1	_	_
+submitted	_	_
+version	_	_
+to	_	_
+IJGI	_	_
+v2	_	_
+added	_	_
+notice	_	_
+of	_	_
+submission	_	_
+date	_	_
+to	_	_
+history	_	_
+v3	_	_
+revised	_	_
+manuscript	_	_
+version	_	_
+on	_	_
+review	_	_
+comments	_	_
+.	_	_
+
+#414
+Added	_	_
+section	_	_
+Section	_	_
+3.2	_	_
+Prior	_	_
+Work	_	_
+and	_	_
+improved	_	_
+English	_	_
+language	_	_
+and	_	_
+style	_	_
+.	_	_
+
+#415
+v4	_	_
+updated	_	_
+ArXiv	_	_
+version	_	_
+with	_	_
+published	_	_
+MDPI	_	_
+paper	_	_
+and	_	_
+added	_	_
+doi	_	_
+.	_	_
+
+#416
+Minor	_	_
+spelling	_	_
+and	_	_
+wording	_	_
+corrections	_	_
+and	_	_
+text	_	_
+layout	_	_
+.	_	_
+
+#417
+Minor	_	_
+modifications	_	_
+on	_	_
+cited	_	_
+papers	_	_
+.	_	_
+
+#418
+Updated	_	_
+Github	_	_
+link	_	_
+.	_	_
+
+#419
+1	_	_
+.	_	_
+
+#420
+Odenweller	_	_
+,	_	_
+J.B.	_	_
+;	_	_
+Johnson	_	_
+,	_	_
+K.I	_	_
+.	_	_
+
+#421
+Crop	_	_
+identification	_	_
+using	_	_
+Landsat	_	_
+temporal-spectral	_	_
+profiles	_	_
+.	_	_
+
+#422
+Remote	_	_
+Sensing	_	_
+of	_	_
+Environment	_	_
+1984	_	_
+,	_	_
+14	_	_
+,	_	_
+39–54	_	_
+.	_	_
+
+#423
+2	_	_
+.	_	_
+
+#424
+Reed	_	_
+,	_	_
+B.C	_	_
+.	_	_
+
+#425
+;	_	_
+Brown	_	_
+,	_	_
+J.F	_	_
+.	_	_
+
+#426
+;	_	_
+VanderZee	_	_
+,	_	_
+D.	_	_
+;	_	_
+Loveland	_	_
+,	_	_
+T.R	_	_
+.	_	_
+
+#427
+;	_	_
+Merchant	_	_
+,	_	_
+J.W	_	_
+.	_	_
+
+#428
+;	_	_
+Ohlen	_	_
+,	_	_
+D.O	_	_
+.	_	_
+
+#429
+Measuring	_	_
+Phenological	_	_
+Variability	_	_
+from	_	_
+Satellite	_	_
+Imagery	_	_
+.	_	_
+
+#430
+Journal	_	_
+of	_	_
+Vegetation	_	_
+Science	_	_
+1994	_	_
+,	_	_
+5	_	_
+,	_	_
+703–714	_	_
+.	_	_
+
+#431
+3	_	_
+.	_	_
+
+#432
+Bahdanau	_	_
+,	_	_
+D.	_	_
+;	_	_
+Cho	_	_
+,	_	_
+K.	_	_
+;	_	_
+Bengio	_	_
+,	_	_
+Y.	_	_
+Neural	_	_
+Machine	_	_
+Translation	_	_
+by	_	_
+Jointly	_	_
+Learning	_	_
+to	_	_
+Align	_	_
+and	_	_
+Translate	_	_
+.	_	_
+
+#433
+Arxiv	_	_
+2014	_	_
+,	_	_
+[	_	_
+1409.0473	_	_
+]	_	_
+.	_	_
+
+#434
+4	_	_
+.	_	_
+
+#435
+Rush	_	_
+,	_	_
+A.	_	_
+;	_	_
+Chopra	_	_
+,	_	_
+S.	_	_
+;	_	_
+Weston	_	_
+,	_	_
+J	_	_
+.	_	_
+
+#436
+A	_	_
+Neural	_	_
+Attention	_	_
+Model	_	_
+for	_	_
+Sentence	_	_
+Summarization	_	_
+.	_	_
+
+#437
+Arxiv	_	_
+2017	_	_
+.	_	_
+
+#438
+5	_	_
+.	_	_
+
+#439
+Shen	_	_
+,	_	_
+S.	_	_
+;	_	_
+Liu	_	_
+,	_	_
+Z.	_	_
+;	_	_
+Sun	_	_
+,	_	_
+M.	_	_
+Neural	_	_
+Headline	_	_
+Generation	_	_
+with	_	_
+Minimum	_	_
+Risk	_	_
+Training	_	_
+.	_	_
+
+#440
+Arxiv	_	_
+2016	_	_
+,	_	_
+[	_	_
+arXiv:1604.01904v1	_	_
+]	_	_
+.	_	_
+
+#441
+6	_	_
+.	_	_
+
+#442
+Nallapati	_	_
+,	_	_
+R.	_	_
+;	_	_
+Zhou	_	_
+,	_	_
+B.	_	_
+;	_	_
+dos	_	_
+Santos	_	_
+,	_	_
+C.N	_	_
+.	_	_
+
+#443
+;	_	_
+Gulcehre	_	_
+,	_	_
+C.	_	_
+;	_	_
+Xiang	_	_
+,	_	_
+B.	_	_
+Abstractive	_	_
+Text	_	_
+Summarization	_	_
+Using	_	_
+Sequence-to-Sequence	_	_
+RNNs	_	_
+and	_	_
+Beyond	_	_
+.	_	_
+
+#444
+Arxiv	_	_
+2016	_	_
+,	_	_
+[	_	_
+1602.06023	_	_
+]	_	_
+.	_	_
+
+#445
+7	_	_
+.	_	_
+
+#446
+Sutskever	_	_
+,	_	_
+I.	_	_
+;	_	_
+Vinyals	_	_
+,	_	_
+O.	_	_
+;	_	_
+Le	_	_
+,	_	_
+Q.V	_	_
+.	_	_
+
+#447
+Sequence	_	_
+to	_	_
+Sequence	_	_
+Learning	_	_
+with	_	_
+Neural	_	_
+Networks	_	_
+.	_	_
+
+#448
+Arxiv	_	_
+2014	_	_
+,	_	_
+[	_	_
+1409.3215	_	_
+]	_	_
+.	_	_
+
+#449
+8	_	_
+.	_	_
+
+#450
+Chorowski	_	_
+,	_	_
+J.	_	_
+;	_	_
+Bahdanau	_	_
+,	_	_
+D.	_	_
+;	_	_
+Serdyuk	_	_
+,	_	_
+D.	_	_
+;	_	_
+Cho	_	_
+,	_	_
+K.	_	_
+;	_	_
+Bengio	_	_
+,	_	_
+Y.	_	_
+Attention-based	_	_
+models	_	_
+for	_	_
+speech	_	_
+recognition	_	_
+.	_	_
+
+#451
+NIPS	_	_
+,	_	_
+2015	_	_
+,	_	_
+pp	_	_
+.	_	_
+
+#452
+577–585	_	_
+,	_	_
+[	_	_
+1506.07503	_	_
+]	_	_
+.	_	_
+
+#453
+9	_	_
+.	_	_
+
+#454
+Foerster	_	_
+,	_	_
+S.	_	_
+;	_	_
+Kaden	_	_
+,	_	_
+K.	_	_
+;	_	_
+Foerster	_	_
+,	_	_
+M.	_	_
+;	_	_
+Itzerott	_	_
+,	_	_
+S.	_	_
+Crop	_	_
+type	_	_
+mapping	_	_
+using	_	_
+spectral-temporal	_	_
+profiles	_	_
+and	_	_
+phenological	_	_
+information	_	_
+.	_	_
+
+#455
+Computers	_	_
+and	_	_
+Electronics	_	_
+in	_	_
+Agriculture	_	_
+2012	_	_
+,	_	_
+89	_	_
+,	_	_
+30–40	_	_
+.	_	_
+
+#456
+10	_	_
+.	_	_
+
+#457
+Conrad	_	_
+,	_	_
+C.	_	_
+;	_	_
+Fritsch	_	_
+,	_	_
+S.	_	_
+;	_	_
+Zeidler	_	_
+,	_	_
+J.	_	_
+;	_	_
+Rücker	_	_
+,	_	_
+G.	_	_
+;	_	_
+Dech	_	_
+,	_	_
+S.	_	_
+Per-Field	_	_
+Irrigated	_	_
+Crop	_	_
+Classification	_	_
+in	_	_
+Arid	_	_
+Central	_	_
+Asia	_	_
+Using	_	_
+SPOT	_	_
+and	_	_
+ASTER	_	_
+Data	_	_
+.	_	_
+
+#458
+Remote	_	_
+Sensing	_	_
+2010	_	_
+,	_	_
+2	_	_
+,	_	_
+1035–1056	_	_
+.	_	_
+
+#459
+11	_	_
+.	_	_
+
+#460
+Conrad	_	_
+,	_	_
+C.	_	_
+;	_	_
+Dech	_	_
+,	_	_
+S.	_	_
+;	_	_
+Dubovyk	_	_
+,	_	_
+O.	_	_
+;	_	_
+Fritsch	_	_
+,	_	_
+S.	_	_
+;	_	_
+Klein	_	_
+,	_	_
+D.	_	_
+;	_	_
+Löw	_	_
+,	_	_
+F.	_	_
+;	_	_
+Schorcht	_	_
+,	_	_
+G.	_	_
+;	_	_
+Zeidler	_	_
+,	_	_
+J.	_	_
+Derivation	_	_
+of	_	_
+temporal	_	_
+windows	_	_
+for	_	_
+accurate	_	_
+crop	_	_
+discrimination	_	_
+in	_	_
+heterogeneous	_	_
+croplands	_	_
+of	_	_
+Uzbekistan	_	_
+using	_	_
+multitemporal	_	_
+RapidEye	_	_
+images	_	_
+.	_	_
+
+#461
+Computers	_	_
+and	_	_
+Electronics	_	_
+in	_	_
+Agriculture	_	_
+2014	_	_
+,	_	_
+103	_	_
+,	_	_
+63–74	_	_
+.	_	_
+
+#462
+12	_	_
+.	_	_
+
+#463
+Hao	_	_
+,	_	_
+P.	_	_
+;	_	_
+Zhan	_	_
+,	_	_
+Y.	_	_
+;	_	_
+Wang	_	_
+,	_	_
+L.	_	_
+;	_	_
+Niu	_	_
+,	_	_
+Z.	_	_
+;	_	_
+Shakir	_	_
+,	_	_
+M.	_	_
+Feature	_	_
+Selection	_	_
+of	_	_
+Time	_	_
+Series	_	_
+MODIS	_	_
+Data	_	_
+for	_	_
+Early	_	_
+Crop	_	_
+Classification	_	_
+Using	_	_
+Random	_	_
+Forest	_	_
+:	_	_
+A	_	_
+Case	_	_
+Study	_	_
+in	_	_
+Kansas	_	_
+,	_	_
+USA	_	_
+.	_	_
+
+#464
+Remote	_	_
+Sensing	_	_
+2015	_	_
+,	_	_
+7	_	_
+,	_	_
+5347–5369	_	_
+.	_	_
+
+#465
+13	_	_
+.	_	_
+
+#466
+Peña-Barragán	_	_
+,	_	_
+J.M	_	_
+.	_	_
+
+#467
+;	_	_
+Ngugi	_	_
+,	_	_
+M.K	_	_
+.	_	_
+
+#468
+;	_	_
+Plant	_	_
+,	_	_
+R.E	_	_
+.	_	_
+
+#469
+;	_	_
+Six	_	_
+,	_	_
+J.	_	_
+Object-based	_	_
+crop	_	_
+identification	_	_
+using	_	_
+multiple	_	_
+vegetation	_	_
+indices	_	_
+,	_	_
+textural	_	_
+features	_	_
+and	_	_
+crop	_	_
+phenology	_	_
+.	_	_
+
+#470
+Remote	_	_
+Sensing	_	_
+of	_	_
+Environment	_	_
+2011	_	_
+,	_	_
+115	_	_
+,	_	_
+1301–1316	_	_
+.	_	_
+
+#471
+14	_	_
+.	_	_
+
+#472
+Siachalou	_	_
+,	_	_
+S.	_	_
+;	_	_
+Mallinis	_	_
+,	_	_
+G.	_	_
+;	_	_
+Tsakiri-Strati	_	_
+,	_	_
+M.	_	_
+A	_	_
+hidden	_	_
+markov	_	_
+models	_	_
+approach	_	_
+for	_	_
+crop	_	_
+classification	_	_
+:	_	_
+Linking	_	_
+crop	_	_
+phenology	_	_
+to	_	_
+time	_	_
+series	_	_
+of	_	_
+multi-sensor	_	_
+remote	_	_
+sensing	_	_
+data	_	_
+.	_	_
+
+#473
+Remote	_	_
+Sensing	_	_
+2015	_	_
+,	_	_
+7	_	_
+,	_	_
+3633–3650	_	_
+.	_	_
+
+#474
+15	_	_
+.	_	_
+
+#475
+Hoberg	_	_
+,	_	_
+T.	_	_
+;	_	_
+Rottensteiner	_	_
+,	_	_
+F.	_	_
+;	_	_
+Feitosa	_	_
+,	_	_
+R.Q	_	_
+.	_	_
+
+#476
+;	_	_
+Heipke	_	_
+,	_	_
+C.	_	_
+Conditional	_	_
+random	_	_
+fields	_	_
+for	_	_
+multitemporal	_	_
+and	_	_
+multiscale	_	_
+classification	_	_
+of	_	_
+optical	_	_
+satellite	_	_
+imagery	_	_
+.	_	_
+
+#477
+IEEE	_	_
+Transactions	_	_
+on	_	_
+Geoscience	_	_
+and	_	_
+Remote	_	_
+Sensing	_	_
+2015	_	_
+,	_	_
+53	_	_
+,	_	_
+659–673	_	_
+.	_	_
+
+#478
+16	_	_
+.	_	_
+
+#479
+Zhu	_	_
+,	_	_
+X.X	_	_
+.	_	_
+
+#480
+;	_	_
+Tuia	_	_
+,	_	_
+D.	_	_
+;	_	_
+Mou	_	_
+,	_	_
+L.	_	_
+;	_	_
+Xia	_	_
+,	_	_
+G.S	_	_
+.	_	_
+
+#481
+;	_	_
+Zhang	_	_
+,	_	_
+L.	_	_
+;	_	_
+Xu	_	_
+,	_	_
+F.	_	_
+;	_	_
+Fraundorfer	_	_
+,	_	_
+F.	_	_
+Deep	_	_
+learning	_	_
+in	_	_
+remote	_	_
+sensing	_	_
+:	_	_
+a	_	_
+review	_	_
+.	_	_
+
+#482
+Arxiv	_	_
+2017	_	_
+,	_	_
+[	_	_
+1710.03959	_	_
+]	_	_
+.	_	_
+
+#483
+17	_	_
+.	_	_
+
+#484
+Hu	_	_
+,	_	_
+F.	_	_
+;	_	_
+Xia	_	_
+,	_	_
+G.S	_	_
+.	_	_
+
+#485
+;	_	_
+Hu	_	_
+,	_	_
+J.	_	_
+;	_	_
+Zhang	_	_
+,	_	_
+L.	_	_
+Transferring	_	_
+Deep	_	_
+Convolutional	_	_
+Neural	_	_
+Networks	_	_
+for	_	_
+the	_	_
+Scene	_	_
+Classification	_	_
+of	_	_
+High-Resolution	_	_
+Remote	_	_
+Sensing	_	_
+Imagery	_	_
+.	_	_
+
+#486
+Remote	_	_
+Sensing	_	_
+2015	_	_
+,	_	_
+7	_	_
+,	_	_
+14680–14707	_	_
+.	_	_
+
+#487
+18	_	_
+.	_	_
+
+#488
+Scott	_	_
+,	_	_
+G.J	_	_
+.	_	_
+
+#489
+;	_	_
+England	_	_
+,	_	_
+M.R	_	_
+.	_	_
+
+#490
+;	_	_
+Starms	_	_
+,	_	_
+W.A	_	_
+.	_	_
+
+#491
+;	_	_
+Marcum	_	_
+,	_	_
+R.A.	_	_
+;	_	_
+Davis	_	_
+,	_	_
+C.H	_	_
+.	_	_
+
+#492
+Training	_	_
+Deep	_	_
+Convolutional	_	_
+Neural	_	_
+Networks	_	_
+for	_	_
+Land-Cover	_	_
+Classification	_	_
+of	_	_
+High-Resolution	_	_
+Imagery	_	_
+.	_	_
+
+#493
+IEEE	_	_
+Geoscience	_	_
+and	_	_
+Remote	_	_
+Sensing	_	_
+Letters	_	_
+(	_	_
+GRSL	_	_
+)	_	_
+2017	_	_
+,	_	_
+14	_	_
+,	_	_
+549–553	_	_
+.	_	_
+
+#494
+19	_	_
+.	_	_
+
+#495
+Makantasis	_	_
+,	_	_
+K.	_	_
+;	_	_
+Karantzalos	_	_
+,	_	_
+K.	_	_
+;	_	_
+Doulamis	_	_
+,	_	_
+A.	_	_
+;	_	_
+Doulamis	_	_
+,	_	_
+N.	_	_
+Deep	_	_
+Supervised	_	_
+Learning	_	_
+for	_	_
+Hyperspectral	_	_
+Data	_	_
+Classification	_	_
+through	_	_
+Convolutional	_	_
+Neural	_	_
+Networks	_	_
+.	_	_
+
+#496
+Proceedings	_	_
+GARSS	_	_
+2015	_	_
+.	_	_
+
+#497
+2015	_	_
+IEEE	_	_
+International	_	_
+Geoscience	_	_
+and	_	_
+Remote	_	_
+Sensing	_	_
+Symposium	_	_
+.	_	_
+
+#498
+IEEE	_	_
+,	_	_
+2015	_	_
+,	_	_
+pp	_	_
+.	_	_
+
+#499
+4959–4962	_	_
+.	_	_
+
+#500
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#501
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#502
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+18	_	_
+of	_	_
+19	_	_
+20	_	_
+.	_	_
+
+#503
+Castelluccio	_	_
+,	_	_
+M.	_	_
+;	_	_
+Poggi	_	_
+,	_	_
+G.	_	_
+;	_	_
+Sansone	_	_
+,	_	_
+C.	_	_
+;	_	_
+Verdoliva	_	_
+,	_	_
+L.	_	_
+Land	_	_
+Use	_	_
+Classification	_	_
+in	_	_
+Remote	_	_
+Sensing	_	_
+Images	_	_
+by	_	_
+Convolutional	_	_
+Neural	_	_
+Networks	_	_
+.	_	_
+
+#504
+arXiv	_	_
+preprint	_	_
+arXiv:1508.00092	_	_
+2015	_	_
+,	_	_
+pp	_	_
+.	_	_
+
+#505
+1–11	_	_
+,	_	_
+[	_	_
+1508.00092	_	_
+]	_	_
+.	_	_
+
+#506
+21	_	_
+.	_	_
+
+#507
+Jia	_	_
+,	_	_
+X.	_	_
+;	_	_
+Khandelwal	_	_
+,	_	_
+A.	_	_
+;	_	_
+Nayak	_	_
+,	_	_
+G.	_	_
+;	_	_
+Gerber	_	_
+,	_	_
+J.	_	_
+;	_	_
+Carlson	_	_
+,	_	_
+K.	_	_
+;	_	_
+West	_	_
+,	_	_
+P.	_	_
+;	_	_
+Kumar	_	_
+,	_	_
+V.	_	_
+Incremental	_	_
+Dual-memory	_	_
+LSTM	_	_
+in	_	_
+Land	_	_
+Cover	_	_
+Prediction	_	_
+.	_	_
+
+#508
+23rd	_	_
+ACM	_	_
+SIGKDD	_	_
+International	_	_
+Conference	_	_
+on	_	_
+Knowledge	_	_
+Discovery	_	_
+and	_	_
+Data	_	_
+Mining	_	_
+,	_	_
+2017	_	_
+,	_	_
+pp	_	_
+.	_	_
+
+#509
+867–876	_	_
+.	_	_
+
+#510
+22	_	_
+.	_	_
+
+#511
+Braakmann-Folgmann	_	_
+,	_	_
+A.	_	_
+;	_	_
+Roscher	_	_
+,	_	_
+R.	_	_
+;	_	_
+Wenzel	_	_
+,	_	_
+S.	_	_
+;	_	_
+Uebbing	_	_
+,	_	_
+B.	_	_
+;	_	_
+Kusche	_	_
+,	_	_
+J	_	_
+.	_	_
+
+#512
+Sea	_	_
+Level	_	_
+Anomaly	_	_
+Prediction	_	_
+using	_	_
+Recurrent	_	_
+Neural	_	_
+Networks	_	_
+.	_	_
+
+#513
+Arxiv	_	_
+2017	_	_
+,	_	_
+[	_	_
+1710.07099	_	_
+]	_	_
+.	_	_
+
+#514
+23	_	_
+.	_	_
+
+#515
+Sharma	_	_
+,	_	_
+A.	_	_
+;	_	_
+Liu	_	_
+,	_	_
+X.	_	_
+;	_	_
+Yang	_	_
+,	_	_
+X	_	_
+.	_	_
+
+#516
+Land	_	_
+Cover	_	_
+Classification	_	_
+from	_	_
+Multi-temporal	_	_
+,	_	_
+Multi-spectral	_	_
+Remotely	_	_
+Sensed	_	_
+Imagery	_	_
+using	_	_
+Patch-Based	_	_
+Recurrent	_	_
+Neural	_	_
+Networks	_	_
+.	_	_
+
+#517
+Arxiv	_	_
+2017	_	_
+,	_	_
+[	_	_
+1708.00813	_	_
+]	_	_
+.	_	_
+
+#518
+24	_	_
+.	_	_
+
+#519
+Rußwurm	_	_
+,	_	_
+M.	_	_
+;	_	_
+Körner	_	_
+,	_	_
+M.	_	_
+Temporal	_	_
+Vegetation	_	_
+Modelling	_	_
+using	_	_
+Long	_	_
+Short-Term	_	_
+Memory	_	_
+Networks	_	_
+for	_	_
+Crop	_	_
+Identification	_	_
+from	_	_
+Medium-Resolution	_	_
+Multi-Spectral	_	_
+Satellite	_	_
+Images	_	_
+.	_	_
+
+#520
+IEEE/ISPRS	_	_
+Workshop	_	_
+on	_	_
+Large	_	_
+Scale	_	_
+Computer	_	_
+Vision	_	_
+for	_	_
+Remote	_	_
+Sensing	_	_
+Imagery	_	_
+(	_	_
+EarthVision	_	_
+)	_	_
+,	_	_
+2017	_	_
+,	_	_
+Proceedings	_	_
+of	_	_
+the	_	_
+IEEE	_	_
+Conference	_	_
+on	_	_
+Computer	_	_
+Vision	_	_
+and	_	_
+Pattern	_	_
+Recognition	_	_
+(	_	_
+CVPR	_	_
+)	_	_
+Workshops	_	_
+.	_	_
+
+#521
+25	_	_
+.	_	_
+
+#522
+Hochreiter	_	_
+,	_	_
+S.	_	_
+;	_	_
+Schmidhuber	_	_
+,	_	_
+J	_	_
+.	_	_
+
+#523
+Long	_	_
+Short-Term	_	_
+Memory	_	_
+.	_	_
+
+#524
+Neural	_	_
+Computation	_	_
+1997	_	_
+,	_	_
+9	_	_
+,	_	_
+1735–1780	_	_
+.	_	_
+
+#525
+26	_	_
+.	_	_
+
+#526
+Cho	_	_
+,	_	_
+K.	_	_
+;	_	_
+van	_	_
+Merrienboer	_	_
+,	_	_
+B.	_	_
+;	_	_
+Gulcehre	_	_
+,	_	_
+C.	_	_
+;	_	_
+Bahdanau	_	_
+,	_	_
+D.	_	_
+;	_	_
+Bougares	_	_
+,	_	_
+F.	_	_
+;	_	_
+Schwenk	_	_
+,	_	_
+H.	_	_
+;	_	_
+Bengio	_	_
+,	_	_
+Y	_	_
+.	_	_
+
+#527
+Learning	_	_
+Phrase	_	_
+Representations	_	_
+using	_	_
+RNN	_	_
+Encoder-Decoder	_	_
+for	_	_
+Statistical	_	_
+Machine	_	_
+Translation	_	_
+.	_	_
+
+#528
+arXiv	_	_
+preprint	_	_
+arXiv:1406.1078	_	_
+2014	_	_
+,	_	_
+[	_	_
+1406.1078	_	_
+]	_	_
+.	_	_
+
+#529
+27	_	_
+.	_	_
+
+#530
+Graves	_	_
+,	_	_
+A.	_	_
+;	_	_
+Wayne	_	_
+,	_	_
+G.	_	_
+;	_	_
+Danihelka	_	_
+,	_	_
+I.	_	_
+Neural	_	_
+Turing	_	_
+Machines	_	_
+.	_	_
+
+#531
+Arxiv	_	_
+2014	_	_
+,	_	_
+[	_	_
+1410.5401	_	_
+]	_	_
+.	_	_
+
+#532
+28	_	_
+.	_	_
+
+#533
+Siegelmann	_	_
+,	_	_
+H.	_	_
+;	_	_
+Sontag	_	_
+,	_	_
+E.	_	_
+On	_	_
+the	_	_
+Computational	_	_
+Power	_	_
+of	_	_
+Neural	_	_
+Nets	_	_
+.	_	_
+
+#534
+Journal	_	_
+of	_	_
+Computer	_	_
+and	_	_
+System	_	_
+Sciences	_	_
+1995	_	_
+,	_	_
+50	_	_
+,	_	_
+132–150	_	_
+.	_	_
+
+#535
+29	_	_
+.	_	_
+
+#536
+Rafal	_	_
+,	_	_
+J.	_	_
+;	_	_
+Wojciech	_	_
+,	_	_
+Z.	_	_
+;	_	_
+Ilya	_	_
+,	_	_
+S.	_	_
+An	_	_
+Empirical	_	_
+Exploration	_	_
+of	_	_
+Recurrent	_	_
+Network	_	_
+Architectures	_	_
+.	_	_
+
+#537
+Proceedings	_	_
+of	_	_
+the	_	_
+32nd	_	_
+International	_	_
+Conference	_	_
+on	_	_
+International	_	_
+Conference	_	_
+on	_	_
+Machine	_	_
+Learning	_	_
+,	_	_
+2015	_	_
+,	_	_
+Vol	_	_
+.	_	_
+
+#538
+7	_	_
+,	_	_
+pp	_	_
+.	_	_
+
+#539
+2342–2350	_	_
+,	_	_
+[	_	_
+1512.03385	_	_
+]	_	_
+.	_	_
+
+#540
+30	_	_
+.	_	_
+
+#541
+Hochreiter	_	_
+,	_	_
+S.	_	_
+;	_	_
+Bengio	_	_
+,	_	_
+Y.	_	_
+;	_	_
+Frasconi	_	_
+,	_	_
+P.	_	_
+;	_	_
+Schmidhuber	_	_
+,	_	_
+J.	_	_
+Gradient	_	_
+flow	_	_
+in	_	_
+recurrent	_	_
+nets	_	_
+:	_	_
+the	_	_
+difficulty	_	_
+of	_	_
+learning	_	_
+long-term	_	_
+dependencies	_	_
+.	_	_
+
+#542
+A	_	_
+Field	_	_
+Guide	_	_
+to	_	_
+Dynamical	_	_
+Recurrent	_	_
+Networks	_	_
+2001	_	_
+,	_	_
+pp	_	_
+.	_	_
+
+#543
+237–243	_	_
+,	_	_
+[	_	_
+arXiv:1011.1669v3	_	_
+]	_	_
+.	_	_
+
+#544
+31	_	_
+.	_	_
+
+#545
+Yoshua	_	_
+,	_	_
+B.	_	_
+;	_	_
+Patrice	_	_
+,	_	_
+S.	_	_
+;	_	_
+Paolo	_	_
+,	_	_
+F.	_	_
+Learning	_	_
+long-term	_	_
+dependencies	_	_
+with	_	_
+gradient	_	_
+descent	_	_
+is	_	_
+difficult	_	_
+.	_	_
+
+#546
+IEEE	_	_
+transactions	_	_
+on	_	_
+neural	_	_
+networks	_	_
+1994	_	_
+,	_	_
+5	_	_
+,	_	_
+157–166	_	_
+.	_	_
+
+#547
+32	_	_
+.	_	_
+
+#548
+Shi	_	_
+,	_	_
+X.	_	_
+;	_	_
+Chen	_	_
+,	_	_
+Z.	_	_
+;	_	_
+Wang	_	_
+,	_	_
+H.	_	_
+;	_	_
+Yeung	_	_
+,	_	_
+D.Y	_	_
+.	_	_
+
+#549
+;	_	_
+Wong	_	_
+,	_	_
+W.K	_	_
+.	_	_
+
+#550
+;	_	_
+Woo	_	_
+,	_	_
+W.C.	_	_
+Convolutional	_	_
+LSTM	_	_
+Network	_	_
+:	_	_
+A	_	_
+Machine	_	_
+Learning	_	_
+Approach	_	_
+for	_	_
+Precipitation	_	_
+Nowcasting	_	_
+.	_	_
+
+#551
+Advances	_	_
+in	_	_
+Neural	_	_
+Information	_	_
+Processing	_	_
+Systems	_	_
+28	_	_
+2015	_	_
+.	_	_
+
+#552
+33	_	_
+.	_	_
+
+#553
+Maas	_	_
+,	_	_
+A.L	_	_
+.	_	_
+
+#554
+;	_	_
+Hannun	_	_
+,	_	_
+A.Y	_	_
+.	_	_
+
+#555
+;	_	_
+Ng	_	_
+,	_	_
+A.Y	_	_
+.	_	_
+
+#556
+Rectifier	_	_
+Nonlinearities	_	_
+Improve	_	_
+Neural	_	_
+Network	_	_
+Acoustic	_	_
+Models	_	_
+.	_	_
+
+#557
+Proceedings	_	_
+of	_	_
+the	_	_
+30	_	_
+th	_	_
+International	_	_
+Conference	_	_
+on	_	_
+Machine	_	_
+Learning	_	_
+2013	_	_
+,	_	_
+28	_	_
+,	_	_
+6	_	_
+.	_	_
+
+#558
+34	_	_
+.	_	_
+
+#559
+Hahnloser	_	_
+R.	_	_
+;	_	_
+Sarpeshkar	_	_
+R.	_	_
+;	_	_
+Mahowald	_	_
+M	_	_
+A.	_	_
+;	_	_
+Douglas	_	_
+R.	_	_
+J..	_	_
+;	_	_
+Seung	_	_
+H.	_	_
+S..	_	_
+Digital	_	_
+selection	_	_
+and	_	_
+analogue	_	_
+amplification	_	_
+coexist	_	_
+in	_	_
+a	_	_
+cortex-inspired	_	_
+silicon	_	_
+circuit	_	_
+.	_	_
+
+#560
+Nature	_	_
+2000	_	_
+,	_	_
+405	_	_
+,	_	_
+947–951	_	_
+.	_	_
+
+#561
+35	_	_
+.	_	_
+
+#562
+Kingma	_	_
+,	_	_
+D.P	_	_
+.	_	_
+
+#563
+;	_	_
+Ba	_	_
+,	_	_
+J.L	_	_
+.	_	_
+
+#564
+Adam	_	_
+:	_	_
+A	_	_
+Method	_	_
+for	_	_
+Stochastic	_	_
+Optimization	_	_
+.	_	_
+
+#565
+ArXiv	_	_
+Preprint	_	_
+(	_	_
+1412.6980	_	_
+)	_	_
+2014	_	_
+,	_	_
+[	_	_
+arXiv:1412.6980	_	_
+]	_	_
+.	_	_
+
+#566
+36	_	_
+.	_	_
+
+#567
+Cohen	_	_
+,	_	_
+J	_	_
+.	_	_
+
+#568
+A	_	_
+coefficient	_	_
+of	_	_
+agreeement	_	_
+for	_	_
+nominal	_	_
+scales	_	_
+.	_	_
+
+#569
+Educational	_	_
+and	_	_
+Psychological	_	_
+Measurement	_	_
+1960	_	_
+,	_	_
+20	_	_
+,	_	_
+37–46	_	_
+.	_	_
+
+#570
+37	_	_
+.	_	_
+
+#571
+Karpathy	_	_
+,	_	_
+A	_	_
+.	_	_
+
+#572
+The	_	_
+unreasonable	_	_
+effectiveness	_	_
+of	_	_
+recurrent	_	_
+neural	_	_
+networks	_	_
+,	_	_
+2015	_	_
+.	_	_
+
+#573
+38	_	_
+.	_	_
+
+#574
+Fung	_	_
+,	_	_
+T.	_	_
+;	_	_
+Ledrew	_	_
+,	_	_
+E.	_	_
+The	_	_
+Determination	_	_
+of	_	_
+Optimal	_	_
+Threshold	_	_
+Levels	_	_
+for	_	_
+Change	_	_
+Detection	_	_
+Using	_	_
+Various	_	_
+Accuracy	_	_
+Indices	_	_
+.	_	_
+
+#575
+Photogrammetric	_	_
+Engineering	_	_
+&	_	_
+Remote	_	_
+Sensing	_	_
+1988	_	_
+,	_	_
+54	_	_
+,	_	_
+1449–1454	_	_
+.	_	_
+
+#576
+39	_	_
+.	_	_
+
+#577
+McHugh	_	_
+,	_	_
+M.L	_	_
+.	_	_
+
+#578
+Interrater	_	_
+reliability	_	_
+:	_	_
+the	_	_
+kappa	_	_
+statistic	_	_
+.	_	_
+
+#579
+Biochemia	_	_
+medica	_	_
+2012	_	_
+,	_	_
+22	_	_
+,	_	_
+276–82	_	_
+.	_	_
+
+#580
+40	_	_
+.	_	_
+
+#581
+Ünsalan	_	_
+,	_	_
+C.	_	_
+;	_	_
+Boyer	_	_
+,	_	_
+K.L	_	_
+.	_	_
+
+#582
+Review	_	_
+on	_	_
+Land	_	_
+Use	_	_
+Classification	_	_
+.	_	_
+
+#583
+In	_	_
+Multispectral	_	_
+Satellite	_	_
+Image	_	_
+Understanding	_	_
+:	_	_
+From	_	_
+Land	_	_
+Classification	_	_
+to	_	_
+Building	_	_
+and	_	_
+Road	_	_
+Detection	_	_
+;	_	_
+Springer	_	_
+,	_	_
+2011	_	_
+;	_	_
+pp	_	_
+.	_	_
+
+#584
+49–64	_	_
+.	_	_
+
+#585
+41	_	_
+.	_	_
+
+#586
+Richter	_	_
+,	_	_
+R.	_	_
+A	_	_
+spatially	_	_
+adaptive	_	_
+fast	_	_
+atmospheric	_	_
+correction	_	_
+algorithm	_	_
+.	_	_
+
+#587
+International	_	_
+Journal	_	_
+of	_	_
+Remote	_	_
+Sensing	_	_
+1996	_	_
+,	_	_
+17	_	_
+,	_	_
+1201–1214	_	_
+.	_	_
+
+#588
+42	_	_
+.	_	_
+
+#589
+Matthew	_	_
+,	_	_
+M.W	_	_
+.	_	_
+
+#590
+;	_	_
+Adler-Golden	_	_
+,	_	_
+S.M	_	_
+.	_	_
+
+#591
+;	_	_
+Berk	_	_
+,	_	_
+A.	_	_
+;	_	_
+Richtsmeier	_	_
+,	_	_
+S.C.	_	_
+;	_	_
+Levine	_	_
+,	_	_
+R.Y	_	_
+.	_	_
+
+#592
+;	_	_
+Bernstein	_	_
+,	_	_
+L.S	_	_
+.	_	_
+
+#593
+;	_	_
+Acharya	_	_
+,	_	_
+P.K	_	_
+.	_	_
+
+#594
+;	_	_
+Anderson	_	_
+,	_	_
+G.P	_	_
+.	_	_
+
+#595
+;	_	_
+Felde	_	_
+,	_	_
+G.W	_	_
+.	_	_
+
+#596
+;	_	_
+Hoke	_	_
+,	_	_
+M.P	_	_
+.	_	_
+
+#597
+Status	_	_
+of	_	_
+Atmospheric	_	_
+Correction	_	_
+using	_	_
+a	_	_
+MODTRAN4-Based	_	_
+Algorithm	_	_
+.	_	_
+
+#598
+SPIE	_	_
+proceeding	_	_
+.	_	_
+
+#599
+Algorithms	_	_
+for	_	_
+multispectral	_	_
+,	_	_
+hyperspectral	_	_
+,	_	_
+and	_	_
+ultra-spectral	_	_
+imagery	_	_
+VI	_	_
+,	_	_
+2000	_	_
+,	_	_
+pp	_	_
+.	_	_
+
+#600
+199–207	_	_
+.	_	_
+
+#601
+ISPRS	_	_
+Int	_	_
+.	_	_
+
+#602
+J.	_	_
+Geo-Inf	_	_
+.	_	_
+
+#603
+2018	_	_
+,	_	_
+7	_	_
+,	_	_
+129	_	_
+19	_	_
+of	_	_
+19	_	_
+43	_	_
+.	_	_
+
+#604
+Hagolle	_	_
+,	_	_
+O.	_	_
+;	_	_
+Huc	_	_
+,	_	_
+M.	_	_
+;	_	_
+Villa	_	_
+Pascual	_	_
+,	_	_
+D.	_	_
+;	_	_
+Dedieu	_	_
+,	_	_
+G.	_	_
+A	_	_
+multi-temporal	_	_
+method	_	_
+for	_	_
+cloud	_	_
+detection	_	_
+,	_	_
+applied	_	_
+to	_	_
+FORMOSAT-2	_	_
+,	_	_
+VENuS	_	_
+,	_	_
+LANDSAT	_	_
+and	_	_
+SENTINEL-2	_	_
+images	_	_
+.	_	_
+
+#605
+Remote	_	_
+Sensing	_	_
+of	_	_
+Environment	_	_
+2010	_	_
+,	_	_
+114	_	_
+,	_	_
+1747–1755	_	_
+.	_	_
+
+#606
+44	_	_
+.	_	_
+
+#607
+Zupanc	_	_
+,	_	_
+A.S	_	_
+.	_	_
+
+#608
+Improving	_	_
+Cloud	_	_
+Detection	_	_
+with	_	_
+Machine	_	_
+Learning	_	_
+,	_	_
+2017.	_	_
+c©	_	_
+2018	_	_
+by	_	_
+the	_	_
+authors	_	_
+.	_	_
+
+#609
+Licensee	_	_
+MDPI	_	_
+,	_	_
+Basel	_	_
+,	_	_
+Switzerland	_	_
+.	_	_
+
+#610
+This	_	_
+article	_	_
+is	_	_
+an	_	_
+open	_	_
+access	_	_
+article	_	_
+distributed	_	_
+under	_	_
+the	_	_
+terms	_	_
+and	_	_
+conditions	_	_
+of	_	_
+the	_	_
+Creative	_	_
+Commons	_	_
+Attribution	_	_
+(	_	_
+CC	_	_
+BY	_	_
+)	_	_
+license	_	_
+(	_	_
+http	_	_
+:	_	_
+//creativecommons.org/licenses/by/4.0/	_	_
+)	_	_
+.	_	_

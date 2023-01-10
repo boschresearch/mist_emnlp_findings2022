@@ -1,0 +1,140 @@
+#46
+Continuous	_	_
+and/or	_	_
+discrete	_	_
+attribute	_	_
+data	_	_
+in	_	_
+the	_	_
+form	_	_
+of	_	_
+a	_	_
+tab-delimited	_	_
+table	_	_
+can	_	_
+also	_	_
+be	_	_
+uploaded	_	_
+.	_	_
+
+#47
+The	_	_
+attribute	_	_
+data	_	_
+should	deontic	_
+be	_	_
+organized	_	_
+so	_	_
+that	_	_
+each	_	_
+column	_	_
+is	_	_
+a	_	_
+trait	_	_
+and	_	_
+each	_	_
+of	_	_
+the	_	_
+rows	_	_
+correspond	_	_
+to	_	_
+a	_	_
+spectral	_	_
+sample	_	_
+.	_	_
+
+#48
+The	_	_
+first	_	_
+column	_	_
+should	deontic	_
+be	_	_
+labelled	_	_
+‘‘filename’’	_	_
+in	_	_
+the	_	_
+header	_	_
+row	_	_
+and	_	_
+should	deontic	_
+include	_	_
+the	_	_
+filenames	_	_
+of	_	_
+the	_	_
+corresponding	_	_
+spectral	_	_
+data	_	_
+files	_	_
+.	_	_
+
+#49
+Additionally	_	_
+,	_	_
+a	_	_
+comma-delimited	_	_
+matrix	_	_
+of	_	_
+filenames	_	_
+can	_	_
+be	_	_
+uploaded	_	_
+that	_	_
+includes	_	_
+the	_	_
+spatial	_	_
+distribution	_	_
+of	_	_
+the	_	_
+samples	_	_
+in	_	_
+the	_	_
+field	_	_
+.	_	_
+
+#54
+Specalyzer	_	_
+does	_	_
+not	_	_
+perform	_	_
+any	_	_
+data	_	_
+interpolation	_	_
+and	_	_
+thus	_	_
+such	_	_
+data	_	_
+transformation	_	_
+can	_	_
+be	_	_
+necessary	_	_
+when	_	_
+the	_	_
+data	_	_
+is	_	_
+collected	_	_
+with	_	_
+spectral	_	_
+instruments	_	_
+with	_	_
+lower	_	_
+resolutions	_	_
+.	_	_
+
+#55
+Such	_	_
+data	_	_
+transformation	_	_
+should	deontic	_
+be	_	_
+performed	_	_
+prior	_	_
+to	_	_
+using	_	_
+Specalyzer	_	_
+.	_	_
+
+#56
+Case	_	_
+study	_	_
+data	_	_

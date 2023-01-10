@@ -1,0 +1,101 @@
+#61
+This	_	_
+approach	_	_
+has	_	_
+privacy	_	_
+issues	_	_
+and	_	_
+needs	_	_
+legal	_	_
+permission	_	_
+.	_	_
+
+#62
+Moreover	_	_
+,	_	_
+we	_	_
+might	speculation	_
+not	_	_
+have	_	_
+collected	_	_
+sufficient	_	_
+samples	_	_
+for	_	_
+the	_	_
+idling	_	_
+cases	_	_
+.	_	_
+
+#63
+It	_	_
+would	_	_
+also	_	_
+be	_	_
+difficult	_	_
+to	_	_
+annotate	_	_
+later	_	_
+by	_	_
+just	_	_
+watching	_	_
+the	_	_
+sequences	_	_
+without	_	_
+knowing	_	_
+whether	_	_
+the	_	_
+car	_	_
+is	_	_
+idling	_	_
+or	_	_
+not	_	_
+.	_	_
+
+#237
+We	_	_
+also	_	_
+trained	_	_
+separate	_	_
+CNNs	_	_
+for	_	_
+each	_	_
+view	_	_
+,	_	_
+however	_	_
+,	_	_
+the	_	_
+performance	_	_
+was	_	_
+either	_	_
+the	_	_
+same	_	_
+or	_	_
+slightly	_	_
+lower	_	_
+.	_	_
+
+#238
+This	_	_
+might	speculation	_
+be	_	_
+due	_	_
+to	_	_
+the	_	_
+reduced	_	_
+amount	_	_
+of	_	_
+training	_	_
+data	_	_
+.	_	_
+
+#239
+We	_	_
+also	_	_
+experimented	_	_
+with	_	_
+different	_	_
+sampling	_	_
+rates	_	_
+,	_	_
+N	_	_
+.	_	_

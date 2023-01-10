@@ -1,0 +1,300 @@
+#77
+Our	_	_
+online	_	_
+scanning	_	_
+system	_	_
+is	_	_
+built	_	_
+on	_	_
+top	_	_
+of	_	_
+the	_	_
+Voxel	_	_
+Hashing	_	_
+[	_	_
+34	_	_
+]	_	_
+pipeline	_	_
+,	_	_
+reconstructing	_	_
+both	_	_
+geometric	_	_
+and	_	_
+semantic	_	_
+information	_	_
+of	_	_
+the	_	_
+scene	_	_
+in	_	_
+real	_	_
+time	_	_
+.	_	_
+
+#78
+In	_	_
+principle	_	_
+,	_	_
+given	_	_
+an	_	_
+incoming	_	_
+frame	_	_
+prediction	_	_
+from	_	_
+CNN	_	_
+,	_	_
+we	_	_
+must	deontic	_
+update	_	_
+the	_	_
+semantic	_	_
+label	_	_
+for	_	_
+each	_	_
+active	_	_
+voxel	_	_
+accordingly	_	_
+,	_	_
+using	_	_
+the	_	_
+same	_	_
+integration	_	_
+process	_	_
+as	_	_
+described	_	_
+in	_	_
+KinectFusion	_	_
+[	_	_
+33	_	_
+]	_	_
+.	_	_
+
+#79
+For	_	_
+this	_	_
+problem	_	_
+,	_	_
+McCormac	_	_
+et	_	_
+al.	_	_
+[	_	_
+32	_	_
+]	_	_
+store	_	_
+a	_	_
+full	_	_
+discrete	_	_
+probability	_	_
+distribution	_	_
+in	_	_
+each	_	_
+voxel	_	_
+,	_	_
+and	_	_
+update	_	_
+it	_	_
+by	_	_
+using	_	_
+recursive	_	_
+Bayesian	_	_
+rule	_	_
+.	_	_
+
+#90
+However	_	_
+,	_	_
+the	_	_
+memory	_	_
+storage	_	_
+per	_	_
+voxel	_	_
+would	_	_
+be	_	_
+very	_	_
+costly	_	_
+because	_	_
+each	_	_
+feature	_	_
+vector	_	_
+often	_	_
+has	_	_
+at	_	_
+least	_	_
+tens	_	_
+of	_	_
+floating	_	_
+point	_	_
+numbers	_	_
+.	_	_
+
+#91
+Some	_	_
+compressions	_	_
+might	capability-speculation	_
+help	_	_
+in	_	_
+this	_	_
+case	_	_
+.	_	_
+
+#92
+Suppose	_	_
+that	_	_
+an	_	_
+existing	_	_
+set	_	_
+of	_	_
+super-voxels	_	_
+are	_	_
+already	_	_
+provided	_	_
+.	_	_
+
+#117
+Using	_	_
+CRF	_	_
+as	_	_
+a	_	_
+post-processing	_	_
+step	_	_
+is	_	_
+a	_	_
+common	_	_
+technique	_	_
+in	_	_
+semantic	_	_
+segmentation	_	_
+.	_	_
+
+#118
+However	_	_
+,	_	_
+for	_	_
+real-time	_	_
+applications	_	_
+,	_	_
+there	_	_
+are	_	_
+two	_	_
+limitations	_	_
+that	_	_
+we	_	_
+must	deontic	_
+address	_	_
+.	_	_
+
+#119
+First	_	_
+is	_	_
+the	_	_
+classification	_	_
+errors	_	_
+caused	_	_
+by	_	_
+inconsistencies	_	_
+,	_	_
+sometimes	_	_
+known	_	_
+as	_	_
+“bleeding”	_	_
+,	_	_
+that	_	_
+is	_	_
+also	_	_
+reported	_	_
+by	_	_
+Valentin	_	_
+et	_	_
+al.	_	_
+[	_	_
+44	_	_
+]	_	_
+.	_	_
+
+#264
+In	_	_
+addition	_	_
+,	_	_
+we	_	_
+observe	_	_
+that	_	_
+the	_	_
+accuracy	_	_
+over	_	_
+time	_	_
+sometimes	_	_
+still	_	_
+fluctuates	_	_
+slightly	_	_
+due	_	_
+to	_	_
+the	_	_
+lack	_	_
+of	_	_
+full	_	_
+temporal	_	_
+constraints	_	_
+among	_	_
+the	_	_
+CNN	_	_
+predictions	_	_
+.	_	_
+
+#265
+Addressing	_	_
+this	_	_
+issue	_	_
+could	speculation	_
+be	_	_
+an	_	_
+interesting	_	_
+future	_	_
+work	_	_
+.	_	_
+
+#266
+Ablation	_	_
+study	_	_
+.	_	_
+
+#276
+Figure	_	_
+3	_	_
+visualizes	_	_
+the	_	_
+instance	_	_
+segmentation	_	_
+in	_	_
+two	_	_
+indoor	_	_
+scenes	_	_
+using	_	_
+our	_	_
+approach	_	_
+.	_	_
+
+#277
+Such	_	_
+results	_	_
+could	capability-speculation	_
+serve	_	_
+as	_	_
+a	_	_
+baseline	_	_
+to	_	_
+compare	_	_
+with	_	_
+more	_	_
+sophisticated	_	_
+real-time	_	_
+3D	_	_
+instance	_	_
+segmentation	_	_
+technique	_	_
+in	_	_
+the	_	_
+future	_	_
+.	_	_
+
+#278
+6.	_	_
+Conclusion	_	_

@@ -1,0 +1,56 @@
+#77
+Nevertheless	_	_
+,	_	_
+the	_	_
+descriptors	_	_
+of	_	_
+a	_	_
+given	_	_
+image	_	_
+remain	_	_
+correlated	_	_
+.	_	_
+
+#78
+To	_	_
+prevent	_	_
+information	_	_
+leakage	_	_
+,	_	_
+all	_	_
+descriptors	_	_
+of	_	_
+the	_	_
+same	_	_
+image	_	_
+must	deontic	_
+be	_	_
+contained	_	_
+in	_	_
+the	_	_
+same	_	_
+fold	_	_
+.	_	_
+
+#79
+For	_	_
+each	_	_
+combination	_	_
+of	_	_
+the	_	_
+encoder	_	_
+,	_	_
+crop	_	_
+size	_	_
+and	_	_
+scale	_	_
+we	_	_
+train	_	_
+10	_	_
+gradient	_	_
+boosting	_	_
+models	_	_
+with	_	_
+10-fold	_	_
+cross-validation	_	_
+.	_	_

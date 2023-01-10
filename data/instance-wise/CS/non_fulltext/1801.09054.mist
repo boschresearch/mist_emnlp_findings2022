@@ -1,0 +1,262 @@
+#20
+The	_	_
+contactless	_	_
+biometrics	_	_
+system	_	_
+can	_	_
+also	_	_
+be	_	_
+used	_	_
+law	_	_
+enforcement	_	_
+,	_	_
+border	_	_
+surveillance	_	_
+,	_	_
+force	_	_
+protection	_	_
+forensic	_	_
+etc	_	_
+.	_	_
+
+#21
+Furthermore	_	_
+,	_	_
+the	_	_
+biometrics	_	_
+system	_	_
+must	deontic	_
+be	_	_
+robust	_	_
+against	_	_
+the	_	_
+spoofing	_	_
+.	_	_
+
+#22
+Thermal	_	_
+camera	_	_
+largely	_	_
+overcomes	_	_
+it	_	_
+.	_	_
+
+#27
+In	_	_
+addition	_	_
+,	_	_
+when	_	_
+the	_	_
+contactless	_	_
+biometrics	_	_
+system	_	_
+enables	_	_
+remote	_	_
+recognition	_	_
+is	_	_
+inadequate	_	_
+,	_	_
+a	_	_
+ubiquitous	_	_
+biometrics	_	_
+system	_	_
+will	_	_
+provide	_	_
+a	_	_
+cue	_	_
+such	_	_
+as	_	_
+a	_	_
+person’s	_	_
+location	_	_
+using	_	_
+Global	_	_
+Positioning	_	_
+System	_	_
+(	_	_
+GPS	_	_
+)	_	_
+for	_	_
+identification	_	_
+of	_	_
+unauthorized	_	_
+protesting	_	_
+[	_	_
+2	_	_
+]	_	_
+.	_	_
+
+#28
+Thus	_	_
+,	_	_
+the	_	_
+biometrics	_	_
+system	_	_
+should	deontic	_
+be	_	_
+evaluated	_	_
+the	_	_
+perfect	_	_
+rank	_	_
+score	_	_
+in	_	_
+cumulative	_	_
+matching	_	_
+curve	_	_
+(	_	_
+CMC	_	_
+)	_	_
+besides	_	_
+the	_	_
+best	_	_
+score	_	_
+,	_	_
+called	_	_
+rank-1	_	_
+.	_	_
+
+#29
+Investigation	_	_
+person	_	_
+can	_	_
+coincide	_	_
+the	_	_
+lowest	_	_
+recognized	_	_
+subject	_	_
+in	_	_
+the	_	_
+biometrics	_	_
+systems	_	_
+.	_	_
+
+#123
+This	_	_
+evaluation	_	_
+is	_	_
+important	_	_
+for	_	_
+especially	_	_
+forensics	_	_
+,	_	_
+corpse	_	_
+identification	_	_
+,	_	_
+criminal	_	_
+investigation	_	_
+etc	_	_
+.	_	_
+
+#124
+Owing	_	_
+to	_	_
+this	_	_
+situation	_	_
+,	_	_
+all	_	_
+suspects	_	_
+up	_	_
+to	_	_
+the	_	_
+perfect	_	_
+rank	_	_
+of	_	_
+biometrics	_	_
+system	_	_
+should	deontic	_
+be	_	_
+investigated	_	_
+for	_	_
+identification	_	_
+.	_	_
+
+#125
+The	_	_
+best	_	_
+results	_	_
+are	_	_
+HOG+LDA	_	_
+for	_	_
+rank-1	_	_
+,	_	_
+rank-2	_	_
+and	_	_
+EER	_	_
+,	_	_
+but	_	_
+HOG+DCVA	_	_
+from	_	_
+rank-3	_	_
+to	_	_
+rank-5	_	_
+.	_	_
+
+#149
+Furthermore	_	_
+,	_	_
+we	_	_
+have	_	_
+defined	_	_
+the	_	_
+perfect	_	_
+rank	_	_
+which	_	_
+is	_	_
+rank	_	_
+number	_	_
+when	_	_
+recognition	_	_
+rate	_	_
+reaches	_	_
+100	_	_
+%	_	_
+in	_	_
+CMC	_	_
+curve	_	_
+.	_	_
+
+#150
+The	_	_
+person	_	_
+requested	_	_
+recognition	_	_
+may	options	_
+be	_	_
+in	_	_
+the	_	_
+perfect	_	_
+rank	_	_
+.	_	_
+
+#151
+Thus	_	_
+,	_	_
+the	_	_
+perfect	_	_
+rank	_	_
+should	deontic	_
+be	_	_
+minimized	_	_
+.	_	_
+
+#152
+In	_	_
+the	_	_
+future	_	_
+work	_	_
+,	_	_
+we	_	_
+will	_	_
+try	_	_
+to	_	_
+do	_	_
+fully	_	_
+automated	_	_
+methods	_	_
+for	_	_
+ear	_	_
+biometrics	_	_
+in	_	_
+LWIR	_	_
+band	_	_
+.	_	_

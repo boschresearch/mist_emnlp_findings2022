@@ -1,0 +1,62 @@
+#52
+The	_	_
+test	_	_
+dataset	_	_
+consists	_	_
+of	_	_
+8×75-frame	_	_
+sequences	_	_
+containing	_	_
+footage	_	_
+sampled	_	_
+immediately	_	_
+after	_	_
+each	_	_
+training	_	_
+sequence	_	_
+and	_	_
+2	_	_
+full	_	_
+300-frame	_	_
+sequences	_	_
+,	_	_
+sampled	_	_
+at	_	_
+the	_	_
+same	_	_
+rate	_	_
+as	_	_
+the	_	_
+training	_	_
+set	_	_
+.	_	_
+
+#53
+Under	_	_
+the	_	_
+terms	_	_
+of	_	_
+the	_	_
+challenge	_	_
+,	_	_
+participants	_	_
+should	deontic	_
+exclude	_	_
+the	_	_
+corresponding	_	_
+training	_	_
+set	_	_
+when	_	_
+evaluating	_	_
+on	_	_
+one	_	_
+of	_	_
+the	_	_
+75-frame	_	_
+sequences	_	_
+.	_	_
+
+#54
+2.2	_	_
+Network	_	_
+architectures	_	_
