@@ -1,0 +1,22 @@
+{
+  "output_vocab": {
+    "type": "BasicVocab",
+    "args": {
+      "vocab_filename": "data/EPOS/output_vocab.txt"
+    }
+  },
+  "single_labeling": true,
+  "has_documents": false,
+  "target_modals": [
+      "can",
+      "could",
+      "may",
+      "must",
+      "should"
+  ],
+  "illegal_combinations": {
+    "may": ["dy"],
+    "must": ["dy"],
+    "should": ["dy"]
+  }
+}

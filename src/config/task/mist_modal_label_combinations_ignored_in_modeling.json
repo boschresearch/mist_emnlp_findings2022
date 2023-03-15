@@ -1,0 +1,33 @@
+{
+    "can": [
+        "deontic",
+        "inference",
+        "speculation"
+    ],
+    "could": [
+        "deontic",
+        "inference",
+        "rhetorical"
+    ],
+    "may": [
+        "inference",
+        "rhetorical"
+    ],
+    "might": [
+        "deontic",
+        "inference",
+        "rhetorical"
+    ],
+    "must": [
+        "capability",
+        "feasibility",
+        "options",
+        "speculation"
+    ],
+    "should": [
+        "capability",
+        "feasibility",
+        "options",
+        "speculation"
+    ]
+}

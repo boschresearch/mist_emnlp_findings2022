@@ -1,0 +1,45 @@
+{
+  "output_vocab": {
+    "type": "BasicVocab",
+    "args": {
+      "vocab_filename": "data/MIST_modeling/output_vocab.txt"
+    }
+  },
+  "single_labeling": false,
+  "has_documents": true,
+  "target_modals": [
+    "can",
+    "could",
+    "may",
+    "might",
+    "must",
+    "should"
+  ],
+  "target_domains": [
+    "ACL",
+    "Agr",
+    "CS",
+    "ES",
+    "MS"
+  ],
+  "illegal_combinations": {
+    "could": [
+      "deontic",
+      "rhetorical"
+    ],
+    "might": [
+      "deontic"
+    ],
+    "must": [
+      "capability",
+      "feasibility",
+      "options",
+      "speculation"
+    ],
+    "should": [
+      "capability",
+      "feasibility"
+    ]
+  },
+  "modal_label_combinations_ignored_in_modeling": "src/config/task/mist_modal_label_combinations_ignored_in_modeling.json"
+}

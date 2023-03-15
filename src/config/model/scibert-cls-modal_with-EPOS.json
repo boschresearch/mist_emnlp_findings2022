@@ -1,0 +1,102 @@
+{
+    "experiment": "mist_with_EPOS",
+    "name": "scibert_CLS_and_modal_embedding_per_modal_heads",
+    "n_gpu": 1,
+    "mlruns_folder": "training_outputs/mlruns",
+    "random_seed": 42,
+    "use_deterministic_algorithms": true,
+    "tasks": {
+        "EPOS": "src/config/task/EPOS.json",
+        "mist": "src/config/task/mist.json"
+    },
+    "model": {
+        "type": "ModalClassifier",
+        "args": {
+            "loss": {
+                "single_label": "CrossEntropyLoss",
+                "multi_label": "BCEWithLogitsLossWithIgnore"
+            },
+            "embedder": {
+                "type": "TransformerBasedEmbedder",
+                "args": {
+                    "embeddings": {
+                        "type": "OtherWrapper",
+                        "args": {
+                            "model_path": "pretrained_embeddings/scibert_scivocab_uncased",
+                            "dropout": 0.1,
+                            "fine_tune": true,
+                            "token_mask_prob": 0.15
+                        }
+                    },
+                    "embeddings_to_use": ["cls","modal"]
+                }
+            },
+            "use_per_modal_heads": true,
+            "use_per_domain_heads": false,
+            "heads": {
+                "mist": {
+                    "type": "Linear",
+                    "args": {
+                        "dropout": 0.1
+                    },
+                    "single_labeling": false
+                },
+                "EPOS": {
+                    "type": "Linear",
+                    "args": {
+                        "dropout": 0.1
+                    },
+                    "single_labeling": true
+                }
+            },
+            "output_vocabs": {
+            }
+        }
+    },
+    "data_loader": {
+        "type": "SentenceClassificationDataLoader",
+        "args": {
+            "batch_size": 8,
+            "num_workers": 0
+        },
+        "paths": {
+            "train": {
+                "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_train1.txt",
+                "EPOS": "data/EPOS/sentence-wise_corpus.txt"
+            },
+            "val": {
+                "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_val1.txt"
+            },
+	        "test": {
+                "mist": "data/MIST_modeling/standard_train_test_split/test.txt"
+            }
+        }
+    },
+    "trainer": {
+        "min_epochs": 10,
+        "max_epochs": 100,
+        "save_period": 101,
+        "save_dir": "training_outputs",
+        "accumulate_gradients": 1,
+	    "early_stopping": 10,
+        "validation_metric": {
+            "type":"weighted_F1",
+            "args": {
+                "tasks": ["mist"]
+            }
+        },
+        "optimizer": {
+            "type": "Adam",
+            "args": {
+                "lr": 3e-05,
+                "weight_decay": 0
+            }
+        },
+        "lr_scheduler": {
+            "type": "LambdaLR",
+            "args": {
+                "lr_lambda": "WarmupSchedule(2*len(train_data_loader))"
+            }
+        }
+    }
+}

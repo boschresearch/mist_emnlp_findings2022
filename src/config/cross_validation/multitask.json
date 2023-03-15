@@ -1,0 +1,51 @@
+{  "splits": {
+    "1": {
+      "train": {
+        "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_train1.txt",
+        "EPOS": "data/EPOS/sentence-wise_corpus.txt"
+      },
+      "val": {
+        "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_val1.txt"
+      }
+    },
+    "2": {
+      "train": {
+        "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_train2.txt",
+        "EPOS": "data/EPOS/sentence-wise_corpus.txt"
+      },
+      "val": {
+        "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_val2.txt"
+      }
+    },
+    "3": {
+      "train": {
+        "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_train3.txt",
+        "EPOS": "data/EPOS/sentence-wise_corpus.txt"
+      },
+      "val": {
+        "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_val3.txt"
+      }
+    },
+    "4": {
+      "train": {
+        "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_train4.txt",
+        "EPOS": "data/EPOS/sentence-wise_corpus.txt"
+      },
+      "val": {
+        "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_val4.txt"
+      }
+    },
+    "5": {
+      "train": {
+        "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_train5.txt",
+        "EPOS": "data/EPOS/sentence-wise_corpus.txt"
+      },
+      "val": {
+        "mist": "data/MIST_modeling/standard_train_test_split/greedy_cv_5-fold_split_val5.txt"
+      }
+    }
+  },
+   "test": {
+      "mist": "data/MIST_modeling/standard_train_test_split/test.txt"
+   }
+}

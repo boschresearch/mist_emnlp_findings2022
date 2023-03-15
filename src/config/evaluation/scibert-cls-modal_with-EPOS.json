@@ -1,0 +1,6 @@
+{
+  "mlruns_folder": "training_outputs/mlflow",
+  "name": "evaluation_MIST-with-EPOS_SciBERT-CLS-modal",
+  "cv_config": "src/config/cross_validation/multitask.json",
+  "best_model_config": "src/config/model/scibert-cls-modal_with-EPOS.json"
+}
