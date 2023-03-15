@@ -47,7 +47,7 @@ To train and evaluate $SB_{CLS,modal}$ models as described in the paper (5 model
 
 Note that this evaluation configuration assumes that you have stored the [SciBERT model](https://huggingface.co/allenai/scibert_scivocab_uncased) in the `pretrained_embeddings` folder.
 
-For performing multi-task training with EPOS ([Marasovic et al. (2016)](https://aclanthology.org/2016.lilt-14.3/), you need to get the corpus and convert it to the format specified in [src/README.md](src/README.md).
+For performing multi-task training with EPOS ([Marasovic et al. (2016)](https://aclanthology.org/2016.lilt-14.3/), you need to get the corpus and convert it to the format specified in [src/config/README.md](src/config/README.md).
 You can then run the training using `python src/evaluate.py --repo_path [REPO_PATH] src/config/evaluation/scibert-cls-modal_with-EPOS.json`.
 
 ## License
