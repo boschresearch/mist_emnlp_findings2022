@@ -39,7 +39,7 @@ You can install all the above dependencies easily using [Conda](https://docs.con
 and the ```environment.yml``` file provided by us:
 ```bash
 conda env create -f environment.yml
-conda activate stepsenv
+conda activate mist
 ```
 
 ### Training and Evaluating Models
