@@ -9,7 +9,7 @@ This repository contains the companion material for the following publication:
 
 > Sophie Henning, Nicole Macher, Stefan Grünewald, and Annemarie Friedrich. MiST: a Large-Scale Annotated Resource and Neural Models for Functions of Modal Verbs in English Scientific Text. In Findings of the Association for Computational Linguistics: EMNLP 2022. Abu Dhabi.
 
-Please cite this paper if using the dataset or the code, and direct any questions regarding the dataset and code at [Sophie Henning](mailto:sophieelisabeth.henning@de.bosch.com). The paper can be found [here](https://aclanthology.org/2022.findings-emnlp.94/).
+Please cite this paper if using the dataset or the code, and direct any questions regarding the dataset and code at [Sophie Henning](mailto:sophie.henning@de.bosch.com). The paper can be found [here](https://aclanthology.org/2022.findings-emnlp.94/).
 
 ## Purpose of this Software 
 
